@@ -3,24 +3,17 @@ import mainLayout from "../../layouts/mainLayout.vue";
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center md:text-2xl font-medium mt-3">EVENTS</h1>
+    <h1 class="flex justify-center mb-20 md:text-xl font-medium mt-3">EVENTS</h1>
     <br />
-    <!-- foto -->
-    <div grid-cols-2>
-      <img
-        class="h-auto pr-20 max-w-lg ml-auto"
-        src="./images/chello.jpeg"
-        alt="image description"
-      />
-      <!-- description -->
-      <h2 class="w-screen flex pl-20 md:text-2xl font-medium mt-3">
-        DON'T MISS OUT ON OUR EVENTS-STAY CONNECTED
-      </h2>
-    </div>
-    <br />
+   
+
     <!-- form -->
-    <div class="mx-52 gap-8 pr-20 pl-20 bg-gray-50 p-2 border shadow-md">
-      <form class="flex flex-wrap justify-between">
+     <div>
+    <h2 class="w-screen flex pl-20 mb:text-xl font-medium mt-3">
+        DON'T MISS OUT ON OUR EVENTS-STAY  CONNECTED!
+      </h2>
+      <div class="mx-60 relative mb-[-245px] ml-[87px] pr-20 pl-20 bg-gray-50 p-2 border shadow-md">
+      <form class="flex flex-wrap justify-between z-0">
         <div class="mb-4 mr-2">
           <label class="block text-gray-700 font-bold mb-2"> Location </label>
           <div class="relative">
@@ -87,7 +80,16 @@ import mainLayout from "../../layouts/mainLayout.vue";
         </div>
       </form>
     </div>
-
+    <div grid-cols-2>
+      <img
+        class="h-auto pr-20 max-w-lg ml-auto"
+        src="./images/chello.jpeg"
+        alt="image description"
+      />
+      
+    </div>
+  </div>
+    <br/>
     <div
       class="flex items-center justify-center min-h-screen container mx-auto"
     >
@@ -99,7 +101,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -130,7 +132,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -161,7 +163,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -192,7 +194,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -223,7 +225,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -254,7 +256,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="./images/jazz singers night_0.jpg" alt="" />
+              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="" />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
