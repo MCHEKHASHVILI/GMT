@@ -3,16 +3,22 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
-    <ul>
+    <div class="  text-center  ">
+      <h1 class="text-xl font-medium"> WHO WILL BE BY YOUR SIDE</h1>
+      <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus
+         saepe culpa fugiat optio mollitia quas inventore maxime est hic,
+         suscipit quisquam debitis dolore nobis!</p>
+    </div>
+    <ul class="ms-8">
       <li
-  class="flex mt-8 ">
+  class="flex mt-8">
   <img
     class=" w-full md:w-48  "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
   <li class="flex flex-col justify-start p-6">
     <h2
-      class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+      class="mb-2 text-xl font-medium ">
       NAME SURNAME
     </h2>
     <h3>
@@ -38,7 +44,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
     alt="" />
   <li class="flex flex-col justify-start p-6">
     <h2
-      class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+      class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
@@ -64,7 +70,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
     alt="" />
   <li class="flex flex-col justify-start p-6">
     <h2
-      class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+      class="mb-2 text-xl font-medium ">
       NAME SURNAME
     </h2>
     <h3>
@@ -90,7 +96,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
     alt="" />
   <li class="flex flex-col justify-start p-6">
     <h2
-      class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+      class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
@@ -116,7 +122,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
     alt="" />
   <li class="flex flex-col justify-start p-6">
     <h2
-      class="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50">
+      class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
