@@ -4,9 +4,15 @@ import mainLayout from '../../layouts/mainLayout.vue';
 <template>
   <main-layout>
    <h1 class=" w-screen flex justify-center md:text-2xl font-medium mt-3 ">EVENTS</h1>
-         
-   <div class=" grid-cols-1 md:grid-cols-2 lg:grid pr-20 pl-20  bg-gray-50 p-2 border shadow-md">
-  <form class="flex flex-wrap justify-between">
+   <br>
+   <!-- Form -->
+<img class="h-auto pr-20 max-w-lg ml-auto" src="./images/chello.jpeg" alt="image description">
+
+   <h2 class=" w-screen flex pl-20 md:text-2xl font-medium mt-3 ">DON'T MISS OUT ON OUR EVENTS-STAY 
+    CONNECTED</h2>
+    <br>
+   <div class="mx-52 gap-8  pr-20 pl-20  bg-gray-50 p-2 border shadow-md">
+  <form class="flex flex-wrap justify-between  ">
     <div class="mb-4 mr-2">
       <label class="block text-gray-700 font-bold mb-2">
         Location
@@ -50,7 +56,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
       </div>
     </div>
 
-    <div class="flex justify-end mt-6">
+    <div class=" justify-end mt-6">
       <button class="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
         DISCOVER EVENTS
       </button>
