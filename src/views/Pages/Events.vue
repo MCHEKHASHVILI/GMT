@@ -3,6 +3,66 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
+   <h1 class=" w-screen flex justify-center md:text-2xl font-medium mt-3 ">EVENTS</h1>
+         
+   <div class=" grid-cols-1 md:grid-cols-2 lg:grid pr-20 pl-20  bg-gray-50 p-2 border shadow-md">
+  <form class="flex flex-wrap justify-between">
+    <div class="mb-4 mr-2">
+      <label class="block text-gray-700 font-bold mb-2">
+        Location
+      </label>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="location" placeholder="Location">
+          <option></option>
+          <option></option>
+          
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+            <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4 mr-2">
+      <label class="block text-gray-700 font-bold mb-2" for="date">
+        Date
+      </label>
+      <input class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="date" type="date" placeholder="Date">
+    </div>
+
+    <div class="mb-4 mr-2">
+      <label class="block text-gray-700 font-bold mb-2" for="type">
+        Type
+      </label>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" id="type" placeholder="Type">
+          <option>Option 1</option>
+          <option>Option 2</option>
+       
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+            <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-end mt-6">
+      <button class="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        DISCOVER EVENTS
+      </button>
+    </div>
+  </form>
+</div>
+
+    
+    
+
+    
+
    <div class="flex items-center justify-center min-h-screen container mx-auto">
      <!-- grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-20 pr-20">
