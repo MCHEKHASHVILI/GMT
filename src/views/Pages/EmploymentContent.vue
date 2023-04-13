@@ -1,20 +1,20 @@
 <script setup></script>
 
 <template>
-  <div>
-    <div>
-      <div>
+  <div class="flex flex-col space-y-[2.5%] w-[75%] mx-[12.5%] my-[5%]">
+    <div class="flex space-x-[2.5%]">
+      <div class="w-[10%] overflow-hidden">
         <img
           src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/36342042_994746297362019_5087005955971874816_n.png?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=K9cjnCANAxgAX8KUgeS&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfB-jhcm2EwT3MLGYNy4C5GBrpG_iSw5AjR5zmHHdhgOrA&oe=645F3224"
           alt="Employer logo"
         />
       </div>
-      <div>
+      <div class="m-auto font-bold">
         <h1>FUNICULAR</h1>
         <h3>Chef</h3>
       </div>
     </div>
-    <div>
+    <div class="flex flex-col space-y-[2%]">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
         veritatis architecto optio possimus id praesentium unde quasi
@@ -23,7 +23,6 @@
         autem qui ab voluptate est dolorum explicabo blanditiis eveniet commodi,
         iste eligendi cum distinctio. Nam, corrupti.
       </p>
-      <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         minima rerum odit optio error mollitia? Recusandae numquam consequuntur
@@ -32,7 +31,6 @@
         Cumque sint nemo debitis. Dicta vero dolor commodi omnis aut deleniti
         cumque ullam perspiciatis. Ipsum, qui atque!
       </p>
-      <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
         laborum, suscipit nihil voluptatibus veritatis corrupti autem sapiente.
@@ -55,7 +53,6 @@
         laborum, atque enim tempora eius? Magnam eius reprehenderit, assumenda
         error repellat ea?
       </p>
-      <br />
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, vel
         blanditiis alias itaque asperiores similique perspiciatis nulla sunt
@@ -64,19 +61,25 @@
     </div>
     <div>
       <div>
-        <p>Salary</p>
-        <p>4000 ₾ per month</p>
+        <table class="text-gray-500">
+          <tbody>
+            <tr>
+              <td class="">Salary</td>
+              <td class="font-bold text-black p-[3%]">4000 ₾ per month</td>
+            </tr>
+            <tr>
+              <td>Full time</td>
+              <td class="font-bold text-black p-[3%]">00:09-00:17:00</td>
+            </tr>
+            <tr>
+              <td>Contact</td>
+              <td class="font-bold text-black p-[3%]">GMTHospitality@GMT.GE</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div>
-        <p>Full time</p>
-        <p>00:09-00:17:00</p>
-      </div>
-      <div>
-        <p>Contact</p>
-        <p>GMTHospitality@GMT.GE</p>
-      </div>
-      <div>
-        <p>match 25, 2023 &#183; 10:25</p>
+        <p class="text-gray-500">match 25, 2023 &#183; 10:25</p>
       </div>
     </div>
   </div>
