@@ -3,7 +3,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
-   <h1 class=" w-screen flex justify-center md:text-2xl font-medium mt-3 ">EVENTS</h1>
+   <h1 class=" flex justify-center md:text-2xl font-medium mt-3 ">EVENTS</h1>
    <br>
    <!-- Form -->
 <img class="h-auto pr-20 max-w-lg ml-auto" src="./images/chello.jpeg" alt="image description">
