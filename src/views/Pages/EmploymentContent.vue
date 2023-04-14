@@ -3,7 +3,7 @@
 <template>
   <div class="flex flex-col space-y-[2.5%] w-[75%] mx-[12.5%] my-[5%]">
     <div class="flex space-x-[2.5%]">
-      <div class="w-[10%] overflow-hidden">
+      <div class="w-[10%]">
         <img
           src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/36342042_994746297362019_5087005955971874816_n.png?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=K9cjnCANAxgAX8KUgeS&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfB-jhcm2EwT3MLGYNy4C5GBrpG_iSw5AjR5zmHHdhgOrA&oe=645F3224"
           alt="Employer logo"
@@ -61,19 +61,19 @@
     </div>
     <div>
       <div>
-        <table class="text-gray-500">
+        <table class="text-gray-500 border-separate border-spacing-y-3 border-spacing-x-5 relative left-[-20px]">
           <tbody>
             <tr>
-              <td class="">Salary</td>
-              <td class="font-bold text-black p-[3%]">4000 ₾ per month</td>
+              <td>Salary</td>
+              <td class="font-bold text-black">4000 ₾ per month</td>
             </tr>
             <tr>
               <td>Full time</td>
-              <td class="font-bold text-black p-[3%]">00:09-00:17:00</td>
+              <td class="font-bold text-black">00:09-00:17:00</td>
             </tr>
             <tr>
               <td>Contact</td>
-              <td class="font-bold text-black p-[3%]">GMTHospitality@GMT.GE</td>
+              <td class="font-bold text-black">GMTHospitality@GMT.GE</td>
             </tr>
           </tbody>
         </table>
