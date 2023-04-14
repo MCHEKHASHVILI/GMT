@@ -3,11 +3,11 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
-    <div class="text-center  ">
+    <div class="w-full text-center  ">
       <h1 class="text-xl font-medium"> WHO WILL BE BY YOUR SIDE</h1>
-      <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus
+      <p class="ml-96 w-[44%] break-all ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus
          saepe culpa fugiat optio mollitia quas inventore maxime est hic,
-         suscipit quisquam debitis dolore nobis!</p>
+         suscipit quisquam debitis dolore nobis! </p>
     </div>
     <ul class="ms-8">
       <li
