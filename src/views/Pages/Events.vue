@@ -3,92 +3,92 @@ import mainLayout from "../../layouts/mainLayout.vue";
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center mb-20 md:text-3xl font-medium mt-3">EVENTS</h1>
+    <h1 class="flex justify-center mb-20 md:text-3xl font-medium mt-3">
+      EVENTS
+    </h1>
     <br />
-   
 
     <!-- form -->
-     <div>
-    <h2 class="w-screen flex pl-20 mb:text-xl font-medium mt-3">
-        DON'T MISS OUT ON OUR EVENTS-STAY  CONNECTED!
+    <div>
+      <h2 class="w-screen flex pl-20 mb:text-xl font-medium mt-3">
+        DON'T MISS OUT ON OUR EVENTS-STAY CONNECTED!
       </h2>
-      <div class="mx-60 relative mb-[-245px] ml-[87px] pr-20 pl-20 bg-gray-50 p-2 border shadow-md">
-      <form class="flex flex-wrap justify-between z-0">
-        <div class="mb-4 mr-2">
-          <label class="block text-gray-700 font-bold mb-2">  </label>
-          <div class="relative">
-            <select
-              class="  w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-              
-              placeholder="Location"
-            >
-              <option></option>
-              <option></option>
-            </select>
-            <div
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-            >
-              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
-              </svg>
+      <div
+        class="mx-60 relative mb-[-245px] ml-[87px] pr-20 pl-20 bg-gray-50 p-2 border shadow-md"
+      >
+        <form class="flex flex-wrap justify-between z-0">
+          <div class="mb-4 mr-2">
+            <label class="block text-gray-700 font-bold mb-2"> Location </label>
+            <div class="relative">
+              <select
+                class="w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              >
+                <option></option>
+                <option></option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                  <path
+                    d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="mb-4 mr-2">
-          <label class="block text-gray-700 font-bold mb-2" for="date">
-            Date
-          </label>
-          <input
-            class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-            id="date"
-            type="date"
-            placeholder="Date"
-          />
-        </div>
-
-        <div class="mb-4 mr-2">
-          <label class="block text-gray-700 font-bold mb-2" for="type">
-            Type
-          </label>
-          <div class="relative">
-            <select
+          <div class="mb-4 mr-2">
+            <label class="block text-gray-700 font-bold mb-2" for="date">
+              Date
+            </label>
+            <input
               class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-              id="type"
-              placeholder="Type"
-            >
-              <option>Option 1</option>
-              <option>Option 2</option>
-            </select>
-            <div
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-            >
-              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
-              </svg>
+              type="date"
+            />
+          </div>
+
+          <div class="mb-4 mr-2">
+            <label class="block text-gray-700 font-bold mb-2" for="type">
+              Type
+            </label>
+            <div class="relative">
+              <select
+                class="block appearance-none w-full bg-gray-100 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              >
+                <option>Option 1</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                  <path
+                    d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="justify-end mt-6">
-          <button
-            class="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-          >
-            DISCOVER EVENTS
-          </button>
-        </div>
-      </form>
+          <div class="justify-end mt-6">
+            <button
+              class="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+            >
+              DISCOVER EVENTS
+            </button>
+          </div>
+        </form>
+      </div>
+      <div grid-cols-2>
+        <img
+          class="h-auto pr-20 max-w-lg ml-auto"
+          src="https://takelessons.com/blog/wp-content/uploads/2017/11/is-cello-hard-to-learn.jpeg "
+          alt="Chello"
+        />
+      </div>
     </div>
-    <div grid-cols-2>
-      <img
-        class="h-auto pr-20 max-w-lg ml-auto"
-        src="https://takelessons.com/blog/wp-content/uploads/2017/11/is-cello-hard-to-learn.jpeg "        alt="Chello"
-      />
-      
-    </div>
-  </div>
-    <br/>
+    <br />
     <div
       class="flex items-center justify-center min-h-screen container mx-auto"
     >
@@ -100,7 +100,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="jazzpic" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="jazzpic"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -131,7 +134,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="afrojazz" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="afrojazz"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -162,7 +168,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="afrojazz" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="afrojazz"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -193,7 +202,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="afrojazz" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="afrojazz"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -224,7 +236,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="afrojazz" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="afrojazz"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -255,7 +270,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         <div class="rounded-xl shadow-lg">
           <div class="p-5 flex flex-col">
             <div class="rounded-xl overflow-hidden">
-              <img src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=" alt="afrojazz" />
+              <img
+                src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+                alt="afrojazz"
+              />
             </div>
             <h5 class="text-2xl md:text-xl font-medium mt-3">
               Jazz up your night: Join us for live music and delicious dinning
@@ -281,7 +299,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
             >
               VIEW DETAILS
             </div>
-            
           </div>
         </div>
       </div>
