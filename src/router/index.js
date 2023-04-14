@@ -14,7 +14,7 @@ const router = createRouter({
       component: () => import('../views/Pages/About.vue')
     },
     {
-      path: '/events:zura',
+      path: '/events:id',
       name: 'events',
       component: () => import('../views/Pages/Events.vue')
     },
