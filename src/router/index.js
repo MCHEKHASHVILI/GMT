@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory ,RouterView} from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,18 +15,24 @@ const router = createRouter({
     },
     {
       path: '/events',
-      name: 'events',
-      component: () => import('../views/Pages/Events.vue')
+      component: () => RouterView,
+      children: [
+        {
+          path:'',
+          name: 'Events',
+          component: () => import('../views/Pages/Events.vue')
+        },
+        {
+          path: ':id',
+          name: 'EventsContent',
+          component: () => import('../views/Pages/EventsContent.vue')
+        },
+      ]
     },
     {
       path: '/employment',
       name: 'Employment',
       component: () => import('../views/Pages/Employment.vue')
-    },
-    {
-      path: '/eventsContent',
-      name: 'EventsContent',
-      component: () => import('../views/Pages/EventsContent.vue')
     },
   ]
 })
