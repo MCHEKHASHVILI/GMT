@@ -3,7 +3,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
-    <div class="  text-center  ">
+    <div class="text-center  ">
       <h1 class="text-xl font-medium"> WHO WILL BE BY YOUR SIDE</h1>
       <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus
          saepe culpa fugiat optio mollitia quas inventore maxime est hic,
