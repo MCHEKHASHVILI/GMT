@@ -19,9 +19,9 @@ const router = createRouter({
       component: () => import('../views/Pages/Employment.vue')
     },
     {
-      path: '/News-Content',
-      name: 'News-Content',
-      component: () => import('../views/Pages/News-Content.vue')
+      path: '/NewsContent',
+      name: 'NewsContent',
+      component: () => import('../views/Pages/NewsContent.vue')
     },
   ]
 })
