@@ -14,6 +14,10 @@ const router = createRouter({
       component: () => import('../views/Pages/About.vue')
     },
     {
+      path: '/News',
+      name: 'News',
+      component: () => import('../views/Pages/News.vue')
+    },
       path: '/events',
       component: () => RouterView,
       children: [
@@ -34,6 +38,11 @@ const router = createRouter({
       name: 'Employment',
       component: () => import('../views/Pages/Employment.vue')
     },
+    {
+      path: '/employment/:id',
+      name: 'EmploymentContent',
+      component: () => import('../views/Pages/EmploymentContent.vue')
+    }
   ]
 })
 

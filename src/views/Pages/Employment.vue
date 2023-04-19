@@ -3,9 +3,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
 </script>
 <template>
   <main-layout>
-    <h1 class="pl-[150px] text-center font-bold text-3xl pb-12">EMPLOYMENT</h1>
+    <h1 class="text-center font-bold text-3xl pb-12">EMPLOYMENT</h1>
     <div class="container ">
-      <div class="justify-center flex gap-[15px] pb-1.5 ml-[150px]">
+      <div class="justify-center flex gap-[15px] pb-1.5">
         <div class="w-[550px] p-6 bg-white border border-gray-300  ">
           <div class="flex">
             <img class="h-12" src="https://www.gmt.ge/uploads_script/news/596e27ljb1c75l4.jpg">
@@ -59,7 +59,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
           </div>
         </div>
       </div>
-      <div class="flex justify-center	 gap-[15px] pb-1.5 ml-[150px]">
+      <div class="flex justify-center	 gap-[15px] pb-1.5 ">
         <div class="w-[550px] p-6 bg-white border border-gray-300  ">
           <div class="flex">
             <img class="h-12"
@@ -115,7 +115,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
           </div>
         </div>
       </div>
-      <div class="flex justify-center	 gap-[15px] ml-[150px]">
+      <div class="flex justify-center	 gap-[15px] ">
         <div class="w-[550px] p-6 bg-white border border-gray-300  ">
           <div class="flex">
             <img class="h-12"
