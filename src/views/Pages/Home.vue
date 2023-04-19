@@ -10,10 +10,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
         class="flex w-[100%] items-center justify-between flex-col bg-black h-[120vh]"
       >
         <div class="flex flex-col mt-auto h-[50%] items-center">
-          <p class="text-white text-[70px] font-sataurisFonti">
+          <p class="text-white text-[70px] font-mainFont">
             GMT HOSPITALITY
           </p>
-          <p class="text-white font-wvrili text-[40px]">Traveller insights</p>
+          <p class="text-white font-wvrili text-[30px] font-fancyFont">Traveller insights</p>
         </div>
 
         <div
@@ -30,11 +30,13 @@ import mainLayout from "../../layouts/mainLayout.vue";
           </p>
 
           <div class="flex items-center mb justify-center">
-            <i class="fa-solid text-white fa-utensils mr-3"></i>
-            <p class="flex text-white">DINING FACILITIES</p>
+            
+            <svg  xmlns="http://www.w3.org/2000/svg" class="mr-2 w-8" viewBox="0 0 256 256"><rect fill="none"></rect><path d="M212,32V224a8,8,0,0,1-16,0V168H148a8.2,8.2,0,0,1-6-2.7,8.1,8.1,0,0,1-2-6.2,412.8,412.8,0,0,1,11.8-59.3c12-42.4,28.7-67.8,49.5-75.3A7.9,7.9,0,0,1,212,32ZM127.9,78.7l-8-48a8,8,0,1,0-15.8,2.6L110.6,72H92V32a8,8,0,0,0-16,0V72H57.4l6.5-38.7a8,8,0,1,0-15.8-2.6l-8,48h0A4.9,4.9,0,0,0,40,80a44.1,44.1,0,0,0,36,43.3V224a8,8,0,0,0,16,0V123.3A44.1,44.1,0,0,0,128,80a4.9,4.9,0,0,0-.1-1.2Z" fill="gray"></path></svg>  
+            <p class="flex text-neutral-300">DINING FACILITIES</p>
+
           </div>
           <i class="fa-solid text-white text-[22px] fa-chevron-down"></i>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /> </svg>
+          <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /> </svg>
                </div>
       </div>
       <!-- მეორე ნაწილი -->
