@@ -18,6 +18,7 @@ const router = createRouter({
       name: 'News',
       component: () => import('../views/Pages/News.vue')
     },
+    {
       path: '/events',
       component: () => RouterView,
       children: [
