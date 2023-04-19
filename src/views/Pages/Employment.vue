@@ -4,7 +4,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
 <template>
   <main-layout>
     <h1 class="text-center font-bold text-3xl pb-12">EMPLOYMENT</h1>
-    <div class="container ">
+    <div class="container pb-[100px]">
       <div class="justify-center flex px-[150px] gap-[15px] pb-1.5">
         <div class="w-full p-6 bg-white border border-gray-300  ">
           <div class="flex">
