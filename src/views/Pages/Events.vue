@@ -18,29 +18,24 @@ import mainLayout from "../../layouts/mainLayout.vue";
       >
         <form class="flex flex-wrap justify-between z-0">
           <div>
-            <input class="placeholder-gray-500 border" placeholder="Location">
-            
-              
-              <div
-                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-              >
-                
-              </div>
-           
+            <input class="placeholder-gray-500 border" placeholder="Location" />
+
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            ></div>
           </div>
 
           <div class="mb-4 mr-2">
-            <input class="placeholder-gray-500 border" placeholder="Date">
+            <input class="placeholder-gray-500 border" placeholder="Date" />
           </div>
 
-           <div>
-            <input class="placeholder-gray-500 border" placeholder="Type" data-dropdown-toggle="dropdown" >
-
-           </div>
-           
-               
-            
-         
+          <div>
+            <input
+              class="placeholder-gray-500 border"
+              placeholder="Type"
+              data-dropdown-toggle="dropdown"
+            />
+          </div>
 
           <div class="justify-end mt-6">
             <button
