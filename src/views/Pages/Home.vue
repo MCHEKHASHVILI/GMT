@@ -1,5 +1,7 @@
 <script setup>
+
 import mainLayout from "../../layouts/mainLayout.vue";
+
 </script>
 <template>
   <main-layout>
@@ -15,7 +17,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
         </div>
 
         <div
-          class="flex border-t-[1px] border-gray-700 w-[100%] pt-8 flex-col justify-center mb-[20px] items-center"
+          class="flex  w-[100%] pt-8 flex-col justify-center mb-[20px] items-center"
         >
           <p class="text-white text-[23px] font-[arial] mb-3">
             TOURISM INSIDE OUT
@@ -32,7 +34,8 @@ import mainLayout from "../../layouts/mainLayout.vue";
             <p class="flex text-white">DINING FACILITIES</p>
           </div>
           <i class="fa-solid text-white text-[22px] fa-chevron-down"></i>
-        </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /> </svg>
+               </div>
       </div>
       <!-- მეორე ნაწილი -->
       <div class="">
@@ -141,3 +144,8 @@ import mainLayout from "../../layouts/mainLayout.vue";
     </div>
   </main-layout>
 </template>
+
+<style>
+
+
+</style>
