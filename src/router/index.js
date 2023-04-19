@@ -14,6 +14,10 @@ const router = createRouter({
       component: () => import('../views/Pages/About.vue')
     },
     {
+      path: '/News',
+      name: 'News',
+      component: () => import('../views/Pages/News.vue')
+    },
       path: '/events',
       name: 'events',
       component: () => import('../views/Pages/Events.vue')
@@ -27,7 +31,7 @@ const router = createRouter({
       path: '/eventsContent',
       name: 'EventsContent',
       component: () => import('../views/Pages/EventsContent.vue')
-    },
+    }
   ]
 })
 
