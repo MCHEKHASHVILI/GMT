@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.26",
+    "node-modules": "^1.0.1",
+    "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vuex": "^4.0.2"
   },
