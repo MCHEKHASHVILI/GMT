@@ -38,14 +38,14 @@ import mainLayout from "../../layouts/mainLayout.vue";
                </div>
       </div>
       <!-- მეორე ნაწილი -->
-      <div class="">
-        <div class="flex w-[100%] items-center justify-start">
+      <div class="h-[250vh]">
+        <div class="flex w-[100%] h-[25%] items-center justify-start">
           <img
             class="w-[50%] h-[100%]"
             src="https://check24.ge/storage/gastronomy/248/gallery/6UVPl-1627999563-mpxnY.jpg"
             alt=""
           />
-          <div class="w-[50%] flex flex-col ml-[5%]">
+          <div class="w-[50%] h-[100%] justify-center flex flex-col ml-[5%]">
             <img
               class="w-[200px] mb-10 ml-[-20px]"
               src="https://i.ibb.co/wCT03tr/596e27ljb1c75l4-removebg-preview.png"
@@ -53,32 +53,28 @@ import mainLayout from "../../layouts/mainLayout.vue";
             />
             <p class="font-bold mb-10 text-xl">FUNICULAR</p>
             <p class="mb-6 w-[50%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              similique, debitis, eligendi, reprehenderit amet officia
-              voluptatem sunt nihil ea quos nostrum explicabo placeat impedit!
-              Sunt delectus ducimus corrupti dolorem sunt nihil ea quos nostrum
-              explicabo placeat impedit! Sunt delectus ducimus corrupti dolorem
-              impedit?
+              Lorem ipsum, lore dolor sit amet consectetur adipisicing elit.
+              Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
+              at quod. Laudantium maxime illum, dolores quisquam autem explicabo
+              sapiente natus quod nisi dolore.
             </p>
             <p class="flex text-orange-300">read more</p>
           </div>
         </div>
 
-        <div class="flex w-[100%] items-center justify-start">
-          <div class="w-[50%] items-end text-end flex flex-col mr-[5%]">
+        <div class="flex w-[100%] h-[25%] items-center justify-start">
+          <div class="w-[50%] h-[100%] justify-center items-end text-end flex flex-col mr-[5%]">
             <img
               class="w-[200px] mb-10 ml-[-20px]"
               src="https://i.imgur.com/YdLM7hD.png"
               alt=""
             />
             <p class="font-bold mb-10 text-xl">PURI GULIANI</p>
-            <p class="mb-6 w-[50%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              similique, debitis, eligendi, reprehenderit amet officia
-              voluptatem sunt nihil ea quos nostrum explicabo placeat impedit!
-              Sunt delectus ducimus corrupti dolorem sunt nihil ea quos nostrum
-              explicabo placeat impedit! Sunt delectus ducimus corrupti dolorem
-              impedit?
+            <p class="mb-6 w-[50%] ">
+              Lorem ipsum, lore dolor sit amet consectetur adipisicing elit.
+              Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
+              at quod. Laudantium maxime illum, dolores quisquam autem explicabo
+              sapiente natus quod nisi dolore.
             </p>
             <p class="flex text-orange-300">read more</p>
           </div>
@@ -91,13 +87,13 @@ import mainLayout from "../../layouts/mainLayout.vue";
 
         <!-- ------------ -->
 
-        <div class="flex w-[100%] items-center justify-start">
+        <div class="flex w-[100%] h-[25%] items-center justify-start">
           <img
             class="w-[50%] h-[100%]"
-            src="https://imageproxy.wolt.com/venue/5d1cbb2ac53e3955d9a37fb2/2843d250a6251fe3eb26cc70fa3b628e"
+            src="https://iguide.ge/uploads/610c55da34423.jpg"
             alt=""
           />
-          <div class="w-[50%] flex flex-col ml-[5%]">
+          <div class="w-[50%] h-[100%] justify-center  flex flex-col ml-[5%]">
             <img
               class="w-[200px] mb-10 ml-[-20px]"
               src="https://i.imgur.com/T26hDxW.png"
@@ -105,19 +101,18 @@ import mainLayout from "../../layouts/mainLayout.vue";
             />
             <p class="font-bold mb-10 text-xl">PURI GULIANI EXPRESS</p>
             <p class="mb-6 w-[50%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              similique, debitis, eligendi, reprehenderit amet officia
-              voluptatem sunt nihil ea quos nostrum explicabo placeat impedit!
-              Sunt delectus ducimus corrupti dolorem sunt nihil ea quos nostrum
-              explicabo placeat impedit! Sunt delectus ducimus corrupti dolorem
-              impedit?
+              Lorem ipsum, lore dolor sit amet consectetur adipisicing elit.
+              Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
+              at quod. Laudantium maxime illum, dolores quisquam autem explicabo
+              sapiente natus quod nisi dolore.
+          
             </p>
             <p class="flex text-orange-300">read more</p>
           </div>
         </div>
 
-        <div class="flex w-[100%] items-center justify-start">
-          <div class="w-[50%] items-end text-end flex flex-col mr-[5%]">
+        <div class="flex w-[100%] items-center h-[25%] justify-start">
+          <div class="w-[50%] h-[100%] justify-center items-end text-end flex flex-col mr-[5%]">
             <img
               class="w-[350px] mb-10 ml-[-20px]"
               src="https://i.imgur.com/YtYjJD8.png"
@@ -125,12 +120,10 @@ import mainLayout from "../../layouts/mainLayout.vue";
             />
             <p class="font-bold mb-10 text-xl">RIGI GASTRODUQAN</p>
             <p class="mb-6 w-[50%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              similique, debitis, eligendi, reprehenderit amet officia
-              voluptatem sunt nihil ea quos nostrum explicabo placeat impedit!
-              Sunt delectus ducimus corrupti dolorem sunt nihil ea quos nostrum
-              explicabo placeat impedit! Sunt delectus ducimus corrupti dolorem
-              impedit?
+              Lorem ipsum, lore dolor sit amet consectetur adipisicing elit.
+              Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
+              at quod. Laudantium maxime illum, dolores quisquam autem explicabo
+              sapiente natus quod nisi dolore.
             </p>
             <p class="flex text-orange-300">read more</p>
           </div>
