@@ -3,8 +3,8 @@
         <div class="">
             <div class="bg-black text-white flex gap-[240px] pb-[25px]">
                 <div class="leftSide pt-[60px] pl-[200px]">
-                    <h1 class="text-3xl">GMT HOSPITALITY</h1>
-                    <p class="ml-[50px]">Traveller insights</p>
+                    <h1 class="text-3xl font-mainFont">GMT HOSPITALITY</h1>
+                    <p class="ml-[50px] font-fancyFont">Traveller insights</p>
                 </div>
                 <div class="grid grid-cols-2 gap-[54px] pt-[60px] lg: md:grid-cols-4">
                     <div class="">
