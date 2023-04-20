@@ -7,7 +7,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
       <div
         class="flex w-[100%] items-center justify-between flex-col bg-black h-[120vh]"
       >
-        <div class="flex flex-col mt-auto h-[50%] items-center">
+        <div class="flex flex-col mt-auto  h-[50%] items-center">
           <p class="text-white text-[70px] font-sataurisFonti">
             GMT HOSPITALITY
           </p>
