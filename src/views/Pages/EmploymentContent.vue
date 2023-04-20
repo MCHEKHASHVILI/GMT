@@ -4,7 +4,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
 
 <template>
   <main-layout>
-    <div class="flex flex-col space-y-[2.5%] w-[75%] mx-[12.5%] my-[5%]">
+    <div class="flex flex-col space-y-[2.5%] w-auto mx-[12.5%] my-[5%]">
       <div class="flex space-x-[2.5%]">
         <div class="w-[10%]">
           <img
@@ -85,7 +85,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
           </table>
         </div>
         <div>
-          <p class="text-gray-500">match 25, 2023 &#183; 10:25</p>
+          <p class="text-gray-500">march 25, 2023 &#183; 10:25</p>
         </div>
       </div>
     </div>
