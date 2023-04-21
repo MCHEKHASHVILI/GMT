@@ -7,14 +7,12 @@ import mainLayout from "../../layouts/mainLayout.vue";
       EVENTS
     </h1>
 
-    <br />
-
     <div class="flex flex-row">
       <div>
-        <div class="translate-x-[80px] translate-y-[100px]">
+        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
           <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
         </div>
-        <div class="translate-x-[80px] translate-y-[100px]">
+        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium ">
           <h2>CONNECTED!</h2>
         </div>
         <!-- form -->
