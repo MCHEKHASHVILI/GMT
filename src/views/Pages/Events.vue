@@ -86,7 +86,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
               </div>
               <div class="relaitve">
                 <button
-                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700  font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
+                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   DISCOVER EVENTS
@@ -113,6 +113,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
       >
         <!-- card -->
 
+       
         <div class="max-w flex flex-col">
           <div>
             <img
@@ -124,39 +125,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
             Jazz up your night: Join us for live music and delicious dinning at
             our restaurant!
           </h5>
-          <div class="text-center px-6 pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 translate-y-1  text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
-        </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class="text-center px-6 pt-4 pb-2">
+          <div class="pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
@@ -188,7 +157,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
             Jazz up your night: Join us for live music and delicious dinning at
             our restaurant!
           </h5>
-          <div class="text-center px-6 pt-4 pb-2">
+          <div class="pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
@@ -220,7 +189,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
             Jazz up your night: Join us for live music and delicious dinning at
             our restaurant!
           </h5>
-          <div class="text-center px-6 pt-4 pb-2">
+          <div class=" pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
@@ -252,7 +221,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
             Jazz up your night: Join us for live music and delicious dinning at
             our restaurant!
           </h5>
-          <div class="text-center px-6 pt-4 pb-2">
+          <div class=" pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
@@ -284,7 +253,39 @@ import mainLayout from "../../layouts/mainLayout.vue";
             Jazz up your night: Join us for live music and delicious dinning at
             our restaurant!
           </h5>
-          <div class="text-center px-6 pt-4 pb-2">
+          <div class=" pt-4 pb-2">
+            <span
+              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >Jazz</span
+            >
+            <span
+              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >Price: 150 Gel</span
+            >
+            <span
+              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >March 25,2023 | 10:25</span
+            >
+          </div>
+          <div
+            href="#"
+            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
+          >
+            VIEW DETAILS
+          </div>
+        </div>
+        <div class="max-w flex flex-col">
+          <div>
+            <img
+              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+              alt="jazzpic"
+            />
+          </div>
+          <h5 class="text-2xl md:text-xl font-medium mt-3">
+            Jazz up your night: Join us for live music and delicious dinning at
+            our restaurant!
+          </h5>
+          <div class="pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
