@@ -3,7 +3,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center mb-20 md:text-3xl font-medium mt-3">
+    <h1 class="flex justify-center  md:text-2xl font-medium mt-3">
       EVENTS
     </h1>
 
