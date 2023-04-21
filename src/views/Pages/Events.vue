@@ -3,16 +3,18 @@ import mainLayout from "../../layouts/mainLayout.vue";
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center  md:text-2xl font-medium mt-3">
-      EVENTS
-    </h1>
+    <h1 class="flex justify-center md:text-2xl font-medium mt-3">EVENTS</h1>
 
     <div class="flex flex-row">
       <div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
+        <div
+          class="translate-x-[80px] translate-y-[100px] text-2xl font-medium"
+        >
           <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
         </div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium ">
+        <div
+          class="translate-x-[80px] translate-y-[100px] text-2xl font-medium"
+        >
           <h2>CONNECTED!</h2>
         </div>
         <!-- form -->
@@ -84,7 +86,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
               </div>
               <div class="relaitve">
                 <button
-                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700  font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   DISCOVER EVENTS
@@ -124,7 +126,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
           </h5>
           <div class="text-center px-6 pt-4 pb-2">
             <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              class="inline-block bg-gray-200 px-8 py-1 translate-y-1  text-sm font-semibold text-gray-700 mr-2 mb-2"
               >Jazz</span
             >
             <span
