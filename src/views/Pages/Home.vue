@@ -1,7 +1,5 @@
 <script setup>
-
 import mainLayout from "../../layouts/mainLayout.vue";
-
 </script>
 <template>
   <main-layout>
@@ -41,13 +39,14 @@ import mainLayout from "../../layouts/mainLayout.vue";
       </div>
       <!-- მეორე ნაწილი -->
       <div class="h-[250vh]">
-        <div class="flex w-[100%] h-[25%] items-center justify-start">
+
+              <div class="flex w-[100%] h-[25%] items-center justify-start">
           <img
             class="w-[50%] h-[100%]"
             src="https://check24.ge/storage/gastronomy/248/gallery/6UVPl-1627999563-mpxnY.jpg"
             alt=""
           />
-          <div class="w-[50%] h-[100%] justify-center flex flex-col ml-[5%]">
+          <div class="w-[50%] h-[100%] justify-center  flex flex-col ml-[5%]">
             <img
               class="w-[200px] mb-10 ml-[-20px]"
               src="https://i.ibb.co/wCT03tr/596e27ljb1c75l4-removebg-preview.png"
@@ -59,20 +58,21 @@ import mainLayout from "../../layouts/mainLayout.vue";
               Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
               at quod. Laudantium maxime illum, dolores quisquam autem explicabo
               sapiente natus quod nisi dolore.
+          
             </p>
             <p class="flex text-orange-300">read more</p>
           </div>
         </div>
 
-        <div class="flex w-[100%] h-[25%] items-center justify-start">
+        <div class="flex w-[100%] items-center h-[25%] justify-start">
           <div class="w-[50%] h-[100%] justify-center items-end text-end flex flex-col mr-[5%]">
             <img
-              class="w-[200px] mb-10 ml-[-20px]"
+            class="w-[200px] mb-10 ml-[-20px]"
               src="https://i.imgur.com/YdLM7hD.png"
               alt=""
             />
             <p class="font-bold mb-10 text-xl">PURI GULIANI</p>
-            <p class="mb-6 w-[50%] ">
+            <p class="mb-6 w-[50%]">
               Lorem ipsum, lore dolor sit amet consectetur adipisicing elit.
               Repellat ullam id debitis nulla? Eligendi doloribus exercitationem
               at quod. Laudantium maxime illum, dolores quisquam autem explicabo
@@ -82,7 +82,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
           </div>
           <img
             class="w-[50%] h-[100%]"
-            src="https://www.ton.eu/Resizer/img.ashx?src=/root/content/references/2019/Puri-Guliani-bakery/2.jpg&bin=1&t=22"
+            src="https://img.marketer.ge/2018/05/60704868_2383556391889316_7705561032881602560_n.jpg"
             alt=""
           />
         </div>
