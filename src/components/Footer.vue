@@ -9,7 +9,7 @@
                 <div class="grid grid-cols-2 gap-[54px] pt-[60px] lg: md:grid-cols-4">
                     <div class="">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/">
+                            <router-link to="/brands">
                             <li class="mb-4 text-sm	font-normal	">
                                 <p class="mr-4  md:mr-6 text-slate-100">BRANDS</p>
                             </li>
