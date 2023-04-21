@@ -14,6 +14,11 @@ const router = createRouter({
             component: () => import('../views/Pages/About.vue')
         },
         {
+            path: '/brands',
+            name: 'Brands',
+            component: () => import('../views/Pages/Brands.vue')
+        },
+        {
             path: '/news',
             component: () => RouterView,
             children: [
