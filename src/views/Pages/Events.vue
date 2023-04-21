@@ -6,55 +6,103 @@ import mainLayout from "../../layouts/mainLayout.vue";
     <h1 class="flex justify-center mb-20 md:text-3xl font-medium mt-3">
       EVENTS
     </h1>
+
     <br />
 
-    <!-- form -->
-    <!-- <div>
-      <h2 class="flex pl-20 mb:text-xl font-medium mt-3">
-        DON'T MISS OUT ON OUR EVENTS-STAY CONNECTED!
-      </h2>
-      <div
-        class="mx-60 relative mb-[-245px] ml-[87px] pr-20 pl-20 bg-gray-50 p-2 border shadow-md"
-      >
-        <form class="flex flex-wrap justify-between z-0">
-          <div>
-            <input class="placeholder-gray-500 border" placeholder="Location" />
+    <div class="flex flex-row">
+      <div>
+        <div class="translate-x-[80px] translate-y-[100px]">
+          <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
+        </div>
+        <div class="translate-x-[80px] translate-y-[100px]">
+          <h2>CONNECTED!</h2>
+        </div>
+        <!-- form -->
+        <div class="absolute">
+          <div
+            class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]"
+          >
+            <form class="w-full max-w-md- flex justify-between h-[90px]">
+              <div class="px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="location"
+                >
+                </label>
+                <div class="relative">
+                  <select
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="location"
+                  >
+                    <option disabled selected>Location</option>
+                    <option>#</option>
+                    <option>#</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  >
+                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                      <path d="M10 12l-6-6h12z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
 
-            <div
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-            ></div>
+              <div class="px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="date"
+                >
+                </label>
+                <input
+                  class="h-[62px] w-[190px] mt-[13px] appearance-none block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="date"
+                  type="date"
+                  placeholder="Date"
+                />
+              </div>
+              <div class="px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="type"
+                >
+                </label>
+                <div class="relative">
+                  <select
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="type"
+                  >
+                    <option disabled selected>Type</option>
+                    <option>#</option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                  >
+                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                      <path d="M10 12l-6-6h12z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="relaitve">
+                <button
+                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+                  type="button"
+                >
+                  DISCOVER EVENTS
+                </button>
+              </div>
+            </form>
           </div>
-
-          <div class="mb-4 mr-2">
-            <input class="placeholder-gray-500 border" placeholder="Date" />
-          </div>
-
-          <div>
-            <input
-              class="placeholder-gray-500 border"
-              placeholder="Type"
-              data-dropdown-toggle="dropdown"
-            />
-          </div>
-
-          <div class="justify-end mt-6">
-            <button
-              class="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              DISCOVER EVENTS
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
-      <div grid-cols-2>
-        <img
-          class="h-auto pr-20 max-w-lg ml-auto"
-          src="https://takelessons.com/blog/wp-content/uploads/2017/11/is-cello-hard-to-learn.jpeg "
-          alt="Chello"
-        />
-      </div>
-    </div> -->
+    </div>
+    <div class="pr-[80px]">
+      <img
+        class="ml-auto w-[675px] h-[300px]"
+        src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/black-and-white-cello-kathy-franklin.jpg"
+      />
+    </div>
     <br />
     <div
       class="flex items-center justify-center min-h-screen container mx-auto"
@@ -96,7 +144,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
         <div class="max-w flex flex-col">
           <div>
@@ -129,7 +176,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
         <div class="max-w flex flex-col">
           <div>
@@ -162,7 +208,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
         <div class="max-w flex flex-col">
           <div>
@@ -195,7 +240,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
         <div class="max-w flex flex-col">
           <div>
@@ -228,7 +272,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
         <div class="max-w flex flex-col">
           <div>
@@ -261,7 +304,6 @@ import mainLayout from "../../layouts/mainLayout.vue";
           >
             VIEW DETAILS
           </div>
-          
         </div>
       </div>
     </div>
