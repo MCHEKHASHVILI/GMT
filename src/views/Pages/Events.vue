@@ -1,5 +1,58 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
+import { ref } from "vue";
+const location= ref("Location")
+const date=ref("Date")
+const type=ref("Type")
+
+const events= [
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 25,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 25,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 2,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 20,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 23,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   {
+      id: "Jazz",
+      price: "150 Gel",
+      date: "March 21,2023 | 10:25",
+      image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+      tittle: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
+   },
+   
+  
+]
+
+
 </script>
 <template>
   <main-layout>
@@ -30,11 +83,11 @@ import mainLayout from "../../layouts/mainLayout.vue";
                 >
                 </label>
                 <div class="relative">
-                  <select
+                  <select v-model="location" 
                     class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="location"
                   >
-                    <option disabled selected>Location</option>
+                    <option disabled selected >Location</option>
                     <option>#</option>
                     <option>#</option>
                   </select>
@@ -54,7 +107,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
                   for="date"
                 >
                 </label>
-                <input
+                <input v-model="date"
                   class="h-[62px] w-[190px] mt-[13px] appearance-none block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
                   id="date"
                   type="date"
@@ -68,7 +121,7 @@ import mainLayout from "../../layouts/mainLayout.vue";
                 >
                 </label>
                 <div class="relative">
-                  <select
+                  <select v-model="type"
                     class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
                     id="type"
                   >
@@ -113,30 +166,28 @@ import mainLayout from "../../layouts/mainLayout.vue";
       >
         <!-- card -->
 
-       
-        <div class="max-w flex flex-col">
+        <div v-for="event in events" class="max-w flex flex-col">
           <div>
             <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
+              :src="event.image"
               alt="jazzpic"
             />
           </div>
           <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
+            {{ event.tittle }}
           </h5>
           <div class="pt-4 pb-2">
             <span
               class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
+              >{{ event.id }}</span
             >
             <span
               class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
+              >{{ event.price }}</span
             >
             <span
               class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
+              >{{ event.date }}</span
             >
           </div>
           <div
@@ -146,167 +197,9 @@ import mainLayout from "../../layouts/mainLayout.vue";
             VIEW DETAILS
           </div>
         </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class="pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
-        </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class=" pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
-        </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class=" pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
-        </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class=" pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
-        </div>
-        <div class="max-w flex flex-col">
-          <div>
-            <img
-              src="https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng="
-              alt="jazzpic"
-            />
-          </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
-            Jazz up your night: Join us for live music and delicious dinning at
-            our restaurant!
-          </h5>
-          <div class="pt-4 pb-2">
-            <span
-              class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Jazz</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >Price: 150 Gel</span
-            >
-            <span
-              class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >March 25,2023 | 10:25</span
-            >
-          </div>
-          <div
-            href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95"
-          >
-            VIEW DETAILS
-          </div>
+      
         </div>
       </div>
-    </div>
+    
   </main-layout>
 </template>
