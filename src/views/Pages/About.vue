@@ -61,8 +61,8 @@ const information={
       class="mb-2 text-xl font-medium ">
      {{ item?.name }}
     </h2>
-    <h3>
-      <a class="underline decoration-amber-500 underline-offset-8">  {{ item?.title }}</a>
+    <h3 class="underline decoration-amber-500 underline-offset-8">
+       {{ item?.title }}
     </h3>
     
     <p class=" text-sm mt-6">
