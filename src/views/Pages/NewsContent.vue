@@ -1,13 +1,15 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
+
+
 </script>
 
 <template>
     <main-layout>
-        <div class="flex flex-col space-y-[-1%]">
-            <img src="https://images.pexels.com/photos/866398/pexels-photo-866398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="mx-auto mt-5 mb-8  " alt="">
-            <h1 class="  pl-[129px] text-2xl font-bold pb-4 mb-1">UNWTO UPDATE PROJECTIONS OF THE IMPACT OF COVID-19 ON TOURISM</h1>
-            <div class="mx-auto text-base  pr-20 pl-[129px] text-left mb-4 ">
+        <div class="flex flex-col  mx-[11%]">
+            <img src="https://images.pexels.com/photos/866398/pexels-photo-866398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class=" mt-5 mb-8  " alt="">
+            <h1 class=" text-2xl font-bold mb-4">UNWTO UPDATE PROJECTIONS OF THE IMPACT OF COVID-19 ON TOURISM</h1>
+            <div class=" text-base text-left mb-4 ">
                 <p class="mb-4">Lorem ipsum dolor sit amet
                     consectetur, adipisicing elit. At fugiat
                     tempora
