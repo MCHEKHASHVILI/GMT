@@ -9,20 +9,20 @@ import mainLayout from '../../layouts/mainLayout.vue';
          saepe culpa fugiat optio mollitia quas inventore maxime est hic,
          suscipit quisquam debitis dolore nobis! </p>
     </div>
-    <ul class="ms-8">
+    <ul class="ml-20 mr-12 mt-16 ">
       <li
-  class="flex mt-8">
+  class="flex mt-16">
   <img
-    class=" w-full md:w-48  "
+    class=" w-full  md:w-64   "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
-  <li class="flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6">
     <h2
       class="mb-2 text-xl font-medium ">
       NAME SURNAME
     </h2>
     <h3>
-      <a class="underline decoration-amber-600 underline-offset-8">  F&B Pr</a>oduct Development and Operations
+      <a class="underline decoration-amber-500 underline-offset-8">  F&B Pr</a>oduct Development and Operations
     </h3>
     
     <p class=" text-sm mt-6">
@@ -34,21 +34,21 @@ import mainLayout from '../../layouts/mainLayout.vue';
      Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam.
     </p>
    
-  </li>
+  </div>
 </li>
 <li
-  class="flex mt-8 ">
+  class="flex mt-16  ">
   <img
-    class=" w-full md:w-48  "
+    class=" w-full md:w-64  "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
-  <li class="flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6">
     <h2
       class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
-      <a class="underline decoration-amber-600 underline-offset-8">  F&B Pr</a>oduct Development and Operations
+      <a class="underline decoration-amber-500 underline-offset-8">  F&B Pr</a>oduct Development and Operations
     </h3>
     
     <p class=" text-sm mt-6">
@@ -60,21 +60,21 @@ import mainLayout from '../../layouts/mainLayout.vue';
      Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam.
     </p>
    
-  </li>
+  </div>
 </li>
 <li
-  class="flex mt-8  ">
+  class="flex mt-16   ">
   <img
-    class=" w-full md:w-48  "
+    class=" w-full md:w-64  "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
-  <li class="flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6">
     <h2
       class="mb-2 text-xl font-medium ">
       NAME SURNAME
     </h2>
     <h3>
-      <a class="underline decoration-amber-600 underline-offset-8">  F&B Pr</a>oduct Development and Operations
+      <a class="underline decoration-amber-500 underline-offset-8">  F&B Pr</a>oduct Development and Operations
     </h3>
     
     <p class=" text-sm mt-6">
@@ -86,21 +86,21 @@ import mainLayout from '../../layouts/mainLayout.vue';
      Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam.
     </p>
    
-  </li>
+  </div>
 </li>
 <li
-  class="flex mt-8  ">
+  class="flex mt-14  ">
   <img
-    class=" w-full md:w-48  "
+    class=" w-full md:w-64 "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
-  <li class="flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6">
     <h2
       class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
-      <a class="underline decoration-amber-600 underline-offset-8">  F&B Pr</a>oduct Development and Operations
+      <a class="underline decoration-amber-500 underline-offset-8">  F&B Pr</a>oduct Development and Operations
     </h3>
     
     <p class=" text-sm mt-6">
@@ -112,21 +112,21 @@ import mainLayout from '../../layouts/mainLayout.vue';
      Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam.
     </p>
    
-  </li>
+  </div>
 </li>
 <li
-  class="flex mt-8  ">
+  class="flex mt-14 ">
   <img
-    class=" w-full md:w-48  "
+    class=" w-full md:w-64  "
     src="https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg"
     alt="" />
-  <li class="flex flex-col justify-start p-6">
+  <div class="flex flex-col justify-start p-6">
     <h2
       class="mb-2 text-xl font-medium">
       NAME SURNAME
     </h2>
     <h3>
-      <a class="underline decoration-amber-600 underline-offset-8">  F&B Pr</a>oduct Development and Operations
+      <a class="underline decoration-amber-500 underline-offset-8">  F&B Pr</a>oduct Development and Operations
     </h3>
     
     <p class=" text-sm mt-6">
@@ -138,7 +138,7 @@ import mainLayout from '../../layouts/mainLayout.vue';
      Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam.
     </p>
    
-  </li>
+  </div>
 </li>
     </ul>
   </main-layout>
