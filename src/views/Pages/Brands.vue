@@ -1,5 +1,5 @@
 <script setup>
-import mainLayout from '../../layouts/mainLayout.vue';
+// import mainLayout from '../../layouts/mainLayout.vue';
 const introduction = {
     title: 'brands',
     pharagrap: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos, reiciendis accusamus atque, 
