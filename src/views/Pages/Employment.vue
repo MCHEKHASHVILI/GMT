@@ -26,9 +26,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
               <p>march 25, 2023 - 10:25</p>
             </div>
             <div class="ml-[180px]">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+              <router-link to="/employment/1" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
                 VIEW DETAILS
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -52,9 +52,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
               <p>march 25, 2023 - 10:25</p>
             </div>
             <div class="ml-[180px]">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+              <router-link to="/employment/2" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
                 VIEW DETAILS
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -81,9 +81,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
               <p>march 25, 2023 - 10:25</p>
             </div>
             <div class="ml-[180px]">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+              <router-link to="/employment/3" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
                 VIEW DETAILS
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -108,9 +108,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
               <p>march 25, 2023 - 10:25</p>
             </div>
             <div class="ml-[180px]">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
+              <router-link to="/employment/4" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
                 VIEW DETAILS
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -137,9 +137,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
               <p>march 25, 2023 - 10:25</p>
             </div>
             <div class="ml-[180px]">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
+              <router-link to="/employment/5" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
                 VIEW DETAILS
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -164,9 +164,9 @@ import mainLayout from '../../layouts/mainLayout.vue';
             <p>march 25, 2023 - 10:25</p>
           </div>
           <div class="ml-[180px]">
-            <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
+            <router-link to="/employment/6" class="inline-flex items-center px-[50px] py-4 text-sm text-center text-black bg-zinc-100">
               VIEW DETAILS
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
