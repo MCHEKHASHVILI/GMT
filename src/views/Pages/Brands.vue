@@ -55,6 +55,7 @@ const facilities = [
         
 ]
 const more = 'read more'
+
 </script>
 <template>
     <!-- <mainLayout> -->
