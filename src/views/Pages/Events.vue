@@ -141,8 +141,9 @@ const filterEvents = () => {
         </div>
       </div>
     </div>
-    <div class="pr-[80px] ">
-      <img class="ml-auto w-3/4 sm:w-11/12 h-1/3 sm:h-[300px] "
+    
+    <div class="pr-[80px]">
+      <img class="ml-auto w-[675px] h-[300px]"
         src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/black-and-white-cello-kathy-franklin.jpg" />
     </div>
     <br />
