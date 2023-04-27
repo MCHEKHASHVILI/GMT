@@ -12,7 +12,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
   },
   { 
@@ -24,7 +24,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
    },
    { 
@@ -36,7 +36,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
    },
    { 
@@ -48,7 +48,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
    },
    { 
@@ -60,7 +60,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
    },
    { 
@@ -72,7 +72,7 @@ const items = ref([
     description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae amet veniam, est nisi alias nobis eligendi quo odio asperiores corrupti quibusdam beataedolorem dolore. Unde fugit consectetur placeat ullam eaque?",
     time: "Full time",
     time2: "00:09-00:17:00",
-    date: "march 25, 2023 - 10:25",
+    date: "march 25, 2023  10:25",
     detail: "VIEW DETAILS",
    },
 ])
@@ -83,26 +83,26 @@ const items = ref([
   <main-layout>
     <h1 class="text-center font-bold text-3xl pb-12">EMPLOYMENT</h1>
     <div class="container pb-[100px]">
-      <div class="justify-center grid grid-cols-2 px-[150px] gap-[15px] pb-1.5">
-        <div v-for="item in items" class="w-full p-6 bg-white border border-gray-300 ">
-          <div class="flex">
+      <div class="md:grid md:grid-cols-1 sm:grid-cols-1 sm:grid justify-center grid grid-cols-2 px-[150px] gap-[15px] pb-1.5 ">
+        <div v-for="item in items" class="w-full p-6 bg-white border border-gray-300 sm:pb-[0px] md:pb-[0px]">
+          <div class="sm:grid md:grid flex ">
             <img class="h-12" :src="item.logo">
-            <div>
-              <h2 class="font-medium md:font-bold">{{item.title}}</h2>
+            <div class="sm:translate-y-[-48px] sm:translate-x-[80px] md:translate-x-[80px] md:translate-y-[-48px]">
+              <h2 class=" font-medium md:font-bold">{{item.title}}</h2>
               <h2 class="font-medium md:font-bold">{{item.name}}</h2>
             </div>
-            <div class="py-6 ml-auto">
+            <div class="sm:translate-y-[-48px] sm:ml-0 py-6 ml-auto md:translate-y-[-48px] md:ml-0 md:sm:translate-y-[-48px] ">
               <h2 class="font-medium md:font-bold">{{item.money}}</h2>
             </div>
           </div>
-          <p class="mb-3 font-normal text-gray-700 dark:text-black">{{item.description}}</p>
-          <div class="flex">
-            <div>
-              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> {{ item.time2 }}</p>
+          <p class="sm:translate-y-[-48px] md:translate-y-[-48px] mb-3 font-normal text-gray-700 dark:text-black">{{item.description}}</p>
+          <div class="sm:block md:block flex">
+            <div class="sm:translate-y-[-48px] md:translate-y-[-48px]">
+              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> <span class="sm:pl-[30px] md:pl-[30px] ">{{ item.time2 }}</span></p>
               <p>{{item.date}}</p>
             </div>
-            <div class="ml-auto">
-              <a href="#" class="inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+            <div class="sm:translate-y-[-40px] md:translate-y-[-30px] ml-auto">
+              <a href="#" class="sm:px-[100px]  md:px-[100px] inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
                 {{item.detail}}
               </a>
             </div>
