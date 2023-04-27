@@ -14,6 +14,10 @@ module.exports = {
         'sm': {'max': '639px'},
       }
     },
+    fontFamily: {
+      fancyFont: ['Pacifico', 'cursive'],
+      mainFont: ['PT Serif', 'serif']
+    }
   },
   plugins: [],
 }
