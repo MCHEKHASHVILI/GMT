@@ -1,10 +1,20 @@
+
+<script setup>
+
+  const navbarComponents = [
+    {routerLink: "/brands", name: "BRANDS" },
+    {routerLink: "/reservation", name: "RESERVATION" },
+    {routerLink: "/events", name: "EVENTS" },
+    {routerLink: "/news", name: "NEWS" },
+    {routerLink: "/about", name: "ABOUT US" },
+    {routerLink: "/geo", name: "GEO" },
+    
+  ]
+
+</script>
+
 <template>
-  <ul class=" mr-[7%] flex" >
-    <li class="text-white mx-5 cursor-pointer">BRANDS</li>
-    <li class="text-white mx-5 cursor-pointer">RESERVATION</li>
-    <li class="text-white mx-5 cursor-pointer">EVENTS</li>
-    <li class="text-white mx-5 cursor-pointer">NEWS</li>
-    <li class="text-white mx-5 cursor-pointer">ABOUT US</li>
-    <li class="text-white mx-5 cursor-pointer">GEO</li>
+  <ul class="flex mr-[7%]">
+    <li v-for="component in navbarComponents" class="text-white mx-5 cursor-pointer"><router-link :to="component.routerLink">{{ component.name }}</router-link></li>
   </ul>
 </template>
