@@ -179,5 +179,3 @@ const readMore = "read more";
     </div>
 </mainLayout>
 </template>
-
-<style></style>
