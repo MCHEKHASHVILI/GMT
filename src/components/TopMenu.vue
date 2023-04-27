@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex mr-[7%]">
+  <ul class=" mr-[7%] flex" >
     <li class="text-white mx-5 cursor-pointer">BRANDS</li>
     <li class="text-white mx-5 cursor-pointer">RESERVATION</li>
     <li class="text-white mx-5 cursor-pointer">EVENTS</li>
