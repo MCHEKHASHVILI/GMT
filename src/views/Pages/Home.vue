@@ -48,8 +48,7 @@ const diningFacilities = "DINING FACILITIES";
 const readMore = "read more";
 </script>
 <template>
-  <main-layout>
-    <div>
+    <div class="w-[100vw]">
       <div
         class="flex w-[100%] items-center justify-between flex-col bg-black h-[120vh]"
       >
@@ -108,7 +107,7 @@ const readMore = "read more";
         
         <div class="flex md:mb-0 mb-4 w-[100%]  flex-col md:flex-row md:h-[25%] h-[15%]   md:items-center items-start justify-start">
           <img class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] " :src="mainContent[0].img" />
-          <div class="md:w-[50%] w-[100%]  md:h-[100%] h-[50%] justify-center flex flex-col ml-[5%]">
+          <div class="md:w-[50%] w-[100%]  md:h-[100%] h-[50%] justify-center flex flex-col md:ml-[5%] pl-4">
             <img
               class="md:w-[200px] w-[150px] md:mb-10 mb-0 md:ml-[-20px] ml-[-12px]"
               :src="mainContent[0].icon"
@@ -124,7 +123,7 @@ const readMore = "read more";
 
         <div class="flex md:mb-0 mb-4  md:flex-row md:mt-0 flex-col-reverse w-[100%] items-center md:h-[25%] h-[15%]  justify-start">
           <div
-            class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] md:justify-center justify-start md:items-end items-start md:text-end text-start flex flex-col md:mr-[5%] ml-[5%]"
+            class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] md:justify-center justify-start md:items-end items-start md:text-end text-start flex flex-col md:mr-[5%] md:ml-[5%] pl-4"
           >
             <img
               class="w-[200px] md:mb-10 mb-0 md:ml-[-20px] ml-[-3px]"
@@ -143,7 +142,7 @@ const readMore = "read more";
 
         <div class="flex md:mb-0 mb-4 w-[100%]  flex-col md:flex-row md:h-[25%] h-[15%]   md:items-center items-start justify-start">
           <img class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] " :src="mainContent[2].img" />
-          <div class="md:w-[50%] w-[100%]  md:h-[100%] h-[50%] justify-center flex flex-col ml-[5%]">
+          <div class="md:w-[50%] w-[100%]  md:h-[100%] h-[50%] justify-center flex flex-col md:ml-[5%] pl-4">
             <img
               class="md:w-[200px] w-[150px] md:mb-10 mb-0 md:ml-[-20px] ml-[-12px]"
               :src="mainContent[2].icon"
@@ -159,7 +158,7 @@ const readMore = "read more";
 
         <div class="flex md:mb-0 mb-4  md:flex-row flex-col-reverse w-[100%] items-center md:h-[25%] h-[15%]  justify-start">
           <div
-            class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] md:justify-center justify-start md:items-end items-start md:text-end text-start flex flex-col md:mr-[5%] ml-[5%]"
+            class="md:w-[50%] w-[100%] md:h-[100%] h-[50%] md:justify-center justify-start md:items-end items-start md:text-end text-start flex flex-col md:mr-[5%] md:ml-[5%] pl-4"
           >
             <img
               class="w-[200px] md:my-10 my-10 md:ml-[-20px] ml-[-3px]"
@@ -177,7 +176,6 @@ const readMore = "read more";
 
       </div>
     </div>
-  </main-layout>
 </template>
 
 <style></style>
