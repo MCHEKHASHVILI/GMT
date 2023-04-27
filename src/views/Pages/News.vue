@@ -164,10 +164,11 @@ import mainLayout from "../../layouts/mainLayout.vue";
       </div>
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"/>
     </div>
-    <div class="flex justify-center items-center h-20">
-      <button class="w-40 bg-black hover:bg-gray-800 text-yellow-500 font-bold py-2 px-4">
-        MORE
-      </button>
     </div>
-  </main-layout>
+    <div class="flex justify-center items-center h-40">
+        <button class="w-48 bg-black hover:bg-gray-800 text-yellow-500 font-[1px] py-3 px-10">
+            MORE
+        </button>
+    </div>
+    </mainLayout>
 </template>
