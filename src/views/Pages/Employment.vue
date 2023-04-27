@@ -98,11 +98,11 @@ const items = ref([
           <p class="sm:translate-y-[-48px] md:translate-y-[-48px] mb-3 font-normal text-gray-700 dark:text-black">{{item.description}}</p>
           <div class="sm:block md:block flex">
             <div class="sm:translate-y-[-48px] md:translate-y-[-48px]">
-              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> <span class="sm:pl-[30px] md:pl-[30px] ">{{ item.time2 }}</span></p>
+              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> <span class="sm:pl-[10%] md:pl-[10%] ">{{ item.time2 }}</span></p>
               <p>{{item.date}}</p>
             </div>
             <div class="sm:translate-y-[-40px] md:translate-y-[-30px] ml-auto">
-              <a href="#" class="sm:px-[100px]  md:px-[100px] inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+              <a href="#" class="sm:px-[35%]  md:px-[35%] inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
                 {{item.detail}}
               </a>
             </div>
