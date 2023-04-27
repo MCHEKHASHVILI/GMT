@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      fancyFont: ['Pacifico', 'cursive'],
+      mainFont: ['PT Serif', 'serif']
+    }
   },
   plugins: [],
 }
