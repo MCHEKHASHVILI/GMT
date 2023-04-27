@@ -48,7 +48,8 @@ const diningFacilities = "DINING FACILITIES";
 const readMore = "read more";
 </script>
 <template>
-    <div class="w-[100vw]">
+<mainLayout>
+  <div class="w-[100vw]">
       <div
         class="flex w-[100%] items-center justify-between flex-col bg-black h-[120vh]"
       >
@@ -176,6 +177,7 @@ const readMore = "read more";
 
       </div>
     </div>
+</mainLayout>
 </template>
 
 <style></style>
