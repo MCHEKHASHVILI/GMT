@@ -83,7 +83,7 @@ const filterEvents = () => {
         <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
           <h2>CONNECTED!</h2>
         </div>
-        <!-- form -->
+       
         <div class="absolute">
           <div class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]">
             <form class="w-full max-w-md- flex justify-between h-[90px]">
