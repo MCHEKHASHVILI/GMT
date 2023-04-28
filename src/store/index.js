@@ -1,13 +1,10 @@
 import { createStore } from "vuex";
+import brandsModule from "./modules/brands"
 
 const store = createStore({
-    state() {
-        return {
-            // ...
-        }
-    },
-    modules: [],
-    plugins: [],
+    modules: {
+        "brands": brandsModule
+    }
 })
 
 export default store
