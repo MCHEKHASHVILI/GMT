@@ -1,6 +1,7 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
 const newsContent = {
+    news: 'NEWS',
     img: 'https://images.pexels.com/photos/866398/pexels-photo-866398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     title: 'UNWTO UPDATE PROJECTIONS OF THE IMPACT OF COVID-19 ON TOURISM',
     paragraphs: [
@@ -47,6 +48,7 @@ const newsContent = {
 <template>
     <main-layout>
         <div class="flex flex-col  mx-[11%]">
+            <div class="hidden max-sm:block "><h1 class="text-center font-bold mt-[10%]">{{ newsContent.news }}</h1></div>
             <img :src="newsContent.img" class=" mt-5 mb-8  " alt="">
             <h1 class=" text-2xl font-bold mb-4">{{ newsContent.title }}</h1>
             <div class=" text-base text-left mb-4 ">
