@@ -197,7 +197,7 @@ const filterEvents = () => {
     </div>
     <br />
     <div
-      class="flex items-center justify-center min-h-screen container mx-auto"
+      class="flex items-center justify-center min-h-screen container mx-auto mb-5"
     >
       <!-- grid -->
       <div
