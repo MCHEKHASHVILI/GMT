@@ -70,20 +70,21 @@ const filterEvents = () => {
     return e.type === type.value && e.date.toISOString().slice(0, 10) === date.value;
   })
 };
+
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center md:text-2xl font-medium mt-3">EVENTS</h1>
+    <h1 class="flex justify-center md:text-2xl font-bold mt-3">EVENTS</h1>
 
-    <div class="flex flex-row">
-      <div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
-          <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
-        </div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
-          <h2>CONNECTED!</h2>
-        </div>
-       
+    <div class="flex flex-wrap md:flex-nowrap">
+      <div class="w-full md:w-auto">
+     
+        <div class="px-8 md:translate-x-[80px] md:translate-y-[100px] text-2xl font-bold">
+        <h2>DON'T MISS OUT ON OUR EVENTS-STAY </h2>
+      </div>
+      <div class="px-8 md:translate-x-[80px] md:translate-y-[100px] text-2xl font-bold">
+        <h2>CONNECTED!</h2>
+      </div>
         <div class="absolute">
           <div class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]">
             <form class="w-full max-w-md- flex justify-between h-[90px]">
@@ -142,8 +143,9 @@ const filterEvents = () => {
       </div>
     </div>
     
-    <div class="pr-[80px]">
-      <img class="ml-auto w-[675px] h-[300px]"
+  
+    <div class="w-full md:w-auto mt-6 md:mt-0 md:pr-[80px]">
+      <img class="ml-auto w-full h-auto md:w-[675px] md:h-[300px]"
         src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/black-and-white-cello-kathy-franklin.jpg" />
     </div>
     <br />
