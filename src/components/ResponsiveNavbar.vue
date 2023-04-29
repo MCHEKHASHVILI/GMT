@@ -13,7 +13,7 @@ const toggleResponsiveNavbar = () =>{
 </script>
 
 <template>
-  <div class="w-screen h-screen bg-[#f5f5f5] absolute   flex flex-col items-center md:hidden top-0 left-0">
+  <div class="w-screen h-screen bg-[#f5f5f5] absolute z-[1]   flex flex-col items-center md:hidden top-0 left-0">
     <div class="flex w-full h-[130px] justify-between items-center border-b-[2px] border-gray-300 px-4 md:px-10 lg:px-20" >
         <a href="/">  <div class=" text-black text-center cursor-pointer">
           <h1 class="font-mainFont font-  text-2xl uppercase"><span class="font-bold">{{ titles[0].pageTitle.slice(0,3) }}</span> {{ titles[0].pageTitle.slice(3) }} </h1>
