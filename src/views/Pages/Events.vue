@@ -106,7 +106,7 @@ const filterEvents = () => {
           <h2 class="leading-none sm:hidden">EVENTS-STAY CONNECTED !</h2>
         </div>
 
-        <div class="absolute">
+        <div class="absolute hidden sm:block">
           <div
             class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]"
           >
@@ -186,6 +186,9 @@ const filterEvents = () => {
             </form>
           </div>
         </div>
+        <button class="filter-button block md:hidden lg:hidden xl:hidden bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline">
+  FILTER
+</button>
       </div>
     </div>
 
