@@ -82,29 +82,32 @@ const items = ref([
 <template>
   <main-layout>
     <h1 class="text-center font-bold text-3xl pb-12 pt-[3%]">EMPLOYMENT</h1>
-    <div class="container pb-[100px]">
-      <div class="max-md:grid max-md:grid-cols-1 max-sm:grid-cols-1 max-sm:grid justify-center grid grid-cols-2 px-[150px] gap-[15px] pb-1.5 ">
-        <div v-for="item in items" class="w-full p-6 bg-white border border-gray-300 max-sm:pb-[0px] max-md:pb-[0px]">
-          <div class="max-sm:grid max-md:grid flex ">
+    <div class="w-full pb-[7%]">
+      <div class="grid gap-[2%] justify-center md:grid md:grid-cols-2 px-[5%] md:gap-[15px] md:pb-1.5 ">
+        <div v-for="item in items" class="w-full p-6 bg-white border border-gray-300 pb-[8%] md:pb-0 relative md:relative">
+          <div class="gap-[12%] md:gap-[7%] md:grid md:grid-cols-3 grid grid-cols-2 ">
             <img class="h-12" :src="item.logo">
-            <div class="max-sm:translate-y-[-48px] max-sm:translate-x-[80px] max-md:translate-x-[80px] max-md:translate-y-[-48px]">
+            <div class="translate-x-[-70%]">
               <h2 class=" font-medium md:font-bold">{{item.title}}</h2>
               <h2 class="font-medium md:font-bold">{{item.name}}</h2>
             </div>
-            <div class="max-sm:translate-y-[-48px] max-sm:ml-0 py-6 ml-auto max-md:translate-y-[-48px] max-md:ml-0 max-md:sm:translate-y-[-48px] ">
-              <h2 class="font-medium md:font-bold">{{item.money}}</h2>
+            <div class="md:py-0 md:translate-x-[18%]">
+              <h2 class="font-bold md:font-bold pb-[15%] md:pt-[14%]">{{item.money}}</h2>
             </div>
           </div>
-          <p class="max-sm:translate-y-[-48px] max-md:translate-y-[-48px] mb-3 font-normal text-gray-700 dark:text-black">{{item.description}}</p>
-          <div class="max-sm:block max-md:block flex">
-            <div class="max-sm:translate-y-[-48px] max-md:translate-y-[-48px]">
-              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> <span class="max-sm:pl-[10%] max-md:pl-[10%] ">{{ item.time2 }}</span></p>
-              <p>{{item.date}}</p>
+          
+          <p class=" mb-3 font-normal text-gray-700 dark:text-black">{{item.description}}</p>
+          <div class="">
+            <div class="pb-[3%] md:grid md:grid-cols-1">
+              <p class="pb-1.5"><span class="font-medium md:font-bold">{{item.time}}</span> <span class="pl-[5%]">{{ item.time2 }}</span></p> 
             </div>
-            <div class="max-sm:translate-y-[-40px] max-md:translate-y-[-30px] ml-auto">
-              <a href="#" class="max-sm:px-[35%] max-md:px-[35%] inline-flex items-center px-[50px] py-4 text-sm  text-center text-black bg-zinc-100">
+            <div class="grid gap-[20%] md:flex ">
+            <p class="md:w-[50%]">{{item.date}}</p>
+              <div class="md:translate-y-[-40%] pb-[4%] md:w-[50%] md:translate-x-[14%]">
+              <a href="#" class="hover:bg-black hover:text-yellow-500	 inline-block	 items-center px-[37%] md:px-[25%] py-4 text-sm  text-center text-black bg-zinc-100">
                 {{item.detail}}
               </a>
+            </div>
             </div>
           </div>
         </div>
