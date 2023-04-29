@@ -9,8 +9,9 @@ const responsiveNavbarStatus = computed(() => store.getters["navbar/responsiveNa
 
 const toggleResponsiveNavbar = () =>{
   store.commit("navbar/toggleResponsiveNavbar")
+   document.body.classList.add('md:overflow-visible');
    document.body.classList.add('overflow-hidden');
-
+   
 }
 const navbarComponents = computed(() => store.getters["navbar/navbarComponents"] )
 </script>
