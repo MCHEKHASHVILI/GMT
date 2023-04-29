@@ -9,7 +9,7 @@ const titles = computed(() => store.getters["titles/titles"])
 
 </script>
 <template>
-  <mainLayout>
+  <mainLayout >
     <div class="flex flex-col h-screen bg-black">
       <div class="flex grow">
         <div class="m-auto text-white text-center">
@@ -32,3 +32,4 @@ const titles = computed(() => store.getters["titles/titles"])
     <BrandsList />
   </mainLayout>
 </template>
+
