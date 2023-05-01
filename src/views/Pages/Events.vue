@@ -120,7 +120,7 @@ const filterEvents = () => {
                 <div class="relative">
                   <select
                     v-model="location"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="location"
                   >
                     <option disabled selected>Location</option>
@@ -144,7 +144,7 @@ const filterEvents = () => {
                 </label>
                 <input
                   v-model="date"
-                  class="h-[62px] w-[190px] mt-[13px] appearance-none block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="h-[62px] w-[190px] mt-[13px] appearance-none block bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
                   id="date"
                   type="date"
                   placeholder="Date"
@@ -159,7 +159,7 @@ const filterEvents = () => {
                 <div class="relative">
                   <select
                     v-model="type"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none  bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
                     id="type"
                   >
                     <option disabled selected>Type</option>
@@ -206,7 +206,7 @@ const filterEvents = () => {
     >
       <!-- grid -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pl-20 pr-20"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-20 pr-20"
       >
         <!-- card -->
 
