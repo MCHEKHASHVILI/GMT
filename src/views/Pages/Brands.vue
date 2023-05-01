@@ -61,47 +61,44 @@ const more = 'read more'
         <div class="bg-gray-100 max-sm:w-310 max-sm:h-[330px] h-[260px] ">
             <div class=" text-center absolute sm:top-44 sm:left-[470px] max-sm:top-40 max-sm:w-96">
                 <h2 class=" uppercase font-bold text-2xl "> {{ introduction.title }}</h2>
-                <p class="mt-2 leading-6 w-[600px] max-sm:w-[300px] max-sm:ml-10 max-sm:text-left">{{ introduction.pharagrap }}</p>
+                <p class="mt-2 leading-6 w-[600px] max-sm:w-[300px] max-sm:ml-10 max-sm:text-left">{{ introduction.pharagrap
+                }}</p>
             </div>
         </div>
         <div class="flex flex-col">
             <div href="#" class="flex flex-col sm:flex-row  sm:items-center  justify-start">
                 <img class="sm:w-[50%] h-[50%] " :src='facilities[0].img' alt="funicular">
                 <div class="flex flex-col sm:w-[50%] w-[100%]  sm:h-[100%] h-[50%] justify-center ml-[8%]">
-                    <img class=" sm:w-52 -mt-6 max-sm:w-[200px] mb-1 ml-[-17px] max-sm:mt-3 " :src="facilities[0].icon" alt="">
-                    <h3
-                        class=" font-bold mb-3 sm:mb-6 uppercase text-2xl max-sm:-mt-3 ">
+                    <img class=" sm:w-52 -mt-6 max-sm:w-[200px] mb-1 ml-[-17px] max-sm:mt-3 " :src="facilities[0].icon"
+                        alt="">
+                    <h3 class=" font-bold mb-3 sm:mb-6 uppercase text-2xl max-sm:-mt-3 ">
                         {{ facilities[0].name }}</h3>
-                    <p
-                        class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%]">
+                    <p class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%]">
                         {{ facilities[0].desc }}
                     </p>
-                    <span class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8">{{ more }}</span>
+                    <router-link :to="{ name: 'Brands' }" class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8">{{
+                        more }}</router-link>
 
                 </div>
             </div>
             <div href="#" class="flex sm:flex-row flex-col-reverse w-[100%]  justify-start">
-                <div class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start  ">
+                <div
+                    class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start  ">
                     <img class="w-48 max-sm:-mt-[70px] sm:ml-[-20px] -ml-2  " :src="facilities[1].icon" alt="">
-                    <h3
-                        class="font-bold sm:-mt-2 max-sm:-mt-6 text-2xl uppercase mb-4  ">
+                    <h3 class="font-bold sm:-mt-2 max-sm:-mt-6 text-2xl uppercase mb-4  ">
                         {{ facilities[1].name }}
                     </h3>
-                    <p
-                        class=" mb-4 text-[18px] w-[70%] max-sm:w-[80%]">
+                    <p class=" mb-4 text-[18px] w-[70%] max-sm:w-[80%]">
                         {{ facilities[1].desc }}
                     </p>
-                    <span
-                        class="mb-8 text-[15px] uppercase text-yellow-500">
-                        {{ more }}</span>
+                    <router-link :to="{ name: 'Brands' }" class="mb-8 text-[15px] uppercase text-yellow-500">
+                        {{ more }}</router-link>
                 </div>
-                <img class="sm:w-[50%] " :src="facilities[1].img"
-                    alt="puri guliani">
+                <img class="sm:w-[50%] " :src="facilities[1].img" alt="puri guliani">
 
             </div>
             <div href="#" class=" flex flex-col sm:flex-row  sm:items-center  justify-start">
-                <img class="sm:w-[50%] h-[50%] " :src="facilities[2].img"
-                    alt="puri guliani express">
+                <img class="sm:w-[50%] h-[50%] " :src="facilities[2].img" alt="puri guliani express">
                 <div class="flex flex-col sm:w-[50%] w-[100%]  sm:h-[100%] h-[50%] justify-center ml-[8%]">
                     <img class=" sm:w-52 sm:-mt-8 max-sm:w-[200px] -ml-5 -mt-2 " :src="facilities[2].icon" alt="">
                     <h3 class="font-bold mb-4 sm:mb-6 uppercase text-2xl -mt-5 max-sm:-mt-7">
@@ -109,25 +106,22 @@ const more = 'read more'
                     </h3>
                     <p class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%] ">
                         {{ facilities[2].desc }}</p>
-                    <span class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8"> {{ more }}</span>
+                    <router-link :to="{ name: 'Brands' }" class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8"> {{
+                        more }}</router-link>>
                 </div>
             </div>
             <div href="#" class="flex sm:flex-row flex-col-reverse w-[100%]  justify-start">
-                <div class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start ">
-                    <img class=" w-[65%] sm:mt-28 sm:mb-9 max-sm:-mt-8 mb-4" :src="facilities[3].icon"
-                        alt="">
-                    <h3
-                        class="font-bold text-2xl uppercase sm:mb-6 mb-5 ">
+                <div
+                    class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start ">
+                    <img class=" w-[65%] sm:mt-28 sm:mb-9 max-sm:-mt-8 mb-4" :src="facilities[3].icon" alt="">
+                    <h3 class="font-bold text-2xl uppercase sm:mb-6 mb-5 ">
                         {{ facilities[3].name }} </h3>
-                    <p
-                        class="mb-4 text-[18px] w-[70%] max-sm:w-[85%]">
+                    <p class="mb-4 text-[18px] w-[70%] max-sm:w-[85%]">
                         {{ facilities[3].desc }} </p>
-                    <span
-                        class="mb-8 text-[15px] uppercase text-yellow-500">
-                        {{ more }}</span>
+                    <router-link :to="{ name: 'Brands' }" class="mb-8 text-[15px] uppercase text-yellow-500">
+                        {{ more }}</router-link>
                 </div>
-                <img class="sm:w-[50%] " :src="facilities[3].img"
-                    alt="rigi gastrodouqan">
+                <img class="sm:w-[50%] " :src="facilities[3].img" alt="rigi gastrodouqan">
             </div>
         </div>
     </mainLayout>
