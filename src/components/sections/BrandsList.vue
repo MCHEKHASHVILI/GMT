@@ -21,7 +21,7 @@ export default {
                     (index % 2 == 0) ? 'md:items-start' : 'md:items-end'
                 ]">
                 <div :class="['w-full md:grid', (index % 2 == 0) ? 'md:place-content-start' : 'md:place-content-end']">
-                    <img class="object-cover w-56 h-auto" :src="item.icon">
+                    <img class="object-cover w-full h-auto" :src="item.icon">
                 </div>
                 <h2 class="text-4xl font-extrabold dark:text-white mt-4 uppercase">{{ item.name }}</h2>
                 <p :class="['mt-4 md:mt-8 md:w-2/3', (index % 2 == 0) ? 'md:text-left' : 'md:text-right']">{{
