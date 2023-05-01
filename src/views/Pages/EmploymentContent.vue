@@ -1,6 +1,6 @@
 <script setup>
 import MainLayout from "@/layouts/mainLayout.vue";
-import logo from "@/assets/logos/ფუნიკულიორი.svg";
+import logo from "@/assets/logos/funicular.svg";
 
 const vacancy = {
     company: {
@@ -61,10 +61,10 @@ const vacancy = {
     <main-layout>
         <div class="flex flex-col space-y-[2%] w-auto mx-[7.5%] mt-[4.5%] mb-[100px]">
             <div class="flex space-x-[2.5%]">
-                <img :src="vacancy.company.logo" class="w-[95px]" alt="Employer logo"/>
+                <img :src="vacancy.company.logo" class="w-[95px] max-sm:w-[85px]" alt="Employer logo"/>
                 <div class="m-auto font-bold">
-                    <h1 class="text-xl">{{ vacancy.company.name }}</h1>
-                    <h3>{{ vacancy.job.position }}</h3>
+                    <h1 class="text-xl max-sm:text-base max-sm:font-normal">{{ vacancy.company.name }}</h1>
+                    <h3 class="max-sm:font-normal">{{ vacancy.job.position }}</h3>
                 </div>
             </div>
             <div class="flex flex-col space-y-[2%]">
@@ -79,18 +79,18 @@ const vacancy = {
                         <tr>
                             <td>Salary</td>
                             <td class="font-bold text-black">
-                                <span class="text-xl">{{ vacancy.job.details.salary }}</span> per month
+                                <span class="text-xl max-sm:text-lg">{{ vacancy.job.details.salary }}</span> per month
                             </td>
                         </tr>
                         <tr>
                             <td>Full time</td>
-                            <td class="font-bold text-black">
+                            <td class="font-bold max-sm:font-normal text-black">
                                 {{ vacancy.job.details.hours }}
                             </td>
                         </tr>
                         <tr>
                             <td>Contact</td>
-                            <td class="font-bold text-black">
+                            <td class="font-bold max-sm:font-normal text-black">
                                 {{ vacancy.job.details.email }}
                             </td>
                         </tr>
