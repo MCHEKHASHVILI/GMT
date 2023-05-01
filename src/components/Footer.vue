@@ -1,60 +1,77 @@
 <template>
     <footer>
         <div class="">
-            <div class="bg-black text-white flex gap-[240px] pb-[25px]">
-                <div class="leftSide pt-[3%] pl-[10%]">
+            <div class="bg-black text-white  md:flex md:justify-between md:pr-[6%] md:pb-[2%]">
+                <div class="leftSide pl-[23%] py-[5%] md:pt-[3%] md:pl-16 md">
                     <img src="../assets/images/Logo.png">
                 </div>
-                <div class="grid grid-cols-2 gap-[54px] pt-[60px] lg: md:grid-cols-4">
-                    <div class="">
+                <div class="pl-[10%] pb-[15%] md:pb-0 gap-x-32 md:grid grid grid-cols-2 md:gap-x-24 md:pt-14 md:grid-cols-4 ">
+                    <div class="order-1 md:order-1">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <router-link to="/brands">
                             <li class="mb-4 text-sm	font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100">BRANDS</p>
-                            </li>
-                        </router-link>
-                        <router-link to="/">
-                            <li class="mb-4 text-sm	 font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100	">RESERVATION</p>
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100">brands</p>
                             </li>
                         </router-link>
                         </ul>
                     </div>
-                    <div>
+                    <div class="order-5 md:order-2">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/Events">
+                            <router-link to="/events">
                             <li class="mb-4 text-sm	 font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100">EVENTS</p>
-                            </li>
-                        </router-link>
-                        <router-link to="/News">
-                            <li class="mb-4 text-sm	 font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100	">NEWS</p>
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100	">events</p>
                             </li>
                         </router-link>
                         </ul>
                     </div>
-                    <div>
+                    <div class="order-4 md:order-3">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/Employment">
-                            <li class="mb-4 text-sm	font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100	">EMPLOYMENT</p>
-                            </li>
-                        </router-link>
-                        <router-link to="/About">
-                            <li class="mb-4 text-sm	font-normal	">
-                                <p class="mr-4  md:mr-6 text-slate-100	">ABOUT US</p>
+                            <router-link to="/employment">
+                            <li class="mb-4 text-sm	 font-normal	">
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100">Employment</p>
                             </li>
                         </router-link>
                         </ul>
                     </div>
-                    <div>
+                    <div class="order-7 md:order-4">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4 text-sm	font-normal	">
-                                <p class="text-slate-100">FOLLOW US</p>
+                            <li class="mb-4 text-sm	 font-normal	">
+                                <a href="#" class="uppercase mr-4  md:mr-6 text-slate-100	">follow us</a>
                             </li>
+                        </ul>
+                    </div>
+                    <div class="order-3  md:order-5">
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <router-link to="/reservation">
+                            <li class="mb-4 text-sm	font-normal	">
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100	">reservation</p>
+                            </li>
+                        </router-link>
+                        </ul>
+                    </div>
+                    <div class="order-2 md:order-6">
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <router-link to="/news">
+                            <li class="mb-4 text-sm	font-normal	">
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100	">news</p>
+                            </li>
+                        </router-link>
+                        </ul>
+                    </div>
+                    <div class="order-6 md:order-7">
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <router-link to="/about">
+                            <li class="mb-4 text-sm	font-normal	">
+                                <p class="uppercase mr-4  md:mr-6 text-slate-100">about us</p>
+                            </li>
+                        </router-link>
+                        </ul>
+                    </div>
+                    <div class="order-8  md:order-8">
+                        <ul class=" text-gray-500 dark:text-gray-400 font-medium">
                             <li class="flex gap-[15px] ">
-                                <div class="rounded-full p-[15px] bg-zinc-700">
+                                <div class="flex gap-3 left-12 translate-y-8 md:left-0 absolute md:relative md:translate-x-0 md:translate-y-0">
+                                <div class="rounded-full p-[7px] md:p-[15px] bg-zinc-700">
                                     <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-200"
                                         fill="currentColor" viewBox="0 0 24 24">
@@ -63,7 +80,7 @@
                                     </svg>
                                 </a>
                                 </div>
-                                <div class="rounded-full p-[15px] bg-zinc-700">
+                                <div class="rounded-full p-[7px] md:p-[15px] bg-zinc-700">
                                     <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-200"
                                         fill="currentColor" viewBox="0 0 24 24">
@@ -72,14 +89,15 @@
                                     </svg>
                                 </a>
                                 </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr class="border-zinc-700 sm:mx-auto" />
+            <hr class="border-zinc-700 mx-auto" />
             <div class="last bg-black text-center ">
-                <h2 class="text-slate-100 py-[30px]">ALL RIGHTS RESERVED</h2>
+                <h2 class="text-slate-100 py-[8%] md:py-[3%]">ALL RIGHTS RESERVED</h2>
             </div>
         </div>
     </footer>
