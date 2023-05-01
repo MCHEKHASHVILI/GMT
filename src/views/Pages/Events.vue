@@ -86,7 +86,7 @@ const filterEvents = () => {
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center text-2xl font-bold mt-3">EVENTS</h1>
+    <h1 class="flex justify-center text-2xl font-bold mt-12">EVENTS</h1>
 
     <div class="flex flex-wrap sm:flex-nowrap">
       <div class="w-full md:w-auto">
@@ -202,11 +202,11 @@ const filterEvents = () => {
     </div>
     <br />
     <div
-      class="flex items-center justify-center min-h-screen container mx-auto mb-5"
+      class="flex items-center justify-center min-h-screen container mx-auto mb-12"
     >
       <!-- grid -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-20 pr-20"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pl-20 pr-20"
       >
         <!-- card -->
 
