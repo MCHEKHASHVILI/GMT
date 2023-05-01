@@ -174,7 +174,7 @@ const filterEvents = () => {
                   </div>
                 </div>
               </div>
-              <div class="relaitve">
+              <div class="relative">
                 <button
                   @click="filterEvents"
                   class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
