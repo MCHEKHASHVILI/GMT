@@ -65,69 +65,68 @@ const more = 'read more'
             </div>
         </div>
         <div class="flex flex-col">
-            <div href="#" class="flex flex-col items-center bg-white sm:flex-row items-start justify-start">
-                <img class="object-cover w-full sm:max-w-[760px] sm:h-auto" :src='facilities[0].img' alt="funicular">
-                <div class="flex flex-col justify-between w-full sm:w-auto sm:pl-24 px-4 max-sm:relative">
-                    <img class=" w-44 -mt-6 mx-auto sm:mx-0 max-sm:absolute max-sm:top-8 " :src="facilities[0].icon" alt="">
-                    <h5
-                        class=" text-gray-900  uppercase mb-6 mt-1 text-center sm:text-left font-bold text-2xl ml-4 max-sm:text-left max-sm:mt-[120px]">
-                        {{ facilities[0].name }}</h5>
+            <div href="#" class="flex flex-col sm:flex-row  sm:items-center  justify-start">
+                <img class="sm:w-[50%] h-[50%] " :src='facilities[0].img' alt="funicular">
+                <div class="flex flex-col sm:w-[50%] w-[100%]  sm:h-[100%] h-[50%] justify-center ml-[8%]">
+                    <img class=" sm:w-52 -mt-6 max-sm:w-[200px] mb-1 ml-[-17px] max-sm:mt-3 " :src="facilities[0].icon" alt="">
+                    <h3
+                        class=" font-bold mb-3 sm:mb-6 uppercase text-2xl max-sm:-mt-3 ">
+                        {{ facilities[0].name }}</h3>
                     <p
-                        class="text-black w-full sm:w-[400px] leading-6 tracking-tighter mb-3 text-center sm:text-left ml-4 max-sm:text-left max-sm:w-80 max-sm:text-xl">
+                        class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%]">
                         {{ facilities[0].desc }}
                     </p>
-                    <span class="text-yellow-500 ml-5 max-sm:text-xl max-sm:uppercase max-sm:mt-4">{{ more }}</span>
+                    <span class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8">{{ more }}</span>
 
                 </div>
             </div>
-            <div href="#" class="flex flex-col items-center bg-white  sm:flex-row  justify-start">
-                <div class="flex flex-col justify-between pr-24 w-full sm:relative sm:items-end items-start sm:text-end text-start justify-start">
-                    <img class="w-44 sm:absolute sm:left-[490px] sm:-top-9 max-sm:ml-8 " :src="facilities[1].icon" alt="">
-                    <h5
-                        class="text-2xl font-bold text-gray-900 sm:text-right max-sm:ml-9 max-sm:-mt-5 uppercase sm:mb-8 max-sm:mb-6 sm:mt-32 mr-[1px]  ">
+            <div href="#" class="flex sm:flex-row flex-col-reverse w-[100%]  justify-start">
+                <div class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start  ">
+                    <img class="w-48 max-sm:-mt-[70px] sm:ml-[-20px] -ml-2  " :src="facilities[1].icon" alt="">
+                    <h3
+                        class="font-bold sm:-mt-2 max-sm:-mt-6 text-2xl uppercase mb-4  ">
                         {{ facilities[1].name }}
-                    </h5>
+                    </h3>
                     <p
-                        class=" text-black sm:text-right sm:w-[455px] leading-6 sm:ml-48 tracking-tighter mb-3  max-sm:text-xl max-sm:ml-9 max-sm:w-80 ">
+                        class=" mb-4 text-[18px] w-[70%] max-sm:w-[80%]">
                         {{ facilities[1].desc }}
                     </p>
                     <span
-                        class="text-yellow-500 sm:text-right mr-[1px] max-sm:mt-4 max-sm:ml-9 max-sm:uppercase max-sm:text-xl ">
+                        class="mb-8 text-[15px] uppercase text-yellow-500">
                         {{ more }}</span>
                 </div>
-                <img class="object-cover w-full sm:max-w-[760px] sm:h-auto sm:w-full " :src="facilities[1].img"
+                <img class="sm:w-[50%] " :src="facilities[1].img"
                     alt="puri guliani">
 
             </div>
-            <div href="#" class="flex flex-col items-center bg-white sm:flex-row items-start justify-start ">
-                <img class="object-cover w-full sm:h-auto sm:w-full sm:max-w-[760px]  " :src="facilities[2].img"
+            <div href="#" class=" flex flex-col sm:flex-row  sm:items-center  justify-start">
+                <img class="sm:w-[50%] h-[50%] " :src="facilities[2].img"
                     alt="puri guliani express">
-                <div class="flex flex-col justify-between w-full sm:w-auto sm:pl-24 px-4 max-sm:relative">
-                    <img class="w-44 -mt-3" :src="facilities[2].icon" alt="">
-                    <h5 class=" text-2xl font-bold  text-gray-900 uppercase mb-6 mt-1 ml-5 max-sm:-mt-5">
+                <div class="flex flex-col sm:w-[50%] w-[100%]  sm:h-[100%] h-[50%] justify-center ml-[8%]">
+                    <img class=" sm:w-52 sm:-mt-8 max-sm:w-[200px] -ml-5 -mt-2 " :src="facilities[2].icon" alt="">
+                    <h3 class="font-bold mb-4 sm:mb-6 uppercase text-2xl -mt-5 max-sm:-mt-7">
                         {{ facilities[2].name }}
-                    </h5>
-                    <p class=" w-[400px] leading-6 tracking-tighter ml-5 mb-3 max-sm:text-xl max-sm:w-80  ">
+                    </h3>
+                    <p class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%] ">
                         {{ facilities[2].desc }}</p>
-                    <span class="text-yellow-500 ml-5 max-sm:uppercase max-sm:text-xl max-sm:mt-4 "> {{ more }}</span>
+                    <span class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8"> {{ more }}</span>
                 </div>
             </div>
-            <div href="#" class="flex flex-col items-center bg-white sm:flex-row  items-start justify-start ">
-                <div class="flex flex-col justify-between pr-24 w-full sm:relative ">
-
-                    <img class="w-96 sm:absolute left-[260px] top-14 max-sm:ml-9 max-sm:mb-5" :src="facilities[3].icon"
+            <div href="#" class="flex sm:flex-row flex-col-reverse w-[100%]  justify-start">
+                <div class="flex flex-col mr-[7%] mt-14 w-[50%] max-sm:w-[100%] max-sm:ml-[26px] max-sm:justify-start items-end max-sm:items-start text-end max-sm:text-start ">
+                    <img class=" w-[65%] sm:mt-28 sm:mb-9 max-sm:-mt-8 mb-4" :src="facilities[3].icon"
                         alt="">
-                    <h5
-                        class="mb-2 text-2xl font-bold text-gray-900 sm:text-right max-sm:ml-9 uppercase mb-4 sm:mt-28 mr-[16px]">
-                        {{ facilities[3].name }} </h5>
+                    <h3
+                        class="font-bold text-2xl uppercase sm:mb-6 mb-5 ">
+                        {{ facilities[3].name }} </h3>
                     <p
-                        class="text-black sm:text-right sm:w-[455px] leading-6 sm:ml-48 max-sm:ml-9 tracking-tighter mb-3 max-sm:text-xl max-sm:w-80">
+                        class="mb-4 text-[18px] w-[70%] max-sm:w-[85%]">
                         {{ facilities[3].desc }} </p>
                     <span
-                        class="text-yellow-500 sm:text-right mr-[16px] max-sm:text-xl max-sm:ml-9 max-sm:uppercase max-sm:mt-4">
+                        class="mb-8 text-[15px] uppercase text-yellow-500">
                         {{ more }}</span>
                 </div>
-                <img class="object-cover w-full  sm:h-auto sm:w-full sm:w-[760px] " :src="facilities[3].img"
+                <img class="sm:w-[50%] " :src="facilities[3].img"
                     alt="rigi gastrodouqan">
             </div>
         </div>
