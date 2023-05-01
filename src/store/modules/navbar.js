@@ -2,6 +2,7 @@ const navbarModule = {
     namespaced: true,
     state() {
         return {
+            scrollSwitch: "wefwf",
             responsiveNavbar: false,
             navbarComponents: [
                 { routerLink: "/brands", name: "BRANDS" },
@@ -21,12 +22,16 @@ const navbarModule = {
         },
         responsiveNavbar(state){
             return state.responsiveNavbar
+        },
+        scrollSwitch(state){
+            return state.scrollSwitch
         }
     },
 
     mutations: {
         toggleResponsiveNavbar(state){
             state.responsiveNavbar = !state.responsiveNavbar
+            state.scrollSwitch = !state.scrollSwitch
         }
     }
 }
