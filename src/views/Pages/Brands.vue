@@ -107,7 +107,7 @@ const more = 'read more'
                     <p class="mb-6 max-sm:mb-4 w-[70%] text-[18px] max-sm:w-[80%] ">
                         {{ facilities[2].desc }}</p>
                     <router-link :to="{ name: 'Brands' }" class="flex text-[15px] text-yellow-500 uppercase max-sm:mb-8"> {{
-                        more }}</router-link>>
+                        more }}</router-link>
                 </div>
             </div>
             <div href="#" class="flex sm:flex-row flex-col-reverse w-[100%]  justify-start">
