@@ -16,7 +16,7 @@ const router = createRouter({
         {
             path: '/brands',
             name: 'Brands',
-            component: () => import('../views/Pages/Brands.vue')
+            component: () => import('../views/Pages/Brands.vue'),
         },
         {
             path: '/news',
