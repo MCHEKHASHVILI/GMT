@@ -1,175 +1,33 @@
 <script setup>
 import mainLayout from '../../layouts/mainLayout.vue'
+import NewsCard from '../../components/sections/NewsCard.vue'
+import { newsArticles } from '../../store/modules/news.js'
 </script>
+
 <template>
     <mainLayout>
-    <div class="flex justify-center items-center h-40">
+      <div class="flex justify-center items-center h-40">
         <div class="text-center text-2xl font-bold">
-            NEWS
+          NEWS
         </div>
-    </div>
-    <div class="mx-5 lg:mx-20">  
-    <div class="grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:grid-cols-3 xl:grid-cols-3 mx-auto?">
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
+      </div>
+      <div class="mx-5 lg:mx-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:mx-24 lg:grid-cols-3 xl:grid-cols-3 mx-auto?">
+          <NewsCard
+            v-for="article in newsArticles"
+            :key="article.id"
+            :imageSrc="article.imageSrc"
+            :title="article.title"
+            :content="article.content"
+            :date="article.date"
+            :views="article.views"
+          />
         </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <div class="mx-auto max-w-sm flex flex-col items-end">
-            <div class="relative w-full h-44 mb-2">
-                <img src="https://picsum.photos/213/160?random=" alt="Placeholder Image"
-                    class="absolute top-0 right-0 w-full h-full object-cover -m-1">
-                <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">calendar_month</i> 15.03.2023
-                </span>
-                <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-                    <i class="material-icons-outlined align-middle text-white">visibility</i> 100k
-                </span>
-            </div>
-            <p class="text-[18px] font-bold">Tourism ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p class="text-gray-600 text-sm leading-5 mb-6 mt-2">
-                Nulla scelerisque mi ac nisl lacinia, vitae
-                ullamcorper eros faucibus. Duis ullamcorper hendrerit urna, sit amet semper felis dictum quis. Vivamus nec
-            </p>
-        </div>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
-    </div>
-    </div>
-    <div class="flex justify-center items-center h-40">
+      </div>
+      <div class="flex justify-center items-center h-40">
         <button class="w-48 bg-black hover:bg-gray-800 text-yellow-500 font-[1px] py-3 px-10">
-            MORE
+          MORE
         </button>
-    </div>
+      </div>
     </mainLayout>
-</template>
+  </template>
