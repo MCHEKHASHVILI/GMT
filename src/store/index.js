@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 import brandsModule from "./modules/brands"
-import employmentModule from "./modules/Employment";
+import employmentModule from "./modules/employment";
 import navbarModule from "./modules/navbar";
 import titlesModule from "./modules/titles";
 
