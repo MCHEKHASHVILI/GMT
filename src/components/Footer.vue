@@ -8,8 +8,8 @@
                     </router-link>
                 </div>
                 <div
-                    class="pl-[10%] pb-[15%] md:pb-0 gap-x-32 md:grid grid grid-cols-2 md:gap-x-24 md:pt-14 md:grid-cols-4 ">
-                    <div class="order-1 md:order-1">
+                    class="pl-[10%] pb-[15%] md:pb-0 gap-x-32 md:grid grid grid-cols-2 md:gap-x-24 md:pt-14 md:grid-cols-3 ">
+                    <div class="pb-[5%]  order-1 md:order-1">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <router-link to="/brands">
                                 <li class="mb-4 text-sm	font-normal	">
@@ -18,64 +18,46 @@
                             </router-link>
                         </ul>
                     </div>
-                    <div class="order-5 md:order-2">
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/events">
-                                <li class="mb-4 text-sm	 font-normal	">
-                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">events</p>
-                                </li>
-                            </router-link>
-                        </ul>
-                    </div>
-                    <div class="order-4 md:order-3">
+                    <div class="order-2 md:order-2">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <router-link to="/employment">
                                 <li class="mb-4 text-sm	 font-normal	">
-                                    <p class="uppercase mr-4  md:mr-6 text-slate-100">Employment</p>
+                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">employment</p>
                                 </li>
                             </router-link>
                         </ul>
                     </div>
-                    <div class="order-7 md:order-4">
+                    <div class="order-8 md:order-3">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4 text-sm	 font-normal	">
                                 <a href="#" class="uppercase mr-4  md:mr-6 text-slate-100	">follow us</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="order-3  md:order-5">
+                    <div class="pb-[5%] order-3 md:order-4">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/reservation">
+                            <router-link to="/events">
                                 <li class="mb-4 text-sm	font-normal	">
-                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">reservation</p>
+                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">events</p>
                                 </li>
                             </router-link>
                         </ul>
                     </div>
-                    <div class="order-2 md:order-6">
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <router-link to="/news">
-                                <li class="mb-4 text-sm	font-normal	">
-                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">news</p>
-                                </li>
-                            </router-link>
-                        </ul>
-                    </div>
-                    <div class="order-6 md:order-7">
+                    <div class="order-4 md:order-5">
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <router-link to="/about">
                                 <li class="mb-4 text-sm	font-normal	">
-                                    <p class="uppercase mr-4  md:mr-6 text-slate-100">about us</p>
+                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">about us</p>
                                 </li>
                             </router-link>
                         </ul>
                     </div>
-                    <div class="order-8  md:order-8">
+                    <div class="order-last md:order-6">
                         <ul class=" text-gray-500 dark:text-gray-400 font-medium">
                             <li class="flex gap-[15px] ">
                                 <div
-                                    class="flex gap-3 left-12 translate-y-8 md:left-0 absolute md:relative md:translate-x-0 md:translate-y-0">
-                                    <div class="rounded-full p-[7px] md:p-[15px] bg-zinc-700">
+                                    class=" flex gap-3 left-12 ">
+                                    <div class=" rounded-full p-[7px] md:p-[13px] bg-zinc-700">
                                         <a href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-200"
                                                 fill="currentColor" viewBox="0 0 24 24">
@@ -84,7 +66,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <div class="rounded-full p-[7px] md:p-[15px] bg-zinc-700">
+                                    <div class="rounded-full p-[7px] md:p-[13px] bg-zinc-700">
                                         <a href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-200"
                                                 fill="currentColor" viewBox="0 0 24 24">
@@ -96,6 +78,17 @@
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="order-7 md:order-7">
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <router-link to="/news">
+                                <li class="mb-4 text-sm	font-normal	">
+                                    <p class="uppercase mr-4  md:mr-6 text-slate-100	">news</p>
+                                </li>
+                            </router-link>
+                        </ul>
+                    </div>
+                    <div class="order-8 md:order-8">
                     </div>
                 </div>
             </div>
