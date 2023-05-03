@@ -8,7 +8,7 @@ const vacancies = computed(() => store.getters["employment/getVacancies"]);
 </script>
 <template>
   <main-layout>
-    <h1 class="text-center font-bold text-3xl pb-12 pt-[3%]">EMPLOYMENT</h1>
+    <h1 class="text-center font-bold text-3xl pb-12 pt-[3%]">EMPLOYMENT</h1> 
     <div class="w-full pb-[60%] md:pb-[7%]">
       <div
         class="grid gap-[2%] justify-center md:grid md:grid-cols-2 px-[10%] md:gap-[15px] md:pb-1.5"
