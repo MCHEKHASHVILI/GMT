@@ -6,10 +6,41 @@ import Address from "../../components/icons/iconAddress.vue";
 import Email from "../../components/icons/iconEmail.vue";
 import Facebook from "../..//components/icons/iconFacebook.vue";
 import Linkedin from "../../components/icons/iconLinkedin.vue";
-import { computed } from "vue";
+import { computed, onMounted, reactive, watch } from "vue";
 import { useStore } from "vuex";
 const store = useStore();
 const brands = computed(() => store.getters["brands/brands"]);
+const mobileVersion = computed(() => store.getters["brands/mobileVersion"])
+
+const screen = reactive({
+      width: window.innerWidth,
+    });
+
+
+    onMounted(() =>{
+      store.commit("brands/checkCurrentSize")
+    })
+    
+
+    watch(() => screen.width, (newWidth, oldWidth) => {
+      if (newWidth <= 768 && oldWidth > 768) {
+        store.commit("brands/changeGalerryArrangement")
+      } else if (newWidth > 768 && oldWidth <= 768) {
+        store.commit("brands/changeGalerryArrangement")
+      }
+    });
+
+        onMounted(() =>{
+      screen.width = window.innerWidth
+    })
+    
+
+    window.addEventListener('resize', () => {
+      screen.width = window.innerWidth
+    });
+
+ 
+
 const links = [
   {
     name: "ADDRESS",
@@ -41,12 +72,13 @@ const links = [
 
 <template>
   <mainLayout>
-    <div class="w-screen flex flex-col items-center mb-32">
-      <div class="h-5/6 flex mb-36 gap-40">
-        <img class="w-5/6" :src="brands[0].mainImg" alt="" />
+    <div class=" flex flex-col items-center mb-32">
 
-        <div class="flex-col flex justify-end">
-          <img class="w-48 mb-12" :src="brands[0].icon" alt="" />
+      <div class="h-5/6 flex  justify-center flex-col md:flex-row mb-16 md:mb-24 md:gap-40  gap-10">
+        <img class="md:w-5/6 " :src="brands[0].mainImg" alt="" />
+
+        <div class="flex-col  flex md:items-start items-center md:justify-end">
+          <img class=" w-36 mb-12 md:w-48" :src="brands[0].icon" alt="" />
           <h1 class="font-bold mb-8 text-3xl font-[arial]">
             {{ brands[0].name.toUpperCase() }}
           </h1>
@@ -66,14 +98,14 @@ const links = [
             <br />
           </div>
 
-          <div class="w-8/12 text-lg flex gap-4">
+          <div class="md:w-8/12 w-10/12 md:flex-row flex-col text-lg flex gap-4">
             <button
-              class="bg-[#f5f5f5] transition duration-300 hover:bg-[#0b0b0b] hover:text-[#d0a958] py-6 font-[arial] w-1/2"
+              class="bg-[#f5f5f5] text-center py-3   transition duration-300 hover:bg-[#0b0b0b] hover:text-[#d0a958] md:py-6 font-[arial] md:w-1/2"
             >
               MENU
             </button>
             <button
-              class="bg-[#0b0b0b] transition duration-300 hover:opacity-80 text-[#d0a958] font-[arial] py-6 w-1/2"
+              class="bg-[#0b0b0b] transition py-3 duration-300 hover:opacity-80 text-[#d0a958] font-[arial] md:py-6 md:w-1/2"
             >
               GO TO WEBSITE
             </button>
@@ -83,12 +115,12 @@ const links = [
 
       <!-- სურათების ნაწილი -->
 
-      <div class="items-center mb-16 w-full justify-center flex flex-col">
+      <div class="items-center md:mb-16 mb-8 w-full justify-center flex flex-col">
         <h1 class="font-bold  text-3xl font-[arial]">GALERRY</h1>
 
-        <div class="flex w-[85%] justify-center my-16 h-screen flex-col">
+        <div class="flex w-[85%] justify-center my-8 md:h-screen flex-col">
 
-            <div class="h-4/5 w-full flex items-center relative mb-4 " >
+            <div class="h-4/5 md:flex hidden w-full  items-center relative mb-4 " >
                 <img  class="w-full h-full" :src="brands[0].galerry[0]" alt="" />
 
 
@@ -105,25 +137,37 @@ const links = [
           
           
           
-          <div class="flex justify-between h-1/5  gap-4">
+          <div class="flex md:h-1/5 overflow-x-scroll overflow-y-hidden md:overflow-hidden items-start h-44  gap-4">
             <img
-              class="flex-1 max-w-1/4 h-full"
+            
+              class="flex-1  md:overflow-hidden md:max-w-1/4 w-11/12 md:flex hidden   md:h-full"
               v-for="img in brands[0].galerry.slice(-4)"
               :src="img"
               alt=""
             />
+
+            <img
+            v-if="mobileVersion"
+              class="flex-1 w-11/12 "
+              v-for="img in brands[0].galerry"
+              :src="img"
+              alt=""
+            />
+
+          
+
           </div>
         </div>
       </div>
 
       <!-- კონტაკტის ნაწილი -->
 
-      <div class="flex flex-col items-center h- w-[85%]">
+      <div class="flex flex-col justify-center w-full items-center">
         <h1 class="text-3xl font-[arial] font-bold">CONTACT</h1>
 
-        <div class="flex md:flex-row flex-col h-full   w-full py-5 items-center">
+        <div class="flex md:flex-row flex-col h-full   w-[85%] py-5 items-center">
 
-          <div class="flex flex-col w-1/2 gap-7">
+          <div class="flex flex-col md:w-1/2 md:mb-0 mb-8 w-full gap-7">
             <div v-for="link in links" class="flex">
               <div
                 class="bg-[#e6e6e6] w-14 h-14 rounded-full flex justify-center items-center p-4"
@@ -139,9 +183,9 @@ const links = [
             </div>
           </div>
 
-          <div class="w-2/3 h-full">
+          <div class="md:w-2/3 w-full h-full">
             <iframe
-              class="w-full h-[400px] "
+              class="w-full h-[200px] md:h-[400px] "
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=Freedom Square, Aleksandr Pushkin Street, Tbilisi 0105, Georgia&t=&z=15&ie=UTF8&iwloc=&output=embed"
             >

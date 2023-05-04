@@ -2,6 +2,9 @@ const brandsModule = {
     namespaced: true,
     state() {
         return {
+
+            mobileVersion: null,
+
             brands: [
                 {
                     img: "/src/assets/images/funicular.png",
@@ -46,10 +49,31 @@ const brandsModule = {
     },
     getters: {
 
+        mobileVersion: state => state.mobileVersion,
         brands: state => state.brands,
         
+    },
 
-    }
+    mutations:{
+        changeGalerryArrangement(state){
+            
+            state.mobileVersion = !state.mobileVersion
+        },
+
+        checkCurrentSize(state){
+
+            if(window.innerWidth<=768){
+                state.mobileVersion = true
+    
+            }
+            else{
+                state.mobileVersion = false
+            }
+    
+        }
+    },
+
+
 }
 
 export default brandsModule
