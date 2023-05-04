@@ -7,7 +7,7 @@ const employmentModule = {
           id: 1,
           company: {
             logo: "https://www.gmt.ge/uploads_script/news/596e27ljb1c75l4.jpg",
-            name: "FINICULAR",
+            name: "FUNICULAR",
             contact: "GMTHospitality@GMT.GE",
           },
           job: {
@@ -66,7 +66,7 @@ const employmentModule = {
           id: 2,
           company: {
             logo: "https://www.gmt.ge/uploads_script/news/596e27ljb1c75l4.jpg",
-            name: "FINICULAR",
+            name: "FUNICULAR",
             contact: "GMTHospitality@GMT.GE",
           },
           job: {
