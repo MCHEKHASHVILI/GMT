@@ -83,7 +83,7 @@ const links = [
 
       <!-- სურათების ნაწილი -->
 
-      <div class="items-center w-full justify-center flex flex-col">
+      <div class="items-center mb-16 w-full justify-center flex flex-col">
         <h1 class="font-bold  text-3xl font-[arial]">GALERRY</h1>
 
         <div class="flex w-[85%] justify-center my-16 h-screen flex-col">
