@@ -48,17 +48,17 @@ const newsContent = {
 <template>
     <main-layout>
         <div class="flex flex-col mx-[8%] ">
-            <div class="hidden max-sm:block ">
+            <div class="hidden max-sm:block">
                 <h1 class="text-center font-bold mt-[10%]">{{ newsContent.news }}</h1>
             </div>
             <img :src="newsContent.img" class="mt-5 mb-8" alt="">
             <div class="flex flex-row flex items-center ">
-                <p class="ml-2 order-2 text-sm">15.03.2023</p>
+                <p class="ml-2 order-2 text-sm ">15.03.2023</p>
                 <p class="ml-2 text-sm order-4">258</p>
             </div>
-            <h1 class="text-2xl font-bold mb-1">{{ newsContent.title }}</h1>
+            <h1 class="text-2xl font-bold mb-1  mt-1 text-lg ">{{ newsContent.title }}</h1>
             <div class="text-base text-left mb-4">
-                <p v-for="p in newsContent.paragraphs" class="mb-4 ">{{ p }}</p>
+                <p v-for="p in newsContent.paragraphs" class="mb-4 md:text-center">{{ p }}</p>
             </div>
         </div>
     </main-layout>
