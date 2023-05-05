@@ -47,18 +47,18 @@ const information = {
 <template>
   <main-layout>
     <div class="m-5 md:mx-56  ">
-      <div class="w-full  text-center sm:w-1/2 mx-auto text-left md:mt-16">
-        <h1 class="mb-3 text-2xl font-medium sm:text-center ">{{ information?.title }} </h1>
-        <p class=" break-all sm:text-center ">{{ information?.description }}</p>
+      <div class=" w-full  text-center  mx-auto text-left md:w-1/2 md:mt-16">
+        <h1 class="mb-3 text-2xl font-medium ">{{ information?.title }} </h1>
+        <p class=" break-all  ">{{ information?.description }}</p>
       </div>
     </div>
 
-    <div class=" sm:flex mx-5 my-10 md:mx-28 md:my-16 " v-for="item in card" :key="item.id">
-      <div class="sm:flex-shrink-0">
-        <img class=" sm:h-full sm:w-48 sm:w-60" :src="item?.image">
+    <div class="mx-5 my-10  md:mx-28 md:my-16 md:flex " v-for="item in card" :key="item.id">
+      <div class="flex-shrink-0">
+        <img class="h-full  md:w-60" :src="item?.image">
       </div>
-      <div class="mt-4 sm:mt-6 sm:ml-6">
-        <h2 class="mb-2 text-xl font-medium">{{ item?.name }}</h2>
+      <div class="md:mx-6">
+        <h2 class="text-center mt-4 mb-2 text-xl font-medium md:text-left">{{ item?.name }}</h2>
         <h3 class="relative"> {{ item?.title }}
           <div class="absolute bg-amber-500 h-0.5 w-12"></div>
         </h3>
