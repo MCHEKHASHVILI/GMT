@@ -1,7 +1,7 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
 import { ref } from "vue";
-
+import iconArrow from "../../components/icons/iconArrow.vue";
 const location = ref("Location");
 const date = ref(new Date());
 const type = ref("Type");
@@ -131,9 +131,7 @@ const filterEvents = () => {
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
                   >
-                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                      <path d="M10 12l-6-6h12z" />
-                    </svg>
+                  <iconArrow />
                   </div>
                 </div>
               </div>
@@ -170,9 +168,7 @@ const filterEvents = () => {
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
                   >
-                    <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                      <path d="M10 12l-6-6h12z" />
-                    </svg>
+                   <iconArrow />
                   </div>
                 </div>
               </div>
