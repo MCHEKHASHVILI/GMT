@@ -1,6 +1,6 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14.15" viewBox="0 0 24 14.15">
-  <path id="expand_more_FILL0_wght400_GRAD0_opsz48_1_" data-name="expand_more_FILL0_wght400_GRAD0_opsz48 (1)" d="M24,30.75l-12-12,2.15-2.15L24,26.5l9.85-9.85L36,18.8Z" transform="translate(-12 -16.6)" fill="#fff" opacity="0.7"/>
-</svg>
+ <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                      <path d="M10 12l-6-6h12z" />
+                    </svg>
 
 </template>
