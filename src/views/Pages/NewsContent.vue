@@ -58,7 +58,7 @@ const newsContent = {
             </div>
             <h1 class="text-2xl font-bold mb-1  mt-1 text-lg ">{{ newsContent.title }}</h1>
             <div class="text-base text-left mb-4">
-                <p v-for="p in newsContent.paragraphs" class="mb-4 md:text-center">{{ p }}</p>
+                <p v-for="p in newsContent.paragraphs" class="mb-4">{{ p }}</p>
             </div>
         </div>
     </main-layout>
