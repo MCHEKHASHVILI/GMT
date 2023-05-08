@@ -27,12 +27,12 @@ const props = defineProps({
   <div class="mx-auto max-w-md flex flex-col items-end">
     <div class="relative w-full h-52 mb-2">
       <img :src="imageSrc" alt="Placeholder Image" class="absolute top-0 right-0 w-full h-full object-cover -m-1" />
-      <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-        <i class="fas fa-calendar" style="color: #ffffff;"></i>
+      <span class="absolute bottom-0 left-0 bg-transparent text-white font-serif py-3 px-4 rounded" style="font-size: 0.8em;">
+        <i class="fas fa-calendar" style="color: #ffffff font-size: 0.8em;"></i>
         {{ date }}
       </span>
-      <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-1 px-2 rounded">
-        <i class="fas fa-eye" style="color: #ffffff;"></i>
+      <span class="absolute bottom-0 right-0 bg-transparent text-white font-serif py-3 px-4 rounded" style="font-size: 0.8em;">
+        <i class="fas fa-eye" style="color: #ffffff font-size: 0.8em;"></i>
         {{ views }}
       </span>
     </div>

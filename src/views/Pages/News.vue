@@ -1,7 +1,11 @@
 <script setup>
 import mainLayout from '../../layouts/mainLayout.vue'
 import NewsCard from '../../components/sections/NewsCard.vue'
-import { newsArticles } from '../../store/modules/news.js'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
+
+const store = useStore()
+const newsModule = computed(() => store.getters['news/news'])
 </script>
 
 <template>
@@ -11,9 +15,9 @@ import { newsArticles } from '../../store/modules/news.js'
         NEWS
       </div>
     </div>
-    <div class="mx-5 lg:mx-20">
-      <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 lg:grid-cols-3 xl:grid-cols-3 mx-auto?">
-        <NewsCard v-for="article in newsArticles" 
+    <div class="md:mx-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 mx-auto?">
+        <NewsCard v-for="article in newsModule" 
           :key="article.id" 
           :imageSrc="article.icon" 
           :title="article.title"
