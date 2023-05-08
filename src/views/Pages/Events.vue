@@ -1,7 +1,7 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
 import { ref } from "vue";
-import { Events } from "./Events.vue";
+
 const location = ref("Location");
 const date = ref(new Date());
 const type = ref("Type");
