@@ -107,7 +107,7 @@ const filterEvents = () => {
           <h2 class="leading-none sm:hidden">EVENTS-STAY CONNECTED !</h2>
         </div>
 
-        <div class="absolute  hidden sm:block">
+        <div class="absolute hidden sm:block">
           <div
             class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]"
           >
@@ -117,12 +117,11 @@ const filterEvents = () => {
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   for="location"
                 >
-                
                 </label>
                 <div class="relative">
                   <select
                     v-model="location"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="location"
                   >
                     <option disabled selected>Location</option>
@@ -131,7 +130,7 @@ const filterEvents = () => {
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
                   >
-                    <iconArrow/>
+                    <iconArrow />
                   </div>
                 </div>
               </div>
@@ -159,7 +158,7 @@ const filterEvents = () => {
                 <div class="relative">
                   <select
                     v-model="type"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none  bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-gray-200 border border-black text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
                     id="type"
                   >
                     <option disabled selected>Type</option>
@@ -168,7 +167,7 @@ const filterEvents = () => {
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
                   >
-                   <iconArrow />
+                    <iconArrow />
                   </div>
                 </div>
               </div>
@@ -183,12 +182,12 @@ const filterEvents = () => {
               </div>
             </form>
           </div>
-     
-
         </div>
-        <button class="filter-button block md:hidden lg:hidden xl:hidden bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline">
-  FILTER
-</button>
+        <button
+          class="filter-button block md:hidden lg:hidden xl:hidden bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
+        >
+          FILTER
+        </button>
       </div>
     </div>
 
