@@ -12,7 +12,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
   {
@@ -21,7 +21,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
   {
@@ -30,7 +30,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
   {
@@ -39,7 +39,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
   {
@@ -48,7 +48,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
   {
@@ -57,7 +57,7 @@ const events = [
     price: "150 Gel",
     date: new Date("2023-03-21"),
     formattedDate: "March 21,2023 | 10:25",
-    image: "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
     title: " Jazz up your night: Join us for live music and delicious dinning at our restaurant!"
   },
 ];
@@ -73,26 +73,26 @@ const filterEvents = () => {
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center md:text-2xl font-medium mt-3">EVENTS</h1>
+    <h1 class="flex justify-center md:text-2xl font-bold mt-14">EVENTS</h1>
 
-    <div class="flex flex-row">
+    <div class="flex flex-row -mt-5">
       <div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
+        <div class="translate-x-[109px] translate-y-[100px] text-2xl font-bold">
           <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
         </div>
-        <div class="translate-x-[80px] translate-y-[100px] text-2xl font-medium">
+        <div class="translate-x-[109px] translate-y-[100px] text-2xl font-bold">
           <h2>CONNECTED!</h2>
         </div>
         <!-- form -->
         <div class="absolute">
-          <div class="flex justify-center items-center bg-gray-200 translate-x-[80px] translate-y-[150px] w-[980px]">
-            <form class="w-full max-w-md- flex justify-between h-[90px]">
-              <div class="px-3">
+          <div class="flex justify-center items-center bg-gray-100 translate-x-[109px] translate-y-[140px] w-[960px]">
+            <form class="w-full max-w-md- flex justify-between h-[100px]">
+              <div class="px-5">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="location">
                 </label>
                 <div class="relative">
                   <select v-model="location"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[55px] w-[200px] mt-[11%] block appearance-none bg-transparent border border-gray-400 text-gray-700 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="location">
                     <option disabled selected>Location</option>
                     <option value="Tbilisi">Tbilisi</option>
@@ -109,7 +109,7 @@ const filterEvents = () => {
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="date">
                 </label>
                 <input v-model="date"
-                  class="h-[62px] w-[190px] mt-[13px] appearance-none block bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="h-[55px] w-[200px] mt-[11%] appearance-none block bg-transparent border border-gray-400 text-gray-700 py-3 px-4 focus:outline-none focus:bg-white focus:border-gray-500"
                   id="date" type="date" placeholder="Date" />
               </div>
               <div class="px-3">
@@ -117,7 +117,7 @@ const filterEvents = () => {
                 </label>
                 <div class="relative">
                   <select v-model="type"
-                    class="h-[62px] w-[190px] mt-[13px] block appearance-none bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="h-[55px] w-[200px] mt-[11%] block appearance-none bg-transparent border border-gray-400 text-gray-700 py-3 px-4 focus:outline-none focus:bg-white focus:border-gray-500"
                     id="type">
                     <option disabled selected>Type</option>
                     <option value="Jazz">Jazz</option>
@@ -131,7 +131,7 @@ const filterEvents = () => {
               </div>
               <div class="relaitve">
                 <button @click="filterEvents"
-                  class="mt-[13px] mr-[15px] w-[190px] h-[62px] bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
+                  class="mt-[10%] mr-[20px] w-[200px] h-[55px] bg-black hover:bg-black-700 font-light text-yellow-600 py-2 px-4 focus:outline-none focus:shadow-outline"
                   type="button">
                   DISCOVER EVENTS
                 </button>
@@ -141,34 +141,35 @@ const filterEvents = () => {
         </div>
       </div>
     </div>
-    <div class="pr-[80px]">
-      <img class="ml-auto w-[675px] h-[300px]"
+    <div class="pr-[90px]">
+      <img class="ml-auto w-[645px] h-[320px]"
         src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/black-and-white-cello-kathy-franklin.jpg" />
     </div>
     <br />
-    <div class="flex items-center justify-center min-h-screen container mx-auto">
+    <div class="flex items-center justify-center min-h-screen container mx-auto mb-28">
       <!-- grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pl-20 pr-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-x-3 pl-[110px] pr-20">
         <!-- card -->
 
-        <div v-for="event in filteredEvents" class="max-w flex flex-col">
+        <div v-for="event in filteredEvents" class=" flex flex-col">
           <div>
-            <img :src="event.image" alt="jazzpic" />
+            <img :src="event.image" class="h-[202px]" alt="jazzpic" />
           </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
+          <h5 class="text-2xl md:text-xl font-medium mt-2">
             {{ event.title }}
           </h5>
-          <div class="pt-4 pb-2">
-            <span class="inline-block bg-gray-200 px-8 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ event.type
+          <div class="pt-3 pb-2">
+            <span class="inline-block bg-gray-200 px-8 py-1 font-normal font-medium text-sm uppercase text-black mr-2 mb-1">{{ event.type
             }}</span>
-            <span class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ event.price
+            <span class="inline-block px-3 py-1 text-sm font-normal text-black mr-[58px] mb-1">
+              <span class="text-gray-700">Price:</span> {{ event.price
             }}</span>
-            <span class="inline-block bg-gray-50 px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{
+            <span class="inline-block px-3 py-1 text-sm font-normal text-gray-700 mr-2 mb-1">{{
               event.formattedDate
             }}</span>
           </div>
           <div href="#"
-            class="text-center bg-gray-200 text-black-700 py-6 font-semibold mt hover:bg-grey-300 focus:scale-95">
+            class="text-center bg-gray-200 text-black-700 py-4 w-[434px] font-semibold hover:bg-gray-300 focus:scale-95">
             VIEW DETAILS
           </div>
         </div>
