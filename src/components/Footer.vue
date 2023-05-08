@@ -8,7 +8,7 @@ const footerComponents = computed(() => store.getters["footer/footerComponents"]
 <template>
     <footer>
         <div class="bg-black text-white  md:flex md:justify-between md:pr-32 md:pb-10">
-            <div class="leftSide pl-20 py-5 md:pt-10 md:pl-16">
+            <div class="leftSide pl-24 py-5 md:pt-10 md:pl-16">
                 <router-link to="/">
                     <img src="../assets/images/Logo.png">
                 </router-link>
