@@ -74,7 +74,7 @@ const filterEvents = () => {
                 </div>
               </div>
 
-              <div class="px-3">
+             <div class="px-3">
                 <label
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   for="date"
@@ -87,7 +87,7 @@ const filterEvents = () => {
                   type="date"
                   placeholder="Date"
                 />
-              </div>
+              </div> 
               <div class="px-3">
                 <label
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
