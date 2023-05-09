@@ -1,90 +1,29 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import iconArrow from "../../components/icons/iconArrow.vue";
+import { useStore } from "vuex";
+import eventsModule from "../../store/modules/events";
+const store = useStore();
+store.registerModule("events", eventsModule);
+
 const location = ref("Location");
 const date = ref(new Date());
 const type = ref("Type");
 
-const events = [
-  {
-    id: 1,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-  {
-    id: 2,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-  {
-    id: 3,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-  {
-    id: 4,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-  {
-    id: 5,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-  {
-    id: 6,
-    type: "Jazz",
-    price: "150 Gel",
-    date: new Date("2023-03-21"),
-    formattedDate: "March 21,2023 | 10:25",
-    image:
-      "https://media.istockphoto.com/id/465732100/photo/african-jazz-musician-playing-the-saxophone.jpg?s=612x612&w=0&k=20&c=hCw5oibcUVJYSHqAWJQnD3AHpPATEdCZoA4TS8qqkng=",
-    title:
-      " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
-  },
-];
+const events = computed(() => store.getters["events/events"]);
 
-const filteredEvents = ref(events);
+const filteredEvents = ref(events.value);
 
 const filterEvents = () => {
-  filteredEvents.value = events.filter((e) => {
+  filteredEvents.value = events.value.filter((e) => {
     return (
       e.type === type.value && e.date.toISOString().slice(0, 10) === date.value
     );
   });
 };
 </script>
+
 <template>
   <main-layout>
     <h1 class="flex justify-center text-2xl font-bold mt-12">EVENTS</h1>
