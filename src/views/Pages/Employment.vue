@@ -35,7 +35,7 @@ const vacancies = computed(() => store.getters["employment/getVacancies"]);
               </h2>
             </div>
           </div>
-          <p class="mb-3 font-normal text-gray-700 dark:text-black">
+          <p class="mb-3 font-hel_roman text-gray-700 dark:text-black">
             {{ vacancy.job.title }}
           </p>
           <div class="">
@@ -54,7 +54,7 @@ const vacancies = computed(() => store.getters["employment/getVacancies"]);
               >
                 <router-link
                   :to="'/employment/' + vacancy.id"
-                  class="hover:bg-black hover:text-yellow-500 inline-block items-center px-[37%] md:px-[25%] py-4 text-sm text-center text-black bg-zinc-100"
+                  class="hover:bg-black hover:text-yellow-500 inline-block items-center px-[37%] md:px-[25%] py-4 text-base text-center text-black bg-zinc-100"
                 >
                   VIEW DETAILS
                 </router-link>

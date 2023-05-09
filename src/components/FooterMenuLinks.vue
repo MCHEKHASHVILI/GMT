@@ -8,8 +8,8 @@ const footerComponents = computed(() => store.getters["footer/footerComponents"]
 
 <template>
     <div class="pb-3 ">
-        <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-32  text-gray-500 dark:text-gray-400 font-medium">
-            <li class="text-white w-28 h-12" v-for="(component, index) in footerComponents" :key="index">
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-32  text-gray-500 dark:text-gray-400 font-medium ">
+            <li class="text-white w-28 h-12 font-hel_light" v-for="(component, index) in footerComponents" :key="index">
                 <router-link v-if="component.routerLink" :to="component.routerLink">{{ component.name
                 }}</router-link>
                 <span class="flex gap-4" v-else-if="component.icon">

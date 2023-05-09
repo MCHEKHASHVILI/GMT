@@ -19,7 +19,6 @@ const footerModule = {
         { routerLink: "/about", name: "ABOUT US" },
         { routerLink: "/news", name: "NEWS" },
         {alink: "FOLLOW US"},
-        { icon: "/src/assets/icons/facebook.svg", icon2: "/src/assets/icons/linkedin.svg" },
      
     ],
       };
@@ -27,6 +26,7 @@ const footerModule = {
     getters: {
       footerComponents: (state) => state.footerComponents,
       footerComponentsMobile: (state) => state.footerComponentsMobile,
+      footerIcons: (state) => state.footerIcons,
     },
   };
   
