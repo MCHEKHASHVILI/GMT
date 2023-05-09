@@ -11,7 +11,7 @@ const newsModule = computed(() => store.getters['news/news'])
 <template>
   <mainLayout>
     <div class="flex justify-center items-center h-40">
-      <div class="text-center text-2xl font-bold">
+      <div class="text-center text-2xl font-hel_bold">
         NEWS
       </div>
     </div>
@@ -26,8 +26,8 @@ const newsModule = computed(() => store.getters['news/news'])
           :views="article.views" />
       </div>
     </div>
-    <div class="flex justify-center items-center h-40">
-      <button class="w-56 h-14 bg-black hover:bg-gray-800 text-yellow-500 font-[1px] py-3 px-10">
+    <div class="flex justify-center items-center h-40 mb-20">
+      <button class="w-56 h-14 bg-black hover:bg-gray-800 text-yellow-500 text-sm font-hel_light py-3 px-10">
         MORE
       </button>
     </div>
