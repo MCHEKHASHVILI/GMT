@@ -1,68 +1,32 @@
 <script setup>
 import mainLayout from '../../layouts/mainLayout.vue'
+import { useStore } from 'vuex';
 
-const card = [{
-  id: 1,
-  name: 'NAME SURNAME',
-  title: ' F&B Product Development and Operations',
-  image: "https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg",
-  description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus sequi deserunt perferendis  voluptatem qui molestias et soluta dolor numquam tenetur id illum quidem officiis, sed, quas iure! Labore, beatae!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam non ratione rem harum nostrum. Voluptatem doloribus corrupti magnam quas hic, praesentium possimus aut reiciendis nobis temporibus, veniam error, facere illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quidem aliquam quibusdam suscipit praesentium, quae voluptatem modi. Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam "
-},
-{
-  id: 2,
-  name: "NAME SURNAME",
-  title: ' F&B Product Development and Operations',
-  image: "https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg",
-  description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus sequi deserunt perferendis  voluptatem qui molestias et soluta dolor numquam tenetur id illum quidem officiis, sed, quas iure! Labore, beatae!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam non ratione rem harum nostrum. Voluptatem doloribus corrupti magnam quas hic, praesentium possimus aut reiciendis nobis temporibus, veniam error, facere illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quidem aliquam quibusdam suscipit praesentium, quae voluptatem modi. Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam "
 
-},
-{
-  id: 3,
-  name: "NAME SURNAME",
-  title: ' F&B Product Development and Operations',
-  image: "https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg",
-  description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus sequi deserunt perferendis  voluptatem qui molestias et soluta dolor numquam tenetur id illum quidem officiis, sed, quas iure! Labore, beatae!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam non ratione rem harum nostrum. Voluptatem doloribus corrupti magnam quas hic, praesentium possimus aut reiciendis nobis temporibus, veniam error, facere illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quidem aliquam quibusdam suscipit praesentium, quae voluptatem modi. Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam "
-},
-{
-  id: 4,
-  name: "NAME SURNAME",
-  title: ' F&B Product Development and Operations',
-  image: "https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg",
-  description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus sequi deserunt perferendis  voluptatem qui molestias et soluta dolor numquam tenetur id illum quidem officiis, sed, quas iure! Labore, beatae!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam non ratione rem harum nostrum. Voluptatem doloribus corrupti magnam quas hic, praesentium possimus aut reiciendis nobis temporibus, veniam error, facere illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quidem aliquam quibusdam suscipit praesentium, quae voluptatem modi. Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam "
-},
-{
-  id: 5,
-  name: "NAME SURNAME",
-  title: ' F&B Product Development and Operations',
-  image: "https://futureofcare.co.uk/wp-content/uploads/2019/10/Jeremy-Hughes-400px.jpg",
-  description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus sequi deserunt perferendis  voluptatem qui molestias et soluta dolor numquam tenetur id illum quidem officiis, sed, quas iure! Labore, beatae!  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam non ratione rem harum nostrum. Voluptatem doloribus corrupti magnam quas hic, praesentium possimus aut reiciendis nobis temporibus, veniam error, facere illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quidem aliquam quibusdam suscipit praesentium, quae voluptatem modi. Nisi sunt nostrum, debitis harum optio facere adipisci, et quia totam dolore quibusdam "
-},
-]
-const information = {
-  title: 'WHO WILL BE BY YOUR SIDE',
-  description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus saepe culpa fugiat optio mollitia quas inventore maxime est hic, suscipit quisquam debitis dolore nobis!'
-}
+const store = useStore()
+const cards = store.getters['about/getCard']
+const informations = store.getters['about/getInformation']
 
 </script>
 <template>
   <main-layout>
     <div class="m-5 md:mx-56  ">
       <div class=" w-full  text-center  mx-auto text-left md:w-1/2 md:mt-16">
-        <h1 class="mb-3 text-2xl font-medium ">{{ information?.title }} </h1>
-        <p class=" break-all  ">{{ information?.description }}</p>
+        <h1 class="mb-3 text-2xl font-hel_medium ">{{ informations.title }} </h1>
+        <p class=" break-all font-hel_ligth ">{{ informations.description }}</p>
       </div>
     </div>
 
-    <div class="mx-5 my-10  md:mx-28 md:my-16 md:flex " v-for="item in card" :key="item.id">
-      <div class="flex-shrink-0">
-        <img class="h-full  md:w-60" :src="item?.image">
+    <div class="mx-5 my-10  md:mx-28 md:my-16 md:flex " v-for="card in cards" :key="card.id">
+      <div class="flex-shrink-0 ">
+        <img class="h-full w-full md:w-60" :src="card?.image">
       </div>
       <div class="md:mx-6">
-        <h2 class="text-center mt-4 mb-2 text-xl font-medium md:text-left">{{ item?.name }}</h2>
-        <h3 class="relative"> {{ item?.title }}
-          <div class="absolute bg-amber-500 h-0.5 w-12"></div>
+        <h2 class="text-center my-4 text-2xl font-hel_medium md:text-left">{{ card?.name }}</h2>
+        <h3 class="relative font-hel_bold text-lg"> {{ card?.title }}
+          <div class="absolute bg-amber-500 h-0.5 w-12 my-2"></div>
         </h3>
-        <p class="mt-6 ">{{ item?.description }} </p>
+        <p class="mt-6 font-hel_ligth ">{{ card?.description }} </p>
       </div>
     </div>
   </main-layout>
