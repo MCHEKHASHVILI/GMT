@@ -3,6 +3,7 @@ import brandsModule from "./modules/brands"
 import employmentModule from "./modules/employment";
 import navbarModule from "./modules/navbar";
 import titlesModule from "./modules/titles";
+import footerModule from "./modules/footer"
 import eventsModule from "./modules/events";
 import newsModule from "./modules/news";
 
@@ -12,6 +13,7 @@ const store = createStore({
         "employment": employmentModule,
         "navbar": navbarModule,
         "titles": titlesModule,
+        "footer": footerModule,
         "events": eventsModule,
         "news": newsModule
     }
