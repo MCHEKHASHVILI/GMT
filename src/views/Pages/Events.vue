@@ -8,7 +8,7 @@ const store = useStore();
 store.registerModule("events", eventsModule);
 
 const location = ref("Location");
-const date = ref(new Date());
+
 const type = ref("Type");
 
 const events = computed(() => store.getters["events/events"]);
@@ -140,11 +140,11 @@ const filterEvents = () => {
     <div
       class="flex items-center justify-center min-h-screen container mx-auto mb-12"
     >
-      <!-- grid -->
+      
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-20 pr-20"
       >
-        <!-- card -->
+        
 
         <div v-for="event in filteredEvents" class="max-w flex flex-col">
           <div>
