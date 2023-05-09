@@ -82,7 +82,7 @@ const filterEvents = () => {
         </div>
         <!-- form -->
         <div class="absolute max-sm:hidden">
-          <div class="flex justify-center items-center bg-gray-100 translate-x-[109px] translate-y-[140px] w-[960px]">
+          <div class="flex justify-center items-center bg-gray-100 translate-x-[109px] translate-y-[160px] w-[960px]">
             <form class="w-full max-w-md- flex justify-between h-[100px]">
               <div class="px-5">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="location">
