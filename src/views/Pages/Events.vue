@@ -148,9 +148,9 @@ const filterEvents = () => {
 
         <div v-for="event in filteredEvents" class="max-w flex flex-col">
           <div>
-            <img :src="event.image" alt="jazzpic" />
+            <img :src="event.image" class="sm:h-[202px] max-sm:w-full" alt="jazzpic" />
           </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-3">
+          <h5 class="text-2xl max-sm:w-[339px]  sm:text-xl max-sm:font-bold font-medium mt-2">
             {{ event.title }}
           </h5>
           <div class="pt-4 pb-2">
