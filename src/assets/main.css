@@ -1,10 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "hel-light";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_45_Light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "hel-roman";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_55_Roman.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "hel-medium";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_65_Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "hel-bold";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_75_Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "hel-heavy";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_85_Heavy.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "hel-black";
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_95_Black.ttf")
+    format("truetype");
+}
+
 body {
-    /* overflow-y: hidden; */
+  /* overflow-y: hidden; */
 }
