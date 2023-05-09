@@ -73,18 +73,15 @@ const filterEvents = () => {
 </script>
 <template>
   <main-layout>
-    <h1 class="flex justify-center md:text-2xl font-bold mt-14">EVENTS</h1>
+    <h1 class="flex justify-center max-sm:text-3xl text-2xl font-bold mt-9 sm:mt-14">EVENTS</h1>
 
     <div class="flex flex-row -mt-5">
-      <div>
-        <div class="translate-x-[109px] translate-y-[100px] text-2xl font-bold">
-          <h2>DON'T MISS OUT ON OUR EVENTS-STAY</h2>
-        </div>
-        <div class="translate-x-[109px] translate-y-[100px] text-2xl font-bold">
-          <h2>CONNECTED!</h2>
+      <div class="max-sm:mt-14 sm:w-[500px] ">
+        <div class="sm:translate-x-[109px] sm:translate-y-[100px]  text-2xl font-bold ">
+          <h2 class="max-sm:text-center max-sm:px-16 max-sm:mb-9">DON'T MISS OUT ON OUR EVENTS-STAY CONNECTED!</h2>
         </div>
         <!-- form -->
-        <div class="absolute">
+        <div class="absolute max-sm:hidden">
           <div class="flex justify-center items-center bg-gray-100 translate-x-[109px] translate-y-[140px] w-[960px]">
             <form class="w-full max-w-md- flex justify-between h-[100px]">
               <div class="px-5">
@@ -139,37 +136,40 @@ const filterEvents = () => {
             </form>
           </div>
         </div>
+       <div class="sm:hidden ">
+        <a class="absolute bg-gray-300 py-4 px-[177px] uppercase font-medium translate-x-[39px] translate-y-[235px] text-lg ">filter</a>
+       </div>
       </div>
     </div>
-    <div class="pr-[90px]">
-      <img class="ml-auto w-[645px] h-[320px]"
+    <div class="sm:pr-[90px]">
+      <img class="ml-auto sm:w-[645px]  sm:h-[320px] "
         src="https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/1/black-and-white-cello-kathy-franklin.jpg" />
     </div>
-    <br />
-    <div class="flex items-center justify-center min-h-screen container mx-auto mb-28">
+    <br/>
+    <div class="flex items-center justify-center min-h-screen container mx-auto mb-28 max-sm:mt-6  ">
       <!-- grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-x-3 pl-[110px] pr-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-x-3 sm:pl-[110px]  sm:pr-20 px-[8%]">
         <!-- card -->
-
         <div v-for="event in filteredEvents" class=" flex flex-col">
           <div>
-            <img :src="event.image" class="h-[202px]" alt="jazzpic" />
+            <img :src="event.image" class="sm:h-[202px] max-sm:w-full" alt="jazzpic" />
           </div>
-          <h5 class="text-2xl md:text-xl font-medium mt-2">
+          <h5 class="text-2xl max-sm:w-[339px]  sm:text-xl max-sm:font-bold font-medium mt-2">
             {{ event.title }}
           </h5>
           <div class="pt-3 pb-2">
-            <span class="inline-block bg-gray-200 px-8 py-1 font-normal font-medium text-sm uppercase text-black mr-2 mb-1">{{ event.type
-            }}</span>
-            <span class="inline-block px-3 py-1 text-sm font-normal text-black mr-[58px] mb-1">
+            <span class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal font-medium text-sm uppercase text-black max-sm:mr-16  mr-2 mb-1">
+              {{ event.type}}
+            </span>
+            <span class="inline-block px-3 py-1 text-sm font-normal text-black sm:mr-[58px] mb-1 max-sm:text-lg">
               <span class="text-gray-700">Price:</span> {{ event.price
             }}</span>
-            <span class="inline-block px-3 py-1 text-sm font-normal text-gray-700 mr-2 mb-1">{{
+            <span class="inline-block sm:px-3 py-1 sm:text-sm text-xl font-normal sm:text-gray-700 mr-2 mb-1 max-sm:uppercase">{{
               event.formattedDate
             }}</span>
           </div>
           <div href="#"
-            class="text-center bg-gray-200 text-black-700 py-4 w-[434px] font-semibold hover:bg-gray-300 focus:scale-95">
+            class="text-center bg-gray-200 py-4 sm:w-[434px] w-auto font-semibold hover:bg-gray-300 focus:scale-95">
             VIEW DETAILS
           </div>
         </div>
