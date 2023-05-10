@@ -11,7 +11,7 @@ const location = ref("Location");
 
 const type = ref("Type");
 
-const events = computed(() => store.getters["events/events"]);
+const events = computed(() => store.getters["events/formattedEvents"]);
 
 const filteredEvents = ref(events.value);
 
@@ -23,6 +23,8 @@ const filterEvents = () => {
   });
 };
 </script>
+
+
 
 <template>
   <main-layout>
@@ -126,7 +128,9 @@ const filterEvents = () => {
             VIEW DETAILS
           </div>
         </div>
+
       </div>
     </div>
+
   </main-layout>
 </template>
