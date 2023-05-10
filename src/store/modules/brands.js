@@ -3,7 +3,6 @@ const brandsModule = {
     state() {
         return {
 
-            mobileVersion: null,
 
             brands: [
                 {
@@ -48,29 +47,13 @@ const brandsModule = {
         }
     },
     getters: {
-
-        mobileVersion: state => state.mobileVersion,
         brands: state => state.brands,
         
     },
 
     mutations:{
-        changeGalerryArrangement(state){
-            
-            state.mobileVersion = !state.mobileVersion
-        },
 
-        checkCurrentSize(state){
 
-            if(window.innerWidth<=768){
-                state.mobileVersion = true
-    
-            }
-            else{
-                state.mobileVersion = false
-            }
-    
-        }
     },
 
 
