@@ -79,7 +79,7 @@ const eventsModule ={
         return state.events.map((event) => {
           return {
             ...event,
-            formattedDate: `${event.date.toLocaleDateString("en-US", {
+            formattedDate: `${event.date.toLocaleDateString("ka-GE", {
               month: "long",
               day: "2-digit",
               year: "numeric",
