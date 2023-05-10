@@ -1,66 +1,69 @@
 <script>
-import '@splidejs/vue-splide/css'
-import { ref } from 'vue'
-import { mapGetters } from 'vuex'
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-import { onMounted } from "vue";
-import mainLayout from '../../layouts/mainLayout.vue'
+import mainLayout from '../../layouts/mainLayout.vue';
+import '@splidejs/vue-splide/css';
+import { ref, onMounted } from 'vue';
+import { mapGetters } from 'vuex';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import Phone from "../../components/icons/iconPhone.vue";
 import Address from "../../components/icons/iconAddress.vue";
 import Email from "../../components/icons/iconEmail.vue";
 import Facebook from "../..//components/icons/iconFacebook.vue";
 import Linkedin from "../../components/icons/iconLinkedin.vue";
 
-
 export default {
-
   components: {
-    Splide, SplideSlide, mainLayout
+    Splide,
+    SplideSlide,
+    Phone,
+    Address,
+    Email,
+    Facebook,
+    Linkedin,
+    mainLayout
   },
   computed: {
-    ...mapGetters('brands', ['brands'])
+    ...mapGetters('brands', ['brands']),
   },
-  setup(){
-    const main = ref()
-    const thumbs = ref()
+  setup() {
+    const main = ref();
+    const thumbs = ref();
 
-    
     const links = [
-  {
-    name: "ADDRESS",
-    content: "Mtatsminda plateau, 0114 Tbilisi, Georgia",
-    icon: Address,
-  },
-  {
-    name: "PHONE",
-    content: "+995 577 74 44 00",
-    icon: Phone,
-  },
-  {
-    name: "E-MAIL",
-    content: "info@funicular.ge",
-    icon: Email,
-  },
-  {
-    name: "FACEBOOK",
-    content: "Funicular \u{2022} ფუნიკულიორი",
-    icon: Facebook,
-  },
-  {
-    name: "LINKEDIN",
-    content: "Restaurant Funicular",
-    icon: Linkedin,
-  },
-];
+      {
+        name: "ADDRESS",
+        content: "Mtatsminda plateau, 0114 Tbilisi, Georgia",
+        icon: Address,
+      },
+      {
+        name: "PHONE",
+        content: "+995 577 74 44 00",
+        icon: Phone,
+      },
+      {
+        name: "E-MAIL",
+        content: "info@funicular.ge",
+        icon: Email,
+      },
+      {
+        name: "FACEBOOK",
+        content: "Funicular \u{2022} ფუნიკულიორი",
+        icon: Facebook,
+      },
+      {
+        name: "LINKEDIN",
+        content: "Restaurant Funicular",
+        icon: Linkedin,
+      },
+    ];
+
     const mainOptions = {
       type: 'loop',
       rewind: true,
       perPage: 1,
       pagination: false,
       fixedHeight: 740,
-    }
+    };
 
-   
     const thumbOptions = ref({
       type: 'slide',
       rewind: true,
@@ -75,21 +78,22 @@ export default {
 
     const updateThumbOptions = () => {
       thumbOptions.value.perPage = window.innerWidth >= 768 ? 4 : 1;
-    }
+    };
 
-    onMounted( () => {
+    onMounted(() => {
       const thumbsSplide = thumbs.value?.splide;
-      if ( thumbsSplide ) {
-        main.value?.sync( thumbsSplide );
+      if (thumbsSplide) {
+        main.value?.sync(thumbsSplide);
       }
       updateThumbOptions();
       window.addEventListener('resize', updateThumbOptions);
     });
 
-    return { mainOptions, thumbOptions, main, thumbs,links }
-  }
-}
+    return { mainOptions, thumbOptions, main, thumbs, links };
+  },
+};
 </script>
+
 
 <template>
   <mainLayout>
@@ -136,21 +140,20 @@ export default {
 
 <!-- სურათების ნაწილი -->
 
-<section class="w-5/6 flex flex-col mb-28 items-center ">
-  <h1 class="font-[arial] font-bold text-3xl mb-10">GALERRY</h1>
-  <Splide class="w-full md:inline-block hidden mb-3 " :options="mainOptions" aria-label="My Favorite Images" ref="main">
-      <SplideSlide  v-for="image in brands[0].galerry">
-          <img class="h-full w-full"  :src="image" alt="Sample 1">
+<section class="w-5/6 flex flex-col mb-28 items-center">
+    <h1 class="font-[arial] font-bold text-3xl mb-10">GALLERY</h1>
+    <Splide class="w-full md:inline-block hidden mb-3" :options="mainOptions" aria-label="My Favorite Images" ref="main">
+      <SplideSlide v-for="image in brands[0].galerry" :key="image">
+        <img class="h-full w-full" :src="image" :alt="'Slide ' + image">
       </SplideSlide>
-      
-  </Splide>
+    </Splide>
 
-  <Splide class="w-full h-1/5 " :options="thumbOptions" aria-label="My Favorite Images" ref="thumbs">
-      <SplideSlide class="h-44" v-for="image in brands[0].galerry" :class="[ 'opacity-75 active:opacity-100 active:border-0' ]">
-          <img  class="w-full h-full" :src="image" alt="Sample 1">
+    <Splide class="w-full h-1/5" :options="thumbOptions" aria-label="My Favorite Images" ref="thumbs">
+      <SplideSlide class="h-44" v-for="image in brands[0].galerry" :key="image" :class="[ 'opacity-75 active:opacity-100 active:border-0' ]">
+        <img class="w-full h-full" :src="image" :alt="'Thumbnail ' + image">
       </SplideSlide>
-  </Splide>
-</section>
+    </Splide>
+  </section>
 
 <!-- კონტაკტის ნაწილი -->
 
