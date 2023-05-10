@@ -26,7 +26,7 @@ const filterEvents = () => {
 
 <template>
   <main-layout>
-    <h1 class="flex justify-center text-2xl font-bold mt-16">EVENTS</h1>
+    <h1 class="flex justify-center text-2xl font-bold mt-16">EVENTS11</h1>
 
     <div class="flex flex-wrap sm:flex-nowrap sm:-mt-4 ">
       <div class="w-full max-sm:mt-14 sm:w-auto ">
