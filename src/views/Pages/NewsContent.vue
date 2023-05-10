@@ -55,9 +55,9 @@ const newsContent = {
 
 <template>
     <main-layout>
-        <div class="flex flex-col mx-10 md: mx-20 ">
+        <div class="flex flex-col mx-10 md:mx-20">
             <div class="hidden max-sm:block">
-                <h1 class="text-center font-bold mt-10">NEWS</h1>
+                <h1 class="text-center font-hel_bold  mt-10">NEWS</h1>
             </div>
             <img :src="news.img" class="mt-5" alt="">
             <div class="flex flex-row flex items-center ">
@@ -73,10 +73,10 @@ const newsContent = {
                 </span>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
             </div>
-            <h1 class="text-2xl font-bold mb-1  max-sm:text-lg ">{{ news.title2 }}</h1>
-            <div class="text-base text-left mb-4 ">
+            <h1 class="text-2xl font-hel_bold  mb-1  max-sm:text-lg ">{{ news.title }}</h1>
+            <div class="text-base text-left mb-4">
                 <p v-for="p in newsContent.paragraphs" class="mb-4">{{ p }}</p>
             </div>
         </div>
     </main-layout>
-</template>
+</template>n

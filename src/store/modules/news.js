@@ -8,7 +8,6 @@ export const newsModule = {
           img: '/src/assets/images/rest_rigi4.jpg',
           icon: '/src/assets/images/rest_rigi4.jpg',
           title: 'Tourism and COVID-19. Minimize losses, reacquire reserves',
-          title2: 'UNWTO UPDATES PROJECTIONS OF THE IMPACT OF COVID-19 ON TOURISM',
           content:
             'Tourism will be one of the sectors most affected by COVID-19, in fact, for contributing to the contagion of the pandemic',
           date: '15.03.2023',
