@@ -14,7 +14,7 @@ const vacancy = computed(() =>
 <template>
   <main-layout>
     <div
-      class="mx-[max(46px,7.292vw)] mt-[max(22px,3.451vw)] mb-[max(89px,7.212vw)]"
+      class="font-hel_roman mx-[max(46px,7.292vw)] mt-[max(22px,3.451vw)] mb-[max(89px,7.212vw)]"
     >
       <section class="flex w-fit">
         <img
