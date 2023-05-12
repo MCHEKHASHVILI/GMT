@@ -27,11 +27,11 @@ const newsContent = computed(() =>
             </div>
             <img :src="news.img" class="mt-5" alt="">
             <div class="flex flex-row items-center ">
-                <div class="bottom-0 left-0 font-serif rounded flex items-center">
+                <div class="flex items-center">
                     <iconCallendar class="mr-2"/>
                     <span> {{ news.date }} </span>
                 </div>
-                <div class="bottom-0 right-0 font-serif py-3 px-6 rounded flex items-center">
+                <div class=" py-3 px-6 flex items-center">
                     <iconEye class="mr-2"/>
                     <span> {{ news.views }} </span>
                 </div>
