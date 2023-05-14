@@ -26,7 +26,7 @@ export default {
                 <h2 class="text-4xl font-extrabold dark:text-white mt-4 uppercase">{{ item.name }}</h2>
                 <p :class="['mt-4 md:mt-8 md:w-2/3', (index % 2 == 0) ? 'md:text-left' : 'md:text-right']">{{
                     item.description }}</p>
-                <router-link :to="{ name: 'Brands' }"
+                <router-link :to="{ name: 'BrandsContent', params: { id: item?.id } }"
                     class="mt-8 text-yellow-500 text-xl hover:underline w-fit text-right">Read More</router-link>
             </div>
         </div>
