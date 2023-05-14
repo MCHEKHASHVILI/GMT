@@ -99,17 +99,17 @@ export default {
   <mainLayout>
     <div class=" flex  flex-col  items-center mb-32">
 
-<div class="h-5/6 flex  justify-center flex-col md:flex-row mb-16 md:mb-32 md:gap-40  gap-10">
-  <img class="md:w-5/6 " :src="brands[0].mainImg" alt="" />
+<div class="  flex  justify-center flex-col md:flex-row mb-16 md:mb-32 md:gap-32  gap-10">
+  <img class="md:w-1/2 " :src="brands[0].mainImg" alt="" />
 
-  <div class="flex-col  flex md:items-start items-center md:justify-end">
-    <img class=" w-36 mb-12 md:w-48" :src="brands[0].icon" alt="" />
+  <div class="flex-col pt-20   flex md:items-start items-center md:justify-end">
+    <img class=" mb-12 md:w-40" :src="brands[0].icon" alt="" />
     <h1 class="font-bold mb-8 text-3xl font-[arial]">
       {{ brands[0].name.toUpperCase() }}
     </h1>
 
-    <div class="text-xl mb-4 w-10/12">
-      <p class="font-[arial]">
+    <div class="text-xl w-10/12  mb-4 ">
+      <p class="font-[arial] ">
         {{ brands[0].conceptDescription.firstPart }}
       </p>
       <br />
@@ -140,7 +140,7 @@ export default {
 
 <!-- სურათების ნაწილი -->
 
-<section class="w-5/6 flex flex-col mb-28 items-center">
+<section class="w-5/6 mt-24 md:mt-0 flex flex-col mb-28 items-center">
     <h1 class="font-[arial] font-bold text-3xl mb-10">GALLERY</h1>
     <Splide class="w-full md:inline-block hidden mb-3" :options="mainOptions" aria-label="My Favorite Images" ref="main">
       <SplideSlide v-for="image in brands[0].galerry" :key="image">
