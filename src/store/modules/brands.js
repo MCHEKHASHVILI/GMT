@@ -6,6 +6,7 @@ const brandsModule = {
 
             brands: [
                 {
+                    id: 1,
                     img: "/src/assets/images/funicular.png",
                     icon: "/src/assets/logos/funicular.svg",
                     name: "funicular",
@@ -23,6 +24,7 @@ const brandsModule = {
 
                 },
                 {
+                    id: 2,
                     img: "/src/assets/images/puri_guliani.png",
                     icon: "/src/assets/logos/puri_guliani.svg",
                     name: "puri guliani",
@@ -30,6 +32,7 @@ const brandsModule = {
                         "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
                 },
                 {
+                    id: 3,
                     img: "/src/assets/images/guliani_express.png",
                     icon: "/src/assets/logos/puri_guliani_express.png",
                     name: "PURI GULIANI EXPRESS",
@@ -37,6 +40,7 @@ const brandsModule = {
                         "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
                 },
                 {
+                    id: 4,
                     img: "/src/assets/images/rigi.png",
                     icon: "/src/assets/logos/rigi.png",
                     name: "RIGI GASTRODUQAN",
