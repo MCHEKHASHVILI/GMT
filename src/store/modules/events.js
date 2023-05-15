@@ -10,7 +10,7 @@ const eventsModule ={
                     date: new Date("2023-03-23"),
                  
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },
@@ -21,7 +21,7 @@ const eventsModule ={
                     date: new Date("2023-03-22"),
                     
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },
@@ -32,7 +32,7 @@ const eventsModule ={
                     date: new Date("2023-03-25"),
                    
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },
@@ -43,7 +43,7 @@ const eventsModule ={
                     date: new Date("2023-03-27"),
                  
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },
@@ -54,7 +54,7 @@ const eventsModule ={
                     date: new Date("2023-03-21"),
                   
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },
@@ -64,7 +64,7 @@ const eventsModule ={
                     price: "150 Gel",
                     date: new Date("2023-03-23"),
                     image:
-                      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUcAAACaCAMAAAANQHocAAAAA1BMVEUAAACnej3aAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBixVAAASBb17YAAAAASUVORK5CYII=",
+                      "https://44.media.tumblr.com/fec9d7f7f351189e011bdaf23ecd2a9d/eaf5bdfe63613ce7-55/s540x810_f1/d87558f33ede9533145b105681ca62d40091896d.gif",
                     title:
                       " Jazz up your night: Join us for live music and delicious dinning at our restaurant!",
                   },

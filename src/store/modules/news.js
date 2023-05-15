@@ -93,13 +93,57 @@ export const newsModule = {
           date: '17.03.2023',
           views: 750,
         },
+      ],
+      newscontent: {
+        paragraphs: [
+          `Lorem ipsum dolor sit amet
+                      consectetur, adipisicing elit. At fugiat
+                      tempora
+                      quaerat quisquam, quo iste quibusdam! Adipisci esse maxime saepe veniam id enim, illo, alias similique
+                      blanditiis ut nisi vero.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. At fugiat tempora quaerat quisquam, quo iste
+                      quibusdam! Adipisci esse maxime saepe veniam id eni illo,blanditiis ut nisi vero.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt ad nisi quia provident temporibus,
+                      quaerat similique facilis. Impedit eum vitae molestias  maxime iure.`,
+  
+          `Lorem ipsum dolor sit amet
+                      consectetur, adipisicing elit. At fugiat
+                      tempora
+                      quaerat quisquam, quo iste quibusdam! Adipisci esse maxime saepe veniam id enim, illo, alias similique
+                      blanditiis ut nisi vero.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. At fugiat tempora quaerat quisquam, quo iste
+                      quibusdam! Adipisci esse maxime saepe veniam id eni illo,blanditiis ut nisi vero.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta culpa accusamus impedit sit
+                      cum dolore dolores nostrum nisi? Quibusdam.`,
+  
+          `Lorem ipsum dolor sit
+                      amet consectetur, adipisicing elit. At fugiat
+                      tempora
+                      quaerat quisquam, quo iste quibusdam! Adipisci esse maxime saepe veniam id enim, illo, alias similique
+                      blanditiis ut nisi vero.
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. At fugiat tempora quaerat quisquam, quo iste
+                      quibusdam! Adipisci esse maxime saepe veniam id eni illo,blanditiis ut nisi vero.
+                      Lorem ipsum .`,
+  
+          `Lorem ipsum dolor sit
+                      amet
+                      consectetur, adipisicing elit. At fugiat
+                      tempora
+                      quaerat quisquam, quo iste quibusdam! Adipisci esse maxime saepe veniam id enim, illo, alias similique
+                      blanditiis ut nisi vero.`
+  
       ]
     }
+  }
   },
   getters: {
     news: state => state.news,
     getNewsById: (state) => (id) => {
       return state.news.find((e) => e.id === id);
+    },
+    getNewsContentByParagraph: (state) => (id) => {
+      const newsItem = state.news.find((e) => e.id === id);
+      return newsItem ? state.newscontent.paragraphs : [];
     },
   }
 }
