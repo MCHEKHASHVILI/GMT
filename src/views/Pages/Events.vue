@@ -3,9 +3,8 @@ import mainLayout from "../../layouts/mainLayout.vue";
 import { ref, computed } from "vue";
 import iconArrow from "../../components/icons/iconArrow.vue";
 import { useStore } from "vuex";
-import eventsModule from "../../store/modules/events";
+
 const store = useStore();
-store.registerModule("events", eventsModule);
 
 const location = ref("Location");
 
