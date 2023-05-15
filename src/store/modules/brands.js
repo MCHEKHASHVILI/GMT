@@ -1,17 +1,22 @@
+import axios from "axios";
+
 const brandsModule = {
     namespaced: true,
     state() {
         return {
 
+            frontPageApi: "https://gmt.javal.ge/wp-json/custom/v1/homepage/en",
+
+
 
             brands: [
                 {
                     id: 1,
-                    img: "/src/assets/images/funicular.png",
-                    icon: "/src/assets/logos/funicular.svg",
-                    name: "funicular",
+                    img: null,
+                    icon: null,
+                    name: null,
                     description:
-                        "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
+                        null,
 
                     mainImg: "https://i.imgur.com/EdMolig.png",
                     conceptDescription: {
@@ -31,22 +36,8 @@ const brandsModule = {
                     description:
                         "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
                 },
-                {
-                    id: 3,
-                    img: "/src/assets/images/guliani_express.png",
-                    icon: "/src/assets/logos/puri_guliani_express.png",
-                    name: "PURI GULIANI EXPRESS",
-                    description:
-                        "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
-                },
-                {
-                    id: 4,
-                    img: "/src/assets/images/rigi.png",
-                    icon: "/src/assets/logos/rigi.png",
-                    name: "RIGI GASTRODUQAN",
-                    description:
-                        "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore.",
-                }
+
+
             ]
         }
     },
@@ -56,9 +47,32 @@ const brandsModule = {
     },
 
     mutations:{
+        storeFrontPageData(state, payload){
+            for(let a=0; a<payload.brands.length;a++){
+                state.brands[a].img = payload.brands[a].featured_image
+                state.brands[a].icon = payload.brands[a].logo
+                state.brands[a].name = payload.brands[a].title
+                state.brands[a].description = payload.brands[a].description
 
+
+
+            }
+
+        }
 
     },
+
+    actions: {
+
+        fetchFrontPageData({commit, state}){
+            axios.get(state.frontPageApi)
+                .then(result => commit("storeFrontPageData",result.data))
+
+        }
+
+    }
+
+
 
 
 }

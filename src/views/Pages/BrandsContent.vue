@@ -192,13 +192,13 @@ export default {
       </div>
 </div>
   </mainLayout>
-    
+
 </template>
 
 <style>
   .splide__arrow {
-    width: 65px; 
-    height: 65px; 
+    width: 65px;
+    height: 65px;
     background-color: rgba(0, 0, 0, 0.5);
   }
 

@@ -1,3 +1,4 @@
+import axios from "axios";
 
 
 const titlesModule = {
@@ -5,13 +6,16 @@ const titlesModule = {
     state() {
         return {
 
+            frontPageApi: "https://gmt.javal.ge/wp-json/custom/v1/homepage/en",
+
+
+
             titles: [
                 {
-                    pageTitle: "gmt hospitality",
-                    pageSubTitle: "Traveller Insights",
-                    sectionTitle: "dining facilities",
-                    introTitle: "tourism inside out",
-                    introDescription: "Lorem ipsum, lore dolor sit amet consectetur adipisicing elit. Repellat ullam id debitis nulla? Eligendi doloribus exercitationem at quod. Laudantium maxime illum, dolores quisquam autem explicabo sapiente natus quod nisi dolore."
+                    pageImg:null ,
+                    sectionTitle: null,
+                    introTitle: null,
+                    introDescription: null,
                 }
             ]
 
@@ -21,7 +25,31 @@ const titlesModule = {
     getters: {
         titles(state) {
             return state.titles
+        },
+
+    },
+
+    mutations:{
+        storeFrontPageData(state, payload){
+            state.titles[0].sectionTitle = payload.section_title
+            state.titles[0].introTitle = payload.subtitle
+            state.titles[0].introDescription = payload.description
+            state.titles[0].pageImg = payload.cover_logo
+
+
+
+            console.log(payload)
         }
+    },
+
+    actions: {
+
+        fetchFrontPageData({commit, state}){
+            axios.get(state.frontPageApi)
+                .then(result => commit("storeFrontPageData",result.data))
+
+        }
+
     }
 }
 
