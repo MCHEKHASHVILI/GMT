@@ -102,7 +102,7 @@ onMounted(()=>store.dispatch("events/getEvents"));
       <!-- grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 sm:pl-36 sm:pr-44">
         <!-- card -->
-        <div v-for="events in Events" class="flex flex-col">
+        <div v-for="events in events.events" class="flex flex-col">
           <div>
             <img :src="events.featured_image" class="max-sm:w-full" alt="jazzpic" />
           </div>
@@ -115,7 +115,7 @@ onMounted(()=>store.dispatch("events/getEvents"));
               {{ events.event_type }}
             </span>
             <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-lg mr-16">
-              <span class="text-gray-700">Price:  </span> {{ events.price
+              <span class="text-gray-700">Price: </span> {{ events.price
               }}</span>
             <span
               class="inline-block sm:px-3 py-1 sm:text-lg text-xl font-normal sm:text-black  mb-1 max-sm:uppercase">{{
