@@ -9,9 +9,10 @@ const eventsModule ={
      },
      actions:{
          async getEvents ({commit}){
-          const res = await axios.get (url());
+          const res = await axios.get(url());
+             
           commit("EVENTS", res.data);
-          
+          console.log(res.data)
           
          },
      },
