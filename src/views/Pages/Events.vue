@@ -1,16 +1,16 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted} from "vue";
 import iconArrow from "../../components/icons/iconArrow.vue";
 import { useStore } from "vuex";
 
 const store = useStore();
-
 const location = ref("Location");
 
 const type = ref("Type");
 
-const events = computed(() => store.getters["events/events"]);
+const events = computed(() => store.getters["events/getEvents"]);
+onMounted(()=>store.dispatch("events/getEvents"));
 
 const filteredEvents = ref(events.value);
 
@@ -19,6 +19,7 @@ const filterEvents = () => {
     return (
       e.type === type.value && e.date.toISOString().slice(0, 10) === date.value
     );
+    
   });
 };
 </script>
@@ -101,24 +102,24 @@ const filterEvents = () => {
       <!-- grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 sm:pl-36 sm:pr-44">
         <!-- card -->
-        <div v-for="event in filteredEvents" class="flex flex-col">
+        <div v-for="events in events.events" class="flex flex-col">
           <div>
-            <img :src="event.image" class="max-sm:w-full" alt="jazzpic" />
+            <img :src="events.featured_image" class="max-sm:w-full" alt="jazzpic" />
           </div>
           <h5 class="text-2xl max-sm:w-96  sm:text-2xl max-sm:font-bold font-medium mt-2 w-full">
-            {{ event.title }}
+            {{ events.title }}
           </h5>
           <div class="pt-3 pb-2">
             <span
               class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal font-medium text-sm uppercase text-black max-sm:mr-16  mr-5 mb-1">
-              {{ event.type }}
+              {{ events.event_type }}
             </span>
             <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-lg mr-16">
-              <span class="text-gray-700">Price:  </span> {{ event.price
+              <span class="text-gray-700">  </span> {{ events.price
               }}</span>
             <span
               class="inline-block sm:px-3 py-1 sm:text-lg text-xl font-normal sm:text-black  mb-1 max-sm:uppercase">{{
-                event.formattedDate
+                events.publish_date
               }}</span>
           </div>
           <div href="#" class="text-center bg-gray-200 py-5 w-auto font-semibold hover:bg-gray-300 focus:scale-95 ">
