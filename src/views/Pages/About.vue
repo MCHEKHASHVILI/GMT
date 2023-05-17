@@ -1,10 +1,13 @@
 <script setup>
 import mainLayout from '../../layouts/mainLayout.vue'
-import { useStore } from 'vuex';
+import { onMounted, computed } from "vue";
+import { useStore } from "vuex";
+
+const store = useStore();
+const staffs = computed(() => store.getters["about/getStaff"]);
+onMounted(() => store.dispatch("about/getStaff"));
 
 
-const store = useStore()
-const cards = store.getters['about/getCard']
 const informations = store.getters['about/getInformation']
 
 </script>
@@ -17,16 +20,16 @@ const informations = store.getters['about/getInformation']
       </div>
     </div>
 
-    <div class="mx-5 my-10  md:mx-28 md:my-16 md:flex " v-for="card in cards" :key="card.id">
+    <div class="mx-5 my-10  md:mx-28 md:my-16 md:flex " v-for="staff in staffs.staff" :key="id">
       <div class="flex-shrink-0 ">
-        <img class="h-full w-full md:w-80" :src="card?.image">
+        <img class="h-full w-full md:w-80" :src="staff?.featured_image">
       </div>
       <div class="md:mx-6">
-        <h2 class="text-center my-4 text-2xl font-hel_medium md:text-left">{{ card?.name }}</h2>
-        <h3 class="relative font-hel_bold text-lg"> {{ card?.title }}
+        <h2 class="text-center my-4 text-2xl font-hel_medium md:text-left">{{ staff?.title }}</h2>
+        <h3 class="relative font-hel_bold text-lg"> {{ staff?.position }}
           <div class="absolute bg-amber-500 h-0.5 w-12 my-2"></div>
         </h3>
-        <p class="mt-6 font-hel_light ">{{ card?.description }} </p>
+        <p class="mt-6 font-hel_light ">{{ staff?.description }} </p>
       </div>
     </div>
   </main-layout>
