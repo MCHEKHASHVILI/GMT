@@ -26,12 +26,12 @@ const filterEvents = () => {
 
 <template>
   <main-layout>
-    <h1 class="flex justify-center text-2xl font-bold mt-20 text-4xl">EVENTS</h1>
+    <h1 class="flex mt-12 justify-center text-2xl font-bold sn:mt-20 text-4xl">EVENTS</h1>
 
     <div class="flex flex-wrap flex-nowrap ">
       <div class="w-full max-sm:mt-14 w-auto ">
-        <div class=" translate-x-36 translate-y-32 font-bold font-bold text-4xl">
-          <h2 class="max-sm:text-center max-sm:px-16 max-sm:mb-9 ">DON'T MISS OUT ON OUR EVENTS-STAY
+        <div class=" sm:translate-x-36 sm:translate-y-32 font-bold font-bold sm:text-4xl text-3xl">
+          <h2 class="max-sm:text-center max-sm:px-12 max-sm:mb-9 ">DON'T MISS OUT ON OUR EVENTS-STAY
             <span class="sm:hidden ">CONNECTED!</span>
           </h2>
           <h2 class="max-sm:hidden mt-2 text-4xl">CONNECTED!</h2>
@@ -89,38 +89,38 @@ const filterEvents = () => {
         </div>
         <div class="sm:hidden ">
           <button
-            class="absolute bg-gray-300 py-4 px-44 uppercase font-medium translate-x-10 translate-y-60 text-lg ">filter</button>
+            class="absolute bg-gray-100 py-4 px-44 uppercase font-medium translate-x-10 translate-y-44 text-lg ">filter</button>
         </div>
       </div>
     </div>
 
-    <div class="sm:mr-44 -mt-7">
+    <div class="sm:mr-44 sm:-mt-7">
       <img class="ml-auto mb-7"
         src="https://www.messiah.edu/images/Cello.jpg" />
     </div>
-    <div class="mx-auto mb-28 max-sm:mt-6">
+    <div class="mx-auto mb-28 max-sm:mt-12">
       <!-- grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 sm:pl-36 sm:pr-44">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 px-11 sm:pl-36 sm:pr-44">
         <!-- card -->
         <div v-for="event in filteredEvents" class="flex flex-col">
           <div>
-            <img :src="event.image" class="max-sm:w-full" alt="jazzpic" />
+            <img :src="event.image" class="sm:w-full" alt="jazzpic" />
           </div>
-          <h5 class="text-2xl max-sm:w-96  sm:text-2xl max-sm:font-bold font-medium mt-2 w-full">
+          <h5 class=" max-sm:w-80 text-2xl max-sm:font-bold font-medium mt-2 w-full">
             {{ event.title }}
           </h5>
           <div class="pt-3 pb-2">
             <span
-              class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal font-medium text-sm uppercase text-black max-sm:mr-16  mr-5 mb-1">
+              class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal text-base uppercase text-black max-sm:mr-9  mr-5 mb-1">
               {{ event.type }}
             </span>
-            <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-lg mr-16">
+            <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-xl mr-16">
               <span class="text-gray-700">Price:  </span> {{ event.price
               }}</span>
             <span
               class="inline-block sm:px-3 py-1 sm:text-lg text-xl font-normal sm:text-black  mb-1 max-sm:uppercase">{{
                 event.formattedDate
-              }}</span>
+              }} </span>
           </div>
           <div href="#" class="text-center bg-gray-200 py-5 w-auto font-semibold hover:bg-gray-300 focus:scale-95 ">
             VIEW DETAILS
