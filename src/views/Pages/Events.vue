@@ -1,27 +1,27 @@
 <script setup>
 import mainLayout from "../../layouts/mainLayout.vue";
-import { ref, computed } from "vue";
+import { ref, computed, onMounted} from "vue";
 import iconArrow from "../../components/icons/iconArrow.vue";
 import { useStore } from "vuex";
-import eventsModule from "../../store/modules/events";
+
 const store = useStore();
-store.registerModule("events", eventsModule);
 
 const location = ref("Location");
 
 const type = ref("Type");
 
-const events = computed(() => store.getters["events/events"]);
+const events = computed(() => store.getters["events/getEvents"]);
+onMounted(()=>store.dispatch("events/getEvents"));
 
-const filteredEvents = ref(events.value);
+// const filteredEvents = ref(events.value);
 
-const filterEvents = () => {
-  filteredEvents.value = events.value.filter((e) => {
-    return (
-      e.type === type.value && e.date.toISOString().slice(0, 10) === date.value
-    );
-  });
-};
+// const filterEvents = () => {
+//   filteredEvents.value = events.value.filter((e) => {
+//     return (
+//       e.type === type.value && e.date.toISOString().slice(0, 10) === date.value
+//     );
+//   });
+// };
 </script>
 
 <template>
@@ -102,25 +102,25 @@ const filterEvents = () => {
       <!-- grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 px-11 sm:pl-36 sm:pr-44">
         <!-- card -->
-        <div v-for="event in filteredEvents" class="flex flex-col">
+        <div v-for="events in events.events" class="flex flex-col">
           <div>
-            <img :src="event.image" class="sm:w-full" alt="jazzpic" />
+            <img :src="events.featured_image" class="max-sm:w-full" alt="jazzpic" />
           </div>
-          <h5 class=" max-sm:w-80 text-2xl max-sm:font-bold font-medium mt-2 w-full">
-            {{ event.title }}
+          <h5 class="text-2xl max-sm:w-96  sm:text-2xl max-sm:font-bold font-medium mt-2 w-full">
+            {{ events.title }}
           </h5>
           <div class="pt-3 pb-2">
             <span
-              class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal text-base uppercase text-black max-sm:mr-9  mr-5 mb-1">
-              {{ event.type }}
+              class="inline-block bg-gray-200 sm:px-9 sm:py-1 px-14 py-2 font-normal font-medium text-sm uppercase text-black max-sm:mr-16  mr-5 mb-1">
+              {{ events.event_type }}
             </span>
-            <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-xl mr-16">
-              <span class="text-gray-700">Price:  </span> {{ event.price
+            <span class="inline-block px-3 py-1 text-lg font-normal text-black mb-1 max-sm:text-lg mr-16">
+              <span class="text-gray-700">Price: </span> {{ events.price
               }}</span>
             <span
               class="inline-block sm:px-3 py-1 sm:text-lg text-xl font-normal sm:text-black  mb-1 max-sm:uppercase">{{
-                event.formattedDate
-              }} </span>
+                events.publish_date
+              }}</span>
           </div>
           <div href="#" class="text-center bg-gray-200 py-5 w-auto font-semibold hover:bg-gray-300 focus:scale-95 ">
             VIEW DETAILS
