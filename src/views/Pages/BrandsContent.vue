@@ -4,9 +4,16 @@ import mainLayout from '../../layouts/mainLayout.vue';
 import {mapGetters, useStore} from 'vuex';
 import galleryComponent from "@/components/galleryComponent.vue";
 import {onMounted, ref} from "vue";
-
+import Phone from '../../components/icons/iconPhone.vue'
+import Address from '../../components/icons/iconAddress.vue'
+import Email from '../../components/icons/iconEmail.vue'
+import Facebook from '../..//components/icons/iconFacebook.vue'
+import Linkedin from '../../components/icons/iconLinkedin.vue'
+import ContactComponent from "@/components/ContactComponent.vue";
 export default {
+
   components: {
+    ContactComponent,
     galleryComponent,
     mainLayout,
   },
@@ -17,13 +24,43 @@ export default {
 
     setup() {
 
-        const store = useStore()
+      const links = [
+        {
+          name: "ADDRESS",
+          content: "Mtatsminda plateau, 0114 Tbilisi, Georgia",
+          icon: Address
+        },
+        {
+          name: "PHONE",
+          content: "+995 577 74 44 00",
+          icon: Phone
+        },
+        {
+          name: "E-MAIL",
+          content: "info@funicular.ge",
+          icon: Email
+        },
+        {
+          name: "FACEBOOK",
+          content: "Funicular" + ' \u2022 ' + 'ფუნიკულიორი'	,
+          icon: Facebook
+        },
+        {
+          name: "LINKEDIN",
+          content: "Restaurant Funicular",
+          icon: Linkedin
+        },
+      ]
+
+
+
+      const store = useStore()
 
         onMounted(() => {
             store.dispatch("brands/fetchFrontPageData")
             store.dispatch("brands/fetchBrandsData")
         });
-
+      return {links}
     },
 };
 </script>
@@ -68,11 +105,12 @@ export default {
 
 <!-- სურათების ნაწილი -->
 
-        <gallery-component :images-source="brandsContent[0]?.galerry"/>
+        <gallery-component :images-source="brandsContent[0]?.gallery"/>
 
 
 <!-- კონტაკტის ნაწილი -->
 
+      <ContactComponent :info="links"/>
 
 
 </div>
