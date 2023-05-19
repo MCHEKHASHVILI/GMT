@@ -22,11 +22,11 @@ export default {
 
 
         const mainOptions = {
-            type: 'loop',
+            type: 'slide',
             rewind: true,
             perPage: 1,
             pagination: false,
-            fixedHeight: 740,
+            fixedHeight: 700,
         };
 
         const thumbOptions = ref({
@@ -42,7 +42,8 @@ export default {
         });
 
         const updateThumbOptions = () => {
-            thumbOptions.value.perPage = window.innerWidth >= 768 ? 4 : 1;
+            thumbOptions.value.perPage = window.innerWidth >= 768 ? 4 : 1.1;
+
         };
 
         onMounted(() => {
@@ -79,7 +80,7 @@ export default {
         </Splide>
 
         <Splide class="w-full h-1/5" :options="thumbOptions" aria-label="My Favorite Images" ref="thumbs">
-            <SplideSlide class="h-44" v-for="image in imagesSource" :key="image" :class="[ 'opacity-75 active:opacity-100 active:border-0' ]">
+            <SplideSlide class="h-44" v-for="image in imagesSource" :key="image" :class="[ 'opacity-100 active:opacity-75 active:border-0' ]">
                 <img class="w-full h-full" :src="image" :alt="'Thumbnail ' + image">
             </SplideSlide>
         </Splide>
