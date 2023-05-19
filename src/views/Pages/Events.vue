@@ -26,12 +26,12 @@ onMounted(()=>store.dispatch("events/getEvents"));
 
 <template>
   <main-layout>
-    <h1 class="flex justify-center text-2xl font-bold mt-20 text-4xl">EVENTS</h1>
+    <h1 class="flex mt-12 justify-center text-2xl font-bold sn:mt-20 text-4xl">EVENTS</h1>
 
     <div class="flex flex-wrap flex-nowrap ">
       <div class="w-full max-sm:mt-14 w-auto ">
-        <div class=" translate-x-36 translate-y-32 font-bold font-bold text-4xl">
-          <h2 class="max-sm:text-center max-sm:px-16 max-sm:mb-9 ">DON'T MISS OUT ON OUR EVENTS-STAY
+        <div class=" sm:translate-x-36 sm:translate-y-32 font-bold font-bold sm:text-4xl text-3xl">
+          <h2 class="max-sm:text-center max-sm:px-12 max-sm:mb-9 ">DON'T MISS OUT ON OUR EVENTS-STAY
             <span class="sm:hidden ">CONNECTED!</span>
           </h2>
           <h2 class="max-sm:hidden mt-2 text-4xl">CONNECTED!</h2>
@@ -89,18 +89,18 @@ onMounted(()=>store.dispatch("events/getEvents"));
         </div>
         <div class="sm:hidden ">
           <button
-            class="absolute bg-gray-300 py-4 px-44 uppercase font-medium translate-x-10 translate-y-60 text-lg ">filter</button>
+            class="absolute bg-gray-100 py-4 px-44 uppercase font-medium translate-x-10 translate-y-44 text-lg ">filter</button>
         </div>
       </div>
     </div>
 
-    <div class="sm:mr-44 -mt-7">
+    <div class="sm:mr-44 sm:-mt-7">
       <img class="ml-auto mb-7"
         src="https://www.messiah.edu/images/Cello.jpg" />
     </div>
-    <div class="mx-auto mb-28 max-sm:mt-6">
+    <div class="mx-auto mb-28 max-sm:mt-12">
       <!-- grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 sm:pl-36 sm:pr-44">
+      <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-y-9 gap-x-4 px-11 sm:pl-36 sm:pr-44">
         <!-- card -->
         <div v-for="events in events.events" class="flex flex-col">
           <div>
