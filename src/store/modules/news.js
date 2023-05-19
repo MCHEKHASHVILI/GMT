@@ -16,7 +16,6 @@ const news = {
     },
     async getSingleNews({ commit }, id) {
       const res = await axios.get(ulr("/" + id));
-      console.log(res.data);
       commit("SAVE_SINGLE_NEWS", res.data);
     },
   },
