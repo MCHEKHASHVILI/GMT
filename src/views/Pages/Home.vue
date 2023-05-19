@@ -1,22 +1,23 @@
 <script setup>
 import BrandsList from "../../components/sections/BrandsList.vue";
 import mainLayout from "../../layouts/mainLayout.vue";
-import { computed} from "vue";
+import { computed, onMounted} from "vue";
 import { useStore } from "vuex";
 const store = useStore()
 const titles = computed(() => store.getters["titles/titles"])
 
+onMounted(() =>{
+    store.dispatch("titles/fetchFrontPageData")
+    store.dispatch("brands/fetchFrontPageData")
+
+})
 
 </script>
 <template>
   <mainLayout >
     <div class="flex flex-col h-screen bg-black">
-      <div class="flex grow">
-        <div class="m-auto text-white text-center">
-          <h1 class="font-mainFont font-extrabold text-5xl uppercase">{{ titles[0].pageTitle }}</h1>
-          <h2 class="font-fancyFont text-3xl">{{ titles[0].pageSubTitle }}</h2>
-        </div>
-      </div>
+        <img class="m-auto md:w-2/5 w-11/12 text-center" :src=titles[0].pageImg>
+
     </div>
     <div class="flex flex-col bg-black">
       <div class="text-white text-left md:text-center w-3/5 mx-auto pb-4">
