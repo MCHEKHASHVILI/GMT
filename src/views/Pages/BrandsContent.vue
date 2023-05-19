@@ -1,5 +1,5 @@
 <script>
-
+import {useRoute} from "vue-router";
 import mainLayout from '../../layouts/mainLayout.vue';
 import {mapGetters, useStore} from 'vuex';
 import galleryComponent from "@/components/galleryComponent.vue";
@@ -10,19 +10,25 @@ import Email from '../../components/icons/iconEmail.vue'
 import Facebook from '../..//components/icons/iconFacebook.vue'
 import Linkedin from '../../components/icons/iconLinkedin.vue'
 import ContactComponent from "@/components/ContactComponent.vue";
+
 export default {
+
 
   components: {
     ContactComponent,
     galleryComponent,
     mainLayout,
+    useRoute
   },
   computed: {
     ...mapGetters('brands', ['brandsContent']),
+    ...mapGetters('brands', ['testGallery']),
+
   },
 
 
     setup() {
+      const route = useRoute()
 
       const links = [
         {
@@ -60,7 +66,7 @@ export default {
             store.dispatch("brands/fetchFrontPageData")
             store.dispatch("brands/fetchBrandsData")
         });
-      return {links}
+      return {links, route}
     },
 };
 </script>
@@ -71,17 +77,17 @@ export default {
     <div class=" flex  flex-col  items-center mb-32">
 
 <div class="  flex  justify-center flex-col md:flex-row mb-16 md:mb-32 md:gap-32  gap-10">
-  <img class="md:w-1/2 " :src="brandsContent[0]?.mainImg" alt="" />
+  <img class="md:w-1/2 " :src="brandsContent?.brands[route.params.id].featured_image " />
 
   <div class="flex-col pt-20   flex md:items-start items-center md:justify-end">
-    <img class=" mb-12 md:w-40" :src="brandsContent[0]?.icon" alt="" />
+    <img class=" mb-12 md:w-40" :src="brandsContent?.brands[route.params.id].logo" alt="" />
     <h1 class="font-bold mb-8 text-3xl font-[arial]">
-        {{brandsContent[0]?.title}}
+        {{brandsContent?.brands[route.params.id].title}}
     </h1>
 
     <div class="text-xl font-[arial] w-10/12  mb-4 ">
       <p class="font-[arial] ">
-        {{ brandsContent[0]?.conceptDescription }}
+        {{ brandsContent?.brands[route.params.id].description }}
       </p>
 
     </div>
@@ -105,7 +111,7 @@ export default {
 
 <!-- სურათების ნაწილი -->
 
-        <gallery-component :images-source="brandsContent[0]?.gallery"/>
+      <gallery-component :images-source="testGallery"/>
 
 
 <!-- კონტაკტის ნაწილი -->
