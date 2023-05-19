@@ -2,27 +2,30 @@
 import mainLayout from '../../layouts/mainLayout.vue'
 import NewsCard from '../../components/sections/NewsCard.vue'
 import { useStore } from 'vuex'
-import { computed } from 'vue'
+import { onMounted, computed } from 'vue'
 
 const store = useStore()
-const newsModule = computed(() => store.getters['news/news'])
+const news = computed(() => store.getters['news/getNews'])
+
+onMounted(() => store.dispatch("news/getNews"));
 </script>
 
 <template>
   <mainLayout>
     <div class="flex justify-center items-center h-40">
       <div class="text-center text-2xl font-hel_bold">
-        NEWS
+        {{ news.title }}
       </div>
     </div>
     <div class="md:mx-20">
       <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 mx-auto?">
-        <NewsCard v-for="article in newsModule" 
+        <NewsCard v-for="article in news.news" 
           :key="article.id" 
-          :imageSrc="article.icon" 
+          :id="article.id"
+          :imageSrc="article.featured_image" 
           :title="article.title"
-          :content="article.content" 
-          :date="article.date" 
+          :content="article.excerpt" 
+          :date="article.publish_date" 
           :views="article.views" />
       </div>
     </div>
