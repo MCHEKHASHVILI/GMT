@@ -19,7 +19,7 @@ const store = createStore({
         
         "footer": footerModule,
         "events": eventsModule,
-        "news": newsModule
+        "news": newsModule,
     }
 })
 export default store
