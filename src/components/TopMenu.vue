@@ -6,10 +6,7 @@ import {computed, onMounted} from "vue"
 import {useStore} from "vuex"
 const store = useStore()
 const responsiveNavbarStatus = computed(() => store.getters["navbar/responsiveNavbar"])
-onMounted(() => {
-  store.dispatch("brands/fetchFrontPageData")
-  store.dispatch("brands/fetchBrandsData")
-});
+
 const toggleResponsiveNavbar = () =>{
   store.commit("navbar/toggleResponsiveNavbar")
    document.body.classList.add('md:overflow-visible');
