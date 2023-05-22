@@ -14,7 +14,7 @@ const informations = store.getters['about/getInformation']
 <template>
   <main-layout>
     <div class="m-5">
-      <div class="text-center  mx-auto text-left md:w-1/2 md:mt-16">
+      <div class="text-center mx-auto md:w-1/2 md:mt-16">
         <h1 class="mb-3 text-2xl font-hel_bold ">{{ informations.title }} </h1>
         <p class=" break-all font-hel_light ">{{ informations.description }}</p>
       </div>
