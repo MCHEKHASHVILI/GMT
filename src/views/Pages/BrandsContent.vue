@@ -1,39 +1,59 @@
 <script>
-import {useRoute} from "vue-router";
+import { useRoute } from "vue-router";
 import mainLayout from '../../layouts/mainLayout.vue';
-import {mapGetters, useStore} from 'vuex';
+import { mapGetters, useStore } from 'vuex';
 import galleryComponent from "@/components/galleryComponent.vue";
-import {onMounted} from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import ContactComponent from "@/components/ContactComponent.vue";
 
 export default {
-
-
   components: {
     ContactComponent,
     galleryComponent,
     mainLayout,
-
   },
-  computed: {
-    ...mapGetters('brands', ['singleBrandData']),
-    ...mapGetters('brands', ['testGallery']),
+  setup() {
+    const route = useRoute();
+    const store = useStore();
 
+    const singleBrandData = computed(() => store.getters["brands/singleBrandData"]);
+    const testGallery = computed(() => store.getters["brands/testGallery"]);
+
+    const contact = ref({
+      address: "",
+      phone: "",
+      email: "",
+      facebook: "",
+      linkedin: "",
+    });
+
+    const updateContact = () => {
+      const data = singleBrandData.value;
+      contact.value.address = data?.contact?.address || "";
+      contact.value.phone = data?.contact?.phone || "";
+      contact.value.email = data?.contact?.email || "";
+      contact.value.facebook = data?.social_networks?.facebook_title || "";
+      contact.value.linkedin = data?.social_networks?.linkedin_title || "";
+    };
+
+    watch(singleBrandData, () => {
+      updateContact();
+    });
+
+    onMounted(() => {
+      store.dispatch("brands/getSingleBrandData", route.params.id);
+    });
+
+    return {
+      contact,
+      route,
+      singleBrandData,
+      testGallery,
+    };
   },
-
-
-    setup() {
-      const route = useRoute()
-
-      const store = useStore()
-
-        onMounted(() => {
-          store.dispatch("brands/getSingleBrandData", route.params.id)
-        });
-      return { route}
-    },
 };
 </script>
+
 
 
 <template>
@@ -73,6 +93,7 @@ export default {
 
 <!-- კონტაკტის ნაწილი -->
 
+      <ContactComponent :contactDetails="contact"/>
 
 
 

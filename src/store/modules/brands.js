@@ -19,6 +19,8 @@ const brandsModule = {
         brands: state => state.brands,
         singleBrandData: state => state.singleBrandData,
 
+
+
     },
 
     mutations:{
