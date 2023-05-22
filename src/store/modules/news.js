@@ -91,4 +91,4 @@ const newsModule = {
   }
 }
 
-export default newsModule
+export default news;

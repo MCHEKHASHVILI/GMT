@@ -16,7 +16,7 @@ onMounted(() => {
   <mainLayout>
     <div class="flex justify-center items-center h-40">
       <div class="text-center text-2xl font-hel_bold">
-        NEWS
+        {{ news.title }}
       </div>
     </div>
     <div class="md:mx-20">

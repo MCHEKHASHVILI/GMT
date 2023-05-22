@@ -1,5 +1,9 @@
 <script setup>
 const props = defineProps({
+  id: {
+    type: Number,
+    required: true,
+  },
   imageSrc: {
     type: String,
     required: true,
@@ -24,6 +28,7 @@ const props = defineProps({
 </script>
 
 <template>
+  <router-link :to="'news/' + id">
   <div class="mx-auto max-w-md flex flex-col items-end">
     <div class="relative w-full h-52 mb-2">
       <img :src="imageSrc" alt="Placeholder Image" class="absolute top-0 right-0 w-full h-full object-cover -m-1" />
@@ -39,5 +44,6 @@ const props = defineProps({
     <p class="text-xl font-hel_medium">{{ title }}</p>
     <p class="text-gray-600 text-hel_roman leading-5 mb-6 mt-2">{{ content }}</p>
   </div>
+</router-link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </template>
