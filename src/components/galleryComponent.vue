@@ -23,7 +23,7 @@ export default {
 
         const mainOptions = {
             type: 'slide',
-            rewind: true,
+            rewind: false,
             perPage: 1,
             pagination: false,
             fixedHeight: 700,
@@ -31,7 +31,7 @@ export default {
 
         const thumbOptions = ref({
             type: 'slide',
-            rewind: true,
+            rewind: false,
             perPage: 4,
             pagination: false,
             arrows: false,

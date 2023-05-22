@@ -2,12 +2,14 @@
 import mainLayout from '../../layouts/mainLayout.vue'
 import NewsCard from '../../components/sections/NewsCard.vue'
 import { useStore } from 'vuex'
-import { onMounted, computed } from 'vue'
+import { computed } from 'vue'
+import { onMounted } from 'vue'
 
 const store = useStore()
-const news = computed(() => store.getters['news/getNews'])
-
-onMounted(() => store.dispatch("news/getNews"));
+const news = computed(() => store.getters['news/news'])
+onMounted(() => {
+  store.dispatch('news/fetchNewsData')
+})
 </script>
 
 <template>
@@ -19,12 +21,11 @@ onMounted(() => store.dispatch("news/getNews"));
     </div>
     <div class="md:mx-20">
       <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 mx-auto?">
-        <NewsCard v-for="article in news.news" 
+        <NewsCard v-for="article in news" 
           :key="article.id" 
-          :id="article.id"
-          :imageSrc="article.featured_image" 
+          :imageSrc="article.img" 
           :title="article.title"
-          :content="article.excerpt" 
+          :content="article.excerpt"
           :date="article.publish_date" 
           :views="article.views" />
       </div>
