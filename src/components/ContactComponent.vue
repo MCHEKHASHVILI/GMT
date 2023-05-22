@@ -1,25 +1,39 @@
 <script setup>
 import {defineProps} from 'vue';
 
-const props = defineProps({
-    info: {
-        type: Array,
-        required: true,
-        validator: (value) => {
-            return value.every(item => {
-                if (typeof item === 'object') {
-                    if (typeof item.name === 'string' &&
-                        typeof item.content === 'string' &&
-                        typeof item.icon === 'object') {
-                        return true
-                    }
-                }
-                return false
-            });
-        }
-    },
+import Phone from '@/components/icons/iconPhone.vue'
+import Address from '@/components/icons/iconAddress.vue'
+import Email from '@/components/icons/iconEmail.vue'
+import Facebook from '@/components/icons/iconFacebook.vue'
+import Linkedin from '@/components/icons/iconLinkedin.vue'
 
+const props = defineProps({
+    contactDetails: Object,
+    required: true
 })
+
+const layout = {
+    'address': {
+        title: "ADDRESS",
+        icon: Address
+    },
+    'phone': {
+        title: "PHONE",
+        icon: Phone
+    },
+    'email': {
+        title: "E-MAIL",
+        icon: Email
+    },
+    'facebook': {
+        title: "FACEBOOK",
+        icon: Facebook
+    },
+    'linkedin': {
+        title: "LINKEDIN",
+        icon: Linkedin
+    }
+}
 </script>
 
 <template>
@@ -28,13 +42,13 @@ const props = defineProps({
         <div class="flex md:flex-row flex-col items-center">
             <div class="flex flex-col w-full  md:w-2/5 h-96 justify-between">
 
-                <div v-for="element in props.info" class="flex">
+                <div v-for="(content,label) in contactDetails" class="flex">
                     <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center p-4">
-                        <component :is="element.icon"></component>
+                        <component :is="layout[label].icon"></component>
                     </div>
                     <div class="flex flex-col justify-center pl-5">
-                        <p class="text-base font-semibold text-[#797878]">{{ element.name }}</p>
-                        <p class="text-sm font-semibold">{{ element.content }}</p>
+                        <p class="text-base font-semibold text-[#797878]">{{ layout[label].title }}</p>
+                        <p class="text-sm font-semibold">{{ content }}</p>
                     </div>
                 </div>
 

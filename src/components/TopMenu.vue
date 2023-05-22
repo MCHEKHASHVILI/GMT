@@ -2,7 +2,7 @@
 <script setup>
 
 import ResponsiveNavbar from './ResponsiveNavbar.vue';
-import {computed} from "vue"
+import {computed, onMounted} from "vue"
 import {useStore} from "vuex"
 const store = useStore()
 const responsiveNavbarStatus = computed(() => store.getters["navbar/responsiveNavbar"])
