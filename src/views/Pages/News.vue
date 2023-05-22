@@ -2,11 +2,12 @@
 import mainLayout from '../../layouts/mainLayout.vue'
 import NewsCard from '../../components/sections/NewsCard.vue'
 import { useStore } from 'vuex'
-import { computed } from 'vue'
-import { onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 
 const store = useStore()
+
 const news = computed(() => store.getters['news/news'])
+
 onMounted(() => {
   store.dispatch('news/fetchNewsData')
 })
@@ -16,7 +17,7 @@ onMounted(() => {
   <mainLayout>
     <div class="flex justify-center items-center h-40">
       <div class="text-center text-2xl font-hel_bold">
-        {{ news.title }}
+        NEWS
       </div>
     </div>
     <div class="md:mx-20">

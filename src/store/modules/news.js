@@ -9,13 +9,9 @@ const newsModule = {
       singlenewsApi: "https://gmt.javal.ge/wp-json/custom/v1/news/104/en",
 
 
-      news: [
+      news: [ ],
 
-      ],
-
-      newscontent: [
-
-      ]
+      newscontent: [ ]
     }
   },
   getters: {
@@ -91,4 +87,4 @@ const newsModule = {
   }
 }
 
-export default news;
+export default newsModule
