@@ -10,14 +10,7 @@ const titlesModule = {
 
 
 
-            titles: [
-                {
-                    pageImg:null ,
-                    sectionTitle: null,
-                    introTitle: null,
-                    introDescription: null,
-                }
-            ]
+            titles: null
 
 
         }
@@ -31,14 +24,9 @@ const titlesModule = {
 
     mutations:{
         storeFrontPageData(state, payload){
-            state.titles[0].sectionTitle = payload.section_title
-            state.titles[0].introTitle = payload.subtitle
-            state.titles[0].introDescription = payload.description
-            state.titles[0].pageImg = payload.cover_logo
 
-
-
-            console.log(payload)
+            state.titles = payload
+            console.log(state)
         }
     },
 

@@ -4,75 +4,49 @@ const brandsModule = {
     namespaced: true,
     state() {
         return {
-
+            singleBrandApi: `https://gmt.javal.ge/wp-json/custom/v1/brands/`,
             frontPageApi: "https://gmt.javal.ge/wp-json/custom/v1/homepage/en",
             brandsApi: "https://gmt.javal.ge/wp-json/custom/v1/brands/en",
-
-
-
-
-
-            brandsContent:[
-
-
-            ],
-
-
-
-            brands: [
-
-
-
-            ]
+            testGallery: ["https://media-cdn.tripadvisor.com/media/photo-o/12/07/9f/c4/restaurant-funicular.jpg", "https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg"],
+            brands: null,
+            singleBrandData: null,
         }
     },
+
+
     getters: {
+        testGallery: state => state.testGallery,
         brands: state => state.brands,
-        brandsContent: state => state.brandsContent,
+        singleBrandData: state => state.singleBrandData,
 
     },
 
     mutations:{
         storeFrontPageData(state, payload){
-            for(let a=0; a<payload.brands.length;a++){
-                state.brands.push(
-                    {
-                        id: a+1,
-                        img: payload.brands[a].featured_image,
-                        icon: payload.brands[a].logo,
-                        name: payload.brands[a].title,
-                        description: payload.brands[a].description,
-                    }
-                )
+            state.brands = payload
 
-            }
 
         },
 
         storeBrandsData(state, payload){
 
-            for(let a=0; a<payload.brands.length;a++){
+            state.brandsContent = payload
+        },
 
-                state.brandsContent.push(
-                    {
-                        mainImg: payload.brands[a].featured_image,
-                        conceptDescription: payload.brands[a].description,
-                        icon: payload.brands[a].logo,
-                        title: payload.brands[a].title,
-                        gallery: ["https://media-cdn.tripadvisor.com/media/photo-o/12/07/9f/c4/restaurant-funicular.jpg", "https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg"]
+        storeSingleBrandData(state, payload){
 
-                    }
-
-                )
-
-
-            }
+            state.singleBrandData = payload
+            console.log(state.singleBrandData)
 
         }
 
     },
 
     actions: {
+        getSingleBrandData({commit, state}, key){
+            axios.get(state.singleBrandApi+key+'/ka')
+                .then(result => commit("storeSingleBrandData", result.data) )
+        },
         fetchFrontPageData({commit, state}){
             axios.get(state.frontPageApi)
                 .then(result => commit("storeFrontPageData",result.data))
