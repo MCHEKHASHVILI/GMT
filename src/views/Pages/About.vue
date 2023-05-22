@@ -24,7 +24,7 @@ const informations = store.getters['about/getInformation']
         <div class="w-auto h-auto "> <img :src="staff?.featured_image"> </div>
         <div class="m-6">
           <h2 class="text-center text-2xl font-hel_medium md:text-left">{{ staff?.title }}</h2>
-          <h3 class="my-5 relative font-hel_medium text-lg"> {{ staff?.position }}
+          <h3 class="my-3 relative font-hel_medium text-lg"> {{ staff?.position }}
             <div class="absolute bg-amber-500 h-0.5 w-12 "></div>
           </h3>
           <p class=" font-hel_light ">{{ staff?.description }} </p>
