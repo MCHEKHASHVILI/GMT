@@ -21,8 +21,8 @@ const informations = store.getters['about/getInformation']
     </div>
     <div class="m-5 md:mx-28  ">
       <div class="flex flex-col justify-around md:flex-row" v-for="staff in staffs.staff" :key="id">
-        <div class="w-auto h-auto"> <img :src="staff?.featured_image"> </div>
-        <div class="md:m-6">
+        <div class="w-auto h-auto "> <img :src="staff?.featured_image"> </div>
+        <div class="m-6">
           <h2 class="text-center text-2xl font-hel_medium md:text-left">{{ staff?.title }}</h2>
           <h3 class="my-5 relative font-hel_medium text-lg"> {{ staff?.position }}
             <div class="absolute bg-amber-500 h-0.5 w-12 "></div>
@@ -31,5 +31,6 @@ const informations = store.getters['about/getInformation']
         </div>
       </div>
     </div>
+
   </main-layout>
 </template>
