@@ -1,65 +1,58 @@
-import axios from "axios";
+import axios from "../../interceptors/axios"
 
 const brandsModule = {
     namespaced: true,
     state() {
         return {
-            singleBrandApi: `https://gmt.javal.ge/wp-json/custom/v1/brands/`,
-            frontPageApi: "https://gmt.javal.ge/wp-json/custom/v1/homepage/en",
-            brandsApi: "https://gmt.javal.ge/wp-json/custom/v1/brands/en",
-            testGallery: ["https://media-cdn.tripadvisor.com/media/photo-o/12/07/9f/c4/restaurant-funicular.jpg", "https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg"],
-            brands: null,
-            singleBrandData: null,
+            brands: [],
+            brand: null,
+            title: null,
+            description: null,
         }
     },
-
-
     getters: {
-        testGallery: state => state.testGallery,
-        brands: state => state.brands,
-        singleBrandData: state => state.singleBrandData,
+        brands: ({ brands }) => brands,
+        brand: ({ brand }) => brand,
+        title: ({ title }) => title,
+        description: ({ description }) => description,
+        contact: ({ brand }) => {
+            
+            const socials = {}
 
+            for (const [ key, value ] of Object.entries({ ...brand?.social_networks })) {
+                let [ label, variant ] = key.split('_')
+                if(Object.keys(socials).includes(label)){
+                    socials[label][variant] = value
+                }else{
+                    socials[label] = { }
+                    socials[label][variant] = value 
+                }
+            }
 
-
+            return { 
+                basic: { ...brand?.contact },
+                social: { ...socials }
+            } 
+        }
     },
-
     mutations:{
-        storeFrontPageData(state, payload){
-            state.brands = payload
-
-
-        },
-
-        storeBrandsData(state, payload){
-
-            state.brandsContent = payload
-        },
-
-        storeSingleBrandData(state, payload){
-
-            state.singleBrandData = payload
-            console.log(state.singleBrandData)
-
-        }
-
+        "SET_BRANDS": (state, payload) => state.brands = payload,
+        "SET_BRAND": (state, payload) => state.brand = payload,
+        "SET_TITLE": (state, payload) => state.title = payload,
+        "SET_DESCRIPTION": (state, payload) => state.description = payload,
     },
-
     actions: {
-        getSingleBrandData({commit, state}, key){
-            axios.get(state.singleBrandApi+key+'/ka')
-                .then(result => commit("storeSingleBrandData", result.data) )
+        getBrands: async ({ commit }) => {
+            let { data } = await axios.get('brands')
+            commit("SET_BRANDS", data.brands)
+            commit("SET_TITLE", data.title)
+            commit("SET_DESCRIPTION", data.description)
         },
-        fetchFrontPageData({commit, state}){
-            axios.get(state.frontPageApi)
-                .then(result => commit("storeFrontPageData",result.data))
+        getBrand: async ({ commit }, id) => {
+            let { data } = await axios.get('brands/' + id)
+            data.images = ["https://media-cdn.tripadvisor.com/media/photo-o/12/07/9f/c4/restaurant-funicular.jpg", "https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/51830210_1163410307162283_286887846684393472_o.jpg","https://sakurageorgia.com/storage/app/media/uploaded-files/59816191_1216595945177052_844218183291240448_o.jpg"]
+            commit("SET_BRAND", data)
         },
-
-        fetchBrandsData({commit, state}){
-            axios.get(state.brandsApi)
-                .then(result => commit("storeBrandsData", result.data))
-
-        }
-
     }
 }
 

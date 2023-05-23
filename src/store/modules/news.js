@@ -4,10 +4,9 @@ const newsModule = {
   namespaced: true,
   state() {
     return {
-
+      
       newsApi: "https://gmt.javal.ge/wp-json/custom/v1/news/en",
       singlenewsApi: "https://gmt.javal.ge/wp-json/custom/v1/news/104/en",
-
 
       news: [ ],
 

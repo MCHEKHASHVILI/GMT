@@ -15,9 +15,7 @@ const router = createRouter({
         },
         {
             path: '/brands',
-          
             component: () => RouterView,
-
             children:[
                 {
                     path:"",
@@ -28,7 +26,8 @@ const router = createRouter({
                 {
                     path: ":id",
                     name: "BrandsContent",
-                    component:() => import('../views/Pages/BrandsContent.vue'),
+                    component:() => import('../views/Pages/Brand.vue'),
+                    props: true,
                 }
             ]
         },
