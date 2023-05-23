@@ -22,7 +22,6 @@ const router = createRouter({
                     name: "Brands",
                     component: () => import('../views/Pages/Brands.vue'),
                 },
-
                 {
                     path: ":id",
                     name: "BrandsContent",
@@ -43,11 +42,11 @@ const router = createRouter({
                 {
                     path: ':id',
                     name: 'NewsContent',
-                    component: () => import('../views/Pages/NewsContent.vue')
+                    component: () => import('../views/Pages/NewsContent.vue'),
+                    props: true,
                 }
             ]
         },
-
         {
             path: '/events',
             component: () => RouterView,

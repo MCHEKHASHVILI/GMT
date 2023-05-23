@@ -6,7 +6,7 @@ import ContactComponent from "@/components/ContactComponent.vue";
 
 export default {
   props: {
-    id: { type: Number, required: true }
+    id: { type: Number | String, required: true }
   },
   components: {
     mainLayout,
@@ -23,58 +23,6 @@ export default {
     this.getBrand(this.$props.id)
   }
 }
-// import { useRoute } from "vue-router";
-// import mainLayout from '../../layouts/mainLayout.vue';
-// import { mapGetters, useStore } from 'vuex';
-// import ContactComponent from "@/components/ContactComponent.vue";
-// import { computed, onMounted, ref, watch } from "vue";
-
-// export default {
-//   components: {
-//     ContactComponent,
-//     galleryComponent,
-//     mainLayout,
-//   },
-//   setup() {
-//     const route = useRoute();
-//     const store = useStore();
-
-//     const brand = computed(() => store.getters["brands/brand"]);
-//     const testGallery = computed(() => store.getters["brands/testGallery"]);
-
-//     const contact = ref({
-//       address: "",
-//       phone: "",
-//       email: "",
-//       facebook: "",
-//       linkedin: "",
-//     });
-
-//     const updateContact = () => {
-//       const data = brand.value;
-//       contact.value.address = data?.contact?.address || "";
-//       contact.value.phone = data?.contact?.phone || "";
-//       contact.value.email = data?.contact?.email || "";
-//       contact.value.facebook = data?.social_networks?.facebook_title || "";
-//       contact.value.linkedin = data?.social_networks?.linkedin_title || "";
-//     };
-
-//     watch(brand, () => {
-//       updateContact();
-//     });
-
-//     onMounted(() => {
-//       store.dispatch("brands/getbrand", route.params.id);
-//     });
-
-//     return {
-//       contact,
-//       route,
-//       brand,
-//       testGallery,
-//     };
-//   },
-// };
 </script>
 
 <template>

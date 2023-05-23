@@ -8,10 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.4.0",
     "flowbite": "^1.6.5",
-    "node-modules": "^1.0.1",
+    "node-modules": "^0.0.1",
     "vue": "^3.2.47",
     "vue-router": "^4.2.0",
     "vuex": "^4.0.2"

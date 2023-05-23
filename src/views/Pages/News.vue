@@ -1,16 +1,22 @@
-<script setup>
+<script>
 import mainLayout from '../../layouts/mainLayout.vue'
 import NewsCard from '../../components/sections/NewsCard.vue'
-import { useStore } from 'vuex'
-import { computed, onMounted } from 'vue'
+import { mapActions, mapGetters } from 'vuex';
 
-const store = useStore()
-
-const news = computed(() => store.getters['news/news'])
-
-onMounted(() => {
-  store.dispatch('news/fetchNewsData')
-})
+export default {
+  components: {
+    mainLayout, NewsCard,
+  },
+  computed: {
+    ...mapGetters('news', ['news'])
+  },
+  methods: {
+    ...mapActions('news', ['getNews'])
+  },
+  mounted(){
+    this.getNews()
+  }
+}
 </script>
 
 <template>
@@ -22,13 +28,7 @@ onMounted(() => {
     </div>
     <div class="md:mx-20">
       <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 mx-auto?">
-        <NewsCard v-for="article in news" 
-          :key="article.id" 
-          :imageSrc="article.img" 
-          :title="article.title"
-          :content="article.excerpt"
-          :date="article.publish_date" 
-          :views="article.views" />
+        <NewsCard v-for="article in news" :content="article" />
       </div>
     </div>
     <div class="flex justify-center items-center h-40 mb-20">

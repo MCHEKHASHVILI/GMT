@@ -1,4 +1,4 @@
-import axios from "../../interceptors/axios"
+import axios from "@/interceptors/axios"
 
 const brandsModule = {
     namespaced: true,
