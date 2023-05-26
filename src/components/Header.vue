@@ -1,16 +1,22 @@
 <script setup>
-import TopMenu from './TopMenu.vue';
+import { onMounted } from "vue"
+import { RouterLink } from 'vue-router'
+import TopMenu from './TopMenu.vue'
+import useHome from "@/composables/useHome"
 
-const name = "GMT HOSPITALITY"
-const travellersInsights = "Travellers insights"
+const { getHomePage, logo } = useHome()
+
+onMounted(() => (logo.value != null) ? getHomePage() : null)
+
 </script>
 
 <template>
-  <header class="flex w-full z-[1]  h-[130px] justify-between items-center bg-black border-b-[1px] border-gray-600 px-4 md:px-10 lg:px-20">
-   <a href="/"> <div class="flex flex-col items-center justify-center">
-      <p class="text-white text-2xl font-mainFont">{{ name }}</p>
-      <p class="text-white text-[13px] font-fancyFont">{{ travellersInsights }}</p>
-    </div></a>
-    <TopMenu ></TopMenu> 
-  </header>
+  <section class="w-full bg-black px-10 py-10 border-b-[1px] border-gray-700">
+    <div class="container mx-auto flex justify-between items-center">
+      <RouterLink :to="{ name: 'Home' }">
+        <img class="h-14 w-auto" :src="logo">
+      </RouterLink>
+      <TopMenu />
+    </div>
+  </section>
 </template>

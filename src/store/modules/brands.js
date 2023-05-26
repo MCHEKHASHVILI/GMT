@@ -43,10 +43,10 @@ const brandsModule = {
     },
     actions: {
         getBrands: async ({ commit }) => {
-            let { data } = await axios.get('brands')
-            commit("SET_BRANDS", data.brands)
-            commit("SET_TITLE", data.title)
-            commit("SET_DESCRIPTION", data.description)
+            let { data: { brands, title, description } } = await axios.get('brands')
+            commit("SET_BRANDS", brands)
+            commit("SET_TITLE", title)
+            commit("SET_DESCRIPTION", description)
         },
         getBrand: async ({ commit }, id) => {
             let { data } = await axios.get('brands/' + id)

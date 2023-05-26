@@ -1,11 +1,12 @@
-import {createRouter, createWebHistory, RouterView} from 'vue-router'
+import { createRouter, createWebHistory, RouterView } from 'vue-router'
+import { defineComponent } from 'vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
-            name: 'home',
+            name: 'Home',
             component: () => import('../views/Pages/Home.vue')
         },
         {
@@ -15,7 +16,7 @@ const router = createRouter({
         },
         {
             path: '/brands',
-            component: () => RouterView,
+            component: () => new Promise(resolve => resolve(defineComponent(RouterView))),
             children:[
                 {
                     path:"",
@@ -32,7 +33,7 @@ const router = createRouter({
         },
         {
             path: '/news',
-            component: () => RouterView,
+            component: () => new Promise(resolve => resolve(defineComponent(RouterView))),
             children: [
                 {
                     path: '',
@@ -49,7 +50,7 @@ const router = createRouter({
         },
         {
             path: '/events',
-            component: () => RouterView,
+            component: () => new Promise(resolve => resolve(defineComponent(RouterView))),
             children: [
                 {
                     path: '',
@@ -65,7 +66,7 @@ const router = createRouter({
         },
         {
             path: '/employment',
-            component: () => RouterView,
+            component: () => new Promise(resolve => resolve(defineComponent(RouterView))),
             children: [
                 {
                     path: '',

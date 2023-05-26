@@ -6,7 +6,7 @@ import ContactComponent from "@/components/ContactComponent.vue";
 
 export default {
   props: {
-    id: { type: Number | String, required: true }
+    id: { type: [Number, String], required: true }
   },
   components: {
     mainLayout,

@@ -3,25 +3,20 @@ import { mapGetters, mapActions } from "vuex"
 
 export default {
     props: {
-        brands: { type: Array || Boolean, reqired: false, default: false }
+        brands: { type: Array, reqired: false, default: null }
     },
     computed: {
-        ...mapGetters('brands', ['brands']),
+        ...mapGetters('brands', { data: 'brands' })
     },
     methods: {
-        ...mapActions('brands', ['getBrands'])
+        ...mapActions('brands', [ 'getBrands' ])
     },
-    mounted(){
-        if(this.$props.brands == false){
-            console.log("this is null")
-            this.getBrands()
-        }
-    }
+    mounted(){ this.getBrands() },
 }
 </script>
 <template>
     <section>
-        <div v-for="(item, index) in brands" :key="index" :class="[
+        <div v-for="(item, index) in data" :key="index" :class="[
             'flex flex-col w-full h-full',
             (index % 2 === 0) ? 'md:flex-row' : 'md:flex-row-reverse'
         ]">
