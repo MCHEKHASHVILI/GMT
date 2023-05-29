@@ -30,7 +30,7 @@ const { footerLinks } = useNavigation()
         </div> -->
         <div class="flex flex-col justify-between md:flex-row border-b-[1px] border-gray-700 pb-4">
             <div class="flex w-full justify-center py-4">
-                <img :src="logo" class="h-16 w-auto">
+                <img src="/logos/sublogo.png" class="h-16 w-auto">
             </div>
             <div class="flex w-full justify-center">
                 <div class="grid grid-cols-2 md:grid-cols-3 justify-items-stretch gap-y-2 text-lg">

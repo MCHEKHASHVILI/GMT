@@ -14,7 +14,7 @@ onMounted(() => (logo.value != null) ? getHomePage() : null)
   <section class="w-full bg-black px-10 py-10 border-b-[1px] border-gray-700">
     <div class="container mx-auto flex justify-between items-center">
       <RouterLink :to="{ name: 'Home' }">
-        <img class="h-14 w-auto" :src="logo">
+        <img class="h-14 w-auto" src="/logos/sublogo.png">
       </RouterLink>
       <TopMenu />
     </div>
