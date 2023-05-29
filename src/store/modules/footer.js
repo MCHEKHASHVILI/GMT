@@ -18,7 +18,7 @@ const footerModule = {
         { routerLink: "/events", name: "EVENTS" },
         { routerLink: "/about", name: "ABOUT US" },
         { routerLink: "/news", name: "NEWS" },
-        {alink: "FOLLOW US"},
+        { alink: "FOLLOW US"},
      
     ],
       };

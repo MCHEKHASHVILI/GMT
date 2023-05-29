@@ -1,7 +1,7 @@
 import { ref } from "vue"
 import axios from '../interceptors/axios'
 
-export default (function () {
+export default (function useHome () {
 
 	const logo = ref()
     const subtitle = ref()
