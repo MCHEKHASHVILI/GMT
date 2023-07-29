@@ -5,40 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "hel-light";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_45_Light.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_45_Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "hel-roman";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_55_Roman.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_55_Roman.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "hel-medium";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_65_Medium.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_65_Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "hel-bold";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_75_Bold.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_75_Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "hel-heavy";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_85_Heavy.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_85_Heavy.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "hel-black";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_95_Black.ttf")
-    format("truetype");
+  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_95_Black.ttf") format("truetype");
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -48,6 +49,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

@@ -1,42 +1,39 @@
-import axios from "axios"
+import axios from "@/interceptors/axios"
 
-
-
-const apiUrl= `https://gmt.javal.ge/wp-json/custom/v1/about-us/en` 
 
 const aboutModule = {
     namespaced: true,
     state() {
         return {
-            staff: [
-               
-                
-            ],
-            information: {
-                title: 'WHO WILL BE BY YOUR SIDE',
-                description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci vero quia ipsa iusto at temporibus saepe culpa fugiat optio mollitia quas inventore maxime est hic, suscipit quisquam debitis dolore nobis!'
-            }
+            team: [],
+            member: null,
+            title: null,
+            subtitle: null,
+            description: null,
         }
     },
     getters: {
-
-        getStaff({staff}) {
-            return staff
-        },
-        getInformation(state) {
-            return state.information
-        }
-
+        team: ({ team }) => team,
+        member: ({ member }) => member,
+        title: ({ title }) => title,
+        subtitle: ({ subtitle }) => subtitle,
+        description: ({ description }) => description,
     },
-    mutations:{
-        STORE_STAFF(state,payload){
-            state.staff=payload
-        }
+    mutations: {
+        "SET_TEAM": (state, payload) => state.team = payload,
+        "SET_MEMBER": (state, payload) => state.member = payload,
+        "SET_TITLE": (state, payload) => state.title = payload,
+        "SET_SUBTITLE": (state, payload) => state.subtitle = payload,
+        "SET_DESCRIPTION": (state, payload) => state.description = payload,
     },
     actions: {
-        async getStaff({ commit }) {
-          const res = await axios.get(apiUrl);
-          commit("STORE_STAFF", res.data);
+        async getAboutUs({ commit }) {
+          const response = await axios.get('about-us');
+          const { title, subtitle, description, staff } = response.data
+          commit("SET_TEAM", staff);
+          commit("SET_TITLE", title);
+          commit("SET_SUBTITLE", subtitle);
+          commit("SET_DESCRIPTION", description);
         }
     }
 
