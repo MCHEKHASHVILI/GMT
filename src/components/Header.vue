@@ -11,12 +11,12 @@ onMounted(() => (logo.value != null) ? getHomePage() : null)
 </script>
 
 <template>
-  <section class="w-full bg-black px-10 py-10 border-b-[1px] border-gray-700">
+  <section class="w-full bg-black px-10 md:px-0 py-10 border-b-[1px] border-gray-700">
     <div class="container mx-auto flex justify-between items-center">
       <RouterLink :to="{ name: 'Home' }">
         <img class="h-14 w-auto" src="/logos/sublogo.png">
       </RouterLink>
-      <TopMenu />
+      <TopMenu  />
     </div>
   </section>
 </template>

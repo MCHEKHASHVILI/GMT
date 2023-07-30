@@ -11,12 +11,11 @@ const toggleResponsiveNavbar = () => {
   store.commit("navbar/toggleResponsiveNavbar")
   document.body.classList.add('md:overflow-visible');
   document.body.classList.add('overflow-hidden');
-
 }
 const navbarComponents = computed(() => store.getters["navbar/navbarComponents"])
 </script>
 <template>
-  <nav class="md:flex hidden justify-between space-x-16">
+  <nav class="flex-1 md:flex hidden justify-end space-x-16">
     <router-link v-for="component in navbarComponents" class="text-white" :to="component.routerLink">
       {{ component.name }}
     </router-link>
@@ -40,4 +39,6 @@ const navbarComponents = computed(() => store.getters["navbar/navbarComponents"]
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}</style>
+}
+
+</style>
