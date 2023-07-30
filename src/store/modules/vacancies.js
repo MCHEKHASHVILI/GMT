@@ -1,40 +1,35 @@
-import axios from "axios";
+import axios from "@/interceptors/axios"
 
-const ulr = (id = "") =>
-  `https://gmt.javal.ge/wp-json/custom/v1/vacancies${id}/en`;
-
-const vacancies = {
+const vacanciesModule = {
   namespaced: true,
-  state: {
-    vacancies: {},
-    vacancy: {},
+    state() {
+      return {
+          vacancies: [],
+          vacancy: null,
+          title: null,
+      }
+  },
+  getters: {
+    vacancies: ({ vacancies }) => vacancies,
+    vacancy: ({ vacancy }) => vacancy,
+    title: ({ title }) => title,
+  },
+  mutations: {
+    "SET_VACANCIES": (state, payload) => state.vacancies = payload,
+    "SET_VACANCY": (state, payload) => state.vacancy = payload,
+    "SET_TITLE": (state, payload) => state.title = payload,
   },
   actions: {
     async getVacancies({ commit }) {
-      const res = await axios.get(ulr());
-      commit("SAVE_VACANCIES", res.data);
+      let { data: { title, vacancies } } = await axios.get('vacancies')
+      commit("SET_VACANCIES", vacancies);
+      commit("SET_TITLE", title);
     },
-    async getSingleVacancy({ commit }, id) {
-      const res = await axios.get(ulr("/" + id));
-      commit("SAVE_SINGLE_VACANCY", res.data);
-    },
-  },
-  mutations: {
-    SAVE_VACANCIES(state, vacancies) {
-      state.vacancies = vacancies;
-    },
-    SAVE_SINGLE_VACANCY(state, vacancy) {
-      state.vacancy = vacancy;
-    },
-  },
-  getters: {
-    getVacancies({ vacancies }) {
-      return vacancies;
-    },
-    getSingleVacancy({ vacancy }) {
-      return vacancy;
+    async getVacancy({ commit }, id) {
+      let { data } = await axios.get('vacancies/' + id)
+      commit("SET_VACANCY", data);
     },
   },
 };
 
-export default vacancies;
+export default vacanciesModule;
