@@ -32,7 +32,7 @@ export default {
             <img class="object-cover aspect-square" :src="member?.featured_image">
           </div>
           <div class="flex-1 px-8 md:px-0 md:pl-2">
-            <h2 class="text-center font-semibold text-2xl md:text-left uppercase">{{ member?.title }}</h2>
+            <h2 class="text-center font-semibold text-2xl md:text-left uppercase mt-2 md:mt-0">{{ member?.title }}</h2>
             <h3 class="my-3 relative font-medium text-xl">
               {{ member?.position }}
               <div class="absolute bg-[#CCA657] h-0.5 w-12"></div>
