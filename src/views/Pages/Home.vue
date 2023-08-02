@@ -14,7 +14,6 @@ const {
 } = useHome()
 
 onMounted(() => getHomePage())
-onMounted(() => console.log(brands))
 
 </script>
 <template>
