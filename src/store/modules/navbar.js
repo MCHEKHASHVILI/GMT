@@ -1,37 +1,30 @@
+import IconBurger from '@/components/icons/iconBurger.vue'
+import IconExit from "@/components/icons/iconExit.vue"
+
 const navbarModule = {
     namespaced: true,
     state() {
         return {
-            scrollSwitch: "wefwf",
-            responsiveNavbar: false,
-            navbarComponents: [
-                { routerLink: "/brands", name: "BRANDS" },
-                { routerLink: "/events", name: "EVENTS" },
-                { routerLink: "/news", name: "NEWS" },
-                { routerLink: "/about", name: "ABOUT US" },
-             
+            open: false,
+            navLinks: [
+                { url: "/brands", label: "BRANDS" },
+                { url: "/events", label: "EVENTS" },
+                { url: "/news", label: "NEWS" },
+                { url: "/about", label: "ABOUT US" },
             ],
-            
-
         }
     },
     getters: {
-        navbarComponents(state) {
-            return state.navbarComponents
-        },
-        responsiveNavbar(state){
-            return state.responsiveNavbar
-        },
-        scrollSwitch(state){
-            return state.scrollSwitch
-        }
+        navLinks: ({navLinks}) => navLinks,
+        open: ({open}) => open,
+        icon: ({open}) => (!open) ? IconBurger : IconExit,
+        iconProps: ({open}) => (open) ? { fill: '#000000' } : { fill: '#FFFFFF' },
     },
-
     mutations: {
-        toggleResponsiveNavbar(state){
-            state.responsiveNavbar = !state.responsiveNavbar
-            state.scrollSwitch = !state.scrollSwitch
-        }
+        "TOGGLE_MENU": (state, _payload) => state.open = !state.open
+    },
+    actions: {
+        toggleMenu: async ({ commit }) => commit('TOGGLE_MENU')
     }
 }
 

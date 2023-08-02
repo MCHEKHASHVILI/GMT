@@ -5,7 +5,7 @@ import iconArrow from "../../components/icons/iconArrow.vue";
 import { useStore } from "vuex";
 import eventsModule from "../../store/modules/events";
 const store = useStore();
-store.registerModule("events", eventsModule);
+// store.registerModule("events", eventsModule);
 
 const location = ref("Location");
 
