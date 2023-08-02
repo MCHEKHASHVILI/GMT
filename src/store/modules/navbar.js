@@ -24,7 +24,10 @@ const navbarModule = {
         "TOGGLE_MENU": (state, _payload) => state.open = !state.open
     },
     actions: {
-        toggleMenu: async ({ commit }) => commit('TOGGLE_MENU')
+        toggleMenu: async ({ commit }) => {
+            commit('TOGGLE_MENU')
+            document.body.classList.toggle('overflow-hidden')
+        }
     }
 }
 
