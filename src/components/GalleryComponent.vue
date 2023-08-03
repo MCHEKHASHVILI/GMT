@@ -15,8 +15,6 @@ export default {
         const main = ref();
         const thumbs = ref();
 
-
-
         const mainOptions = {
             type: 'slide',
             rewind: false,
@@ -59,15 +57,10 @@ export default {
     },
 }
 
-
-
-
-
 </script>
-
 <template>
 
-    <section class="w-5/6 mt-24 md:mt-0 flex flex-col mb-28 items-center">
+    <section class="w-full mt-24 md:mt-0 px-8 md:px-0 flex flex-col mb-28 items-center">
         <h1 class="font-[arial] font-bold text-3xl mb-10">GALLERY</h1>
         <Splide class="w-full md:inline-block hidden mb-3" :options="mainOptions" aria-label="My Favorite Images" ref="main">
             <SplideSlide v-for="image in images" :key="image">
@@ -82,15 +75,13 @@ export default {
         </Splide>
     </section>
 
-
-
 </template>
 
-<style>
+<style scopped>
 .splide__arrow {
   width: 65px;
   height: 65px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(11, 11, 11, 0.75);
 }
 
 .splide__arrow path {

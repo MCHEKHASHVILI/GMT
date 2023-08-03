@@ -41,16 +41,19 @@ export default {
             </p>
           </div>
           <div class="md:w-8/12 w-10/12 md:flex-row flex-col text-lg flex gap-4">
-            <a :href="brand?.menu"
+            <a :href="brand?.menu" target="_blank"
               class="bg-[#f5f5f5] flex items-center justify-center py-3   transition duration-300 hover:bg-[#0b0b0b] hover:text-[#d0a958] md:py-6 font-[arial] md:w-1/2">MENU</a>
-            <a :href="brand?.website"
+            <a :href="brand?.website" target="_blank"
               class="bg-[#0b0b0b] flex items-center justify-center transition py-3 duration-300 hover:opacity-80 text-[#d0a958] font-[arial] md:py-6 md:w-1/2">GO
               TO WEBSITE</a>
           </div>
         </div>
       </div>
-      <GalleryComponent :images="brand?.images" />
-      <ContactComponent :details="contact" />
+      <div class="container mx-auto">
+        <GalleryComponent :images="brand?.images" />
+        <ContactComponent :details="contact" />
+      </div>
+      
     </div>
   </mainLayout>
 </template>

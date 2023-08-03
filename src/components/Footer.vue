@@ -16,14 +16,12 @@ const { footerLinks } = useNavigation()
                     { 'invert': open }
                 ]" src="@/assets/logos/sublogo.png">
                 </RouterLink>
-                <!-- <img src="/logos/sublogo.png" class="h-16 w-auto"> -->
             </div>
-
             <div class="w-full justify-between md:justify-end">
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-y-8 text-xl ">
-                    <router-link v-for="link in footerLinks" :to="{ name: link.name }" class="justify-self-start pl-14">{{
+                <div class="w-3/4 mx-auto grid grid-cols-2 md:grid-cols-3 gap-y-8 text-xl">
+                    <router-link v-for="link in footerLinks" :to="{ name: link.name }" class="justify-self-start">{{
                         link.title }}</router-link>
-                    <div class="flex flex-col pl-14">
+                    <div class="flex flex-col">
                         <h2 class="text-xl">Follow us</h2>
                         <div class="flex flex-row justify-content-start space-x-4 mt-2 py-2">
                             <img class="w-14 md:w-15" src="@/assets/icons/linkedin.svg">

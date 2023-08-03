@@ -33,7 +33,7 @@ const layout = {
 }
 </script>
 <template>
-    <section class="flex flex-col w-full px-8 md:px-36 pb-28 md:pb-36 md:pt-8">
+    <section class="flex flex-col w-full px-8 md:px-0 pb-28 md:pb-36 md:pt-8">
         <h1 class="text-center m-5 text-3xl font-bold">CONTACT</h1>
         <div class="flex md:flex-row flex-col items-start">
             <div class="w-full md:w-2/5 flex flex-col h-full items-start justify-right space-y-2">
