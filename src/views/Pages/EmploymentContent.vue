@@ -16,27 +16,19 @@ export default {
   methods: {
     ...mapActions('vacancies', ['getVacancy'])
   },
-  mounted(){
+  mounted() {
     this.getVacancy(this.id)
   },
 }
 
 </script>
 <template>
-  <main-layout>
-    <div
-      class="font-hel_roman mx-[max(46px,7.292vw)] mt-[max(22px,3.451vw)] mb-[max(89px,7.212vw)]"
-    >
+  <MainLayout>
+    <div class="container mx-auto py-8 md:py-16 px-8 md:px-0">
       <section class="flex w-fit">
-        <img
-          class="w-[max(103px,7.813vw)]"
-          :src="vacancy?.featured_image"
-          :alt="vacancy?.title + ' logo'"
-        />
+        <img class="w-[max(103px,7.813vw)]" :src="vacancy?.featured_image" :alt="vacancy?.title + ' logo'" />
         <article class="my-auto ml-[max(10px,1.367vw)]">
-          <h1
-            class="font-bold text-[max(16px,1.294vw)] max-sm:text-base max-sm:font-normal"
-          >
+          <h1 class="font-bold text-[max(16px,1.294vw)] max-sm:text-base max-sm:font-normal">
             {{ vacancy?.title }}
           </h1>
           <h3 class="font-bold max-sm:font-normal">
@@ -46,9 +38,7 @@ export default {
       </section>
       <section v-html="vacancy?.description" class="[&>p]:mt-[max(20px,2.801vh)]"></section>
       <section class="mt-[max(35px,4.902vh)] w-fit">
-        <article
-          class="text-gray-500 grid gap-x-[max(20px,1.302vw)] gap-y-[max(15px,2.101vh)] grid-cols-[auto_1fr]"
-        >
+        <article class="text-gray-500 grid gap-x-[max(20px,1.302vw)] gap-y-[max(15px,2.101vh)] grid-cols-[auto_1fr]">
           <p>Salary</p>
           <p class="font-bold text-black">
             <span class="text-xl max-sm:text-lg">{{ vacancy?.salary }}</span> ₾
@@ -68,5 +58,5 @@ export default {
         </p>
       </section>
     </div>
-  </main-layout>
+  </MainLayout>
 </template>

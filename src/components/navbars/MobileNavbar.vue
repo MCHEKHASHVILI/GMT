@@ -26,7 +26,7 @@ export default {
   <section :class="['flex md:hidden w-full py-4 md:py-10 border-b-[1px] border-gray-700', (!open) ? 'bg-black' : 'bg-invert']">
     <div class="container mx-auto px-4 py-4 flex flex-col justify-between">
       <div :class="['w-full flex flex-row justify-between']">
-        <RouterLink :to="{ name: 'Home' }">
+        <RouterLink :to="{ name: 'Home' }" @click="toggleMenu">
           <img :class="[
             'object-cover h-12',
             { 'invert': open }
