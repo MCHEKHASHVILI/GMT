@@ -8,10 +8,10 @@ export default {
     mainLayout, NewsCard,
   },
   computed: {
-    ...mapGetters('news', ['news'])
+    ...mapGetters('news', ['title','news', 'more'])
   },
   methods: {
-    ...mapActions('news', ['getNews'])
+    ...mapActions('news', ['getNews', 'getMore'])
   },
   mounted(){
     this.getNews()
@@ -21,18 +21,14 @@ export default {
 
 <template>
   <mainLayout>
-    <div class="flex justify-center items-center h-40">
-      <div class="text-center text-2xl font-hel_bold">
-        NEWS
-      </div>
-    </div>
-    <div class="md:mx-20">
-      <div class="grid grid-cols-1 md:grid-cols-3 md:mx-8 mx-auto?">
-        <NewsCard v-for="article in news" :content="article" />
+    <h1 class="text-center text-3xl font-bold uppercase my-8 md:mt-16 md:mb-12">{{ title }}</h1>
+    <div class="md:container px-4 md:px-0 md:mx-auto ">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <NewsCard v-for="article in news" :content="article"/>
       </div>
     </div>
     <div class="flex justify-center items-center h-40 mb-20">
-      <button class="w-56 h-14 bg-black hover:bg-gray-800 text-yellow-500 text-sm font-hel_light py-3 px-10">
+      <button v-if="!!more" @click="getMore" class="w-56 h-14 bg-black hover:bg-gray-800 text-yellow-500 text-sm py-3 px-10">
         MORE
       </button>
     </div>

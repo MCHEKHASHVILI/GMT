@@ -8,7 +8,7 @@ export default {
 </script>
 <template>
     <footer class="w-full bg-black text-white">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between px-8 md:px-0 py-8 md:py-11">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between px-4 md:px-0 py-8 md:py-11">
             <div class="w-full py-8 md:py-0 md:pb-8 flex justify-around md:justify-start">
                 <ApplicationLogo :imgClass="['object-cover h-12', { 'invert': open }]" :link="true" />
             </div>

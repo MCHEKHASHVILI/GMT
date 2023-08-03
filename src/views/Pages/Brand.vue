@@ -27,7 +27,7 @@ export default {
 
 <template>
   <mainLayout>
-    <div class="flex overflow-x-hidden  flex-col  items-center mb-32">
+    <div class="flex overflow-x-hidden flex-col items-center mb-32">
       <div class="w-screen flex justify-center  flex-col md:flex-row mb-16 md:mb-32 ">
         <img class="md:w-1/2 w-full   md:mr-32 mr-10" :src="brand?.featured_image" />
         <div class="flex-col  pt-20 md:w-1/2   flex md:items-start items-center md:justify-end">
