@@ -8,7 +8,8 @@ export default {
     ...mapGetters('navbar', ['menus', 'open', 'icon', 'iconProps']),
   },
   methods: {
-    ...mapActions('navbar', ['toggleMenu'])
+    ...mapActions('navbar', ['toggleMenu']),
+    goHome(){ if(!!this.open) { this.toggleMenu() }}
   },
   components: { ApplicationLogo }
 }
@@ -19,7 +20,7 @@ export default {
     :class="['flex md:hidden w-full py-4 md:py-10 border-b-[1px] border-[#000000] border-opacity-20', (!open) ? 'bg-[#0B0B0B]' : 'bg-invert']">
     <div class="container mx-auto px-4 py-4 flex flex-col justify-between">
       <div :class="['w-full flex flex-row justify-between']">
-        <ApplicationLogo :imgClass="['object-cover h-12', { 'invert': open }]" :link="true" @click="toggleMenu" />
+        <ApplicationLogo :imgClass="['object-cover h-12', { 'invert': open }]" :link="true" @click="goHome" />
         <div class="flex flex-1 justify-end">
           <KeepAlive>
             <Component :is="{ ...icon }" @click="toggleMenu"
