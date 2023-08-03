@@ -3,6 +3,7 @@ import { ref } from "vue"
 export default (function useNavigation () {
 
 	const menuLinks = ref([])
+
     const footerLinks = ref([
         { name: 'Brands', title: 'Brands' },
         { name: 'Employment', title: 'Employment' },
@@ -11,9 +12,7 @@ export default (function useNavigation () {
         { name: 'News', title: 'News' },
     ])
 
-
-
-	let instance = { menuLinks, footerLinks}      
+	let instance = { menuLinks, footerLinks }      
 
 	return () => {
 		return instance

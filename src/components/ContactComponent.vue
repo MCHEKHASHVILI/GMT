@@ -40,7 +40,7 @@ const layout = {
                 <!-- Basic info as Text -->
                 <div v-for="(info, key) in details?.basic" class="flex flex-row">
                     <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center p-4">
-                        <component :is="layout[key]?.icon"></component>
+                        <component :is="layout[key]?.icon" role="img"></component>
                     </div>
                     <div class="flex flex-col justify-center pl-5">
                         <p class="text-base font-semibold text-[#797878]">{{ layout[key]?.title }}</p>

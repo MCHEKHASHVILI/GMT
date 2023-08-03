@@ -19,7 +19,8 @@ onMounted(() => getHomePage())
 <template>
   <mainLayout>
     <div class="flex flex-col h-screen bg-black">
-      <img class="m-auto md:w-2/5 w-11/12 text-center" src="/logos/sublogo.png">
+      <img v-if="!!logo" class="m-auto md:w-2/5 w-11/12 text-center" :src="logo">
+      <img v-else class="m-auto md:w-2/5 w-11/12 text-center" src="@/assets/logos/sublogo.png">
     </div>
     <div class="flex flex-col bg-black">
       <div class="text-white text-left md:text-center w-3/5 mx-auto pb-4">

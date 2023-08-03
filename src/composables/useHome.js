@@ -3,7 +3,7 @@ import axios from '../interceptors/axios'
 
 export default (function useHome () {
 
-	const logo = ref()
+	const logo = ref(null)
     const subtitle = ref()
     const description = ref()
     const sectionTitle = ref()

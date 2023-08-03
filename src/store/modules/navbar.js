@@ -6,19 +6,28 @@ const navbarModule = {
     state() {
         return {
             open: false,
-            navLinks: [
-                { url: "/brands", label: "BRANDS" },
-                { url: "/events", label: "EVENTS" },
-                { url: "/news", label: "NEWS" },
-                { url: "/about", label: "ABOUT US" },
-            ],
+            menus: {
+                top: [
+                    { name: 'Brands', label: 'Brands' },
+                    { name: 'Events', label: 'Events' },
+                    { name: 'News', label: 'News' },
+                    { name: 'About', label: 'About Us' },
+                ],
+                footer: [
+                    { name: 'Brands', label: 'Brands' },
+                    { name: 'Employment', label: 'Employment' },
+                    { name: 'Events', label: 'Events' },
+                    { name: 'About', label: 'About Us' },
+                    { name: 'News', label: 'News' },
+                ]
+            }
         }
     },
     getters: {
-        navLinks: ({navLinks}) => navLinks,
-        open: ({open}) => open,
-        icon: ({open}) => (!open) ? IconBurger : IconExit,
-        iconProps: ({open}) => (open) ? { fill: '#000000' } : { fill: '#FFFFFF' },
+        menus: ({ menus }) => menus,
+        open: ({ open }) => open,
+        icon: ({ open }) => (!open) ? IconBurger : IconExit,
+        iconProps: ({ open }) => (open) ? { fill: '#000000' } : { fill: '#FFFFFF' },
     },
     mutations: {
         "TOGGLE_MENU": (state, _payload) => state.open = !state.open
