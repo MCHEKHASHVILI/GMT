@@ -27,6 +27,7 @@ const navbarModule = {
         toggleMenu: async ({ commit }) => {
             commit('TOGGLE_MENU')
             document.body.classList.toggle('overflow-hidden')
+            document.body.classList.toggle('touch-none')
         }
     }
 }
