@@ -24,7 +24,7 @@ module.exports = {
         'link-active': '#D3B266',
       },
       fontFamily: {
-        'sans-serif': ['Helvetica Neue', ...defaultTheme.fontFamily.sans],
+        'sans': ['Helvetica Neue', ...defaultTheme.fontFamily.sans],
         // fancyFont: ["Pacifico", "cursive"],
         // mainFont: ["PT Serif", "serif"],
         // hel_light: "hel-light",
