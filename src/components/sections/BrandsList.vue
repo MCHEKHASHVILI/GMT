@@ -24,7 +24,7 @@ export default {
                 <img class="object-fill w-full h-full" :src="item?.featured_image" alt="">
             </div>
             <div :class="[
-                'flex flex-col w-full h-full p-16 md:w-1/2 md:p-24 ',
+                'flex flex-col w-full h-full py-16 px-4 md:w-1/2 md:p-24 ',
                 (index % 2 === 0) ? 'md:items-start' : 'md:items-end'
             ]">
                 <div :class="['w-full md:grid', (index % 2 === 0) ? 'md:place-content-start' : 'md:place-content-end']">
