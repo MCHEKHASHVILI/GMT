@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"); 
 
 @tailwind base;
 @tailwind components;
@@ -13,37 +13,36 @@
 }
 
 
-
-@font-face {
-  font-family: "Helvetica Neue";
+/* @font-face {
+  font-family: 'Helvetica Neue';
   font-weight: 200;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_45_Roman.woff2" format("woff2");
-}
+  src: "/assets/fonts/Helvetica_Neue_LT_GEO_45_Roman.woff2" format("woff2");
+} */
 @font-face {
   font-family: "Helvetica Neue";
   font-weight: 400;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_55_Medium.woff2" format("woff2");
+  src: url("./fonts/Helvetica_Neue_LT_GEO_65_Medium.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Helvetica Neue";
+/* @font-face {
+  font-family: 'Helvetica Neue';
   font-weight: 500;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_65_Bold.woff2" format("woff2");
+  src: "/assets/fonts/Helvetica_Neue_LT_GEO_65_Bold.woff2" format("woff2");
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   font-weight: 600;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_75_Heavy.woff2" format("woff2");
+  src: "/assets/fonts/Helvetica_Neue_LT_GEO_75_Heavy.woff2" format("woff2");
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   font-weight: 700;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_85_Black.woff2" format("woff2");
+  src: "/assets/fonts/Helvetica_Neue_LT_GEO_85_Black.woff2" format("woff2");
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue';
   font-weight: 800;
-  src: "@/assets/fonts/Helvetica_Neue_LT_GEO_95_Black.woff2" format("woff2");
-}
+  src: "/assets/fonts/Helvetica_Neue_LT_GEO_95_Black.woff2" format("woff2");
+} */
 
 /* 
 @font-face {

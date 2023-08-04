@@ -11,4 +11,6 @@ app.use( VueSplide );
 app.use(store)
 app.use(router)
 
+console.log(import.meta.BASE_URL);
+
 app.mount('#app')
