@@ -1,8 +1,6 @@
 <script>
 import { mapGetters, mapActions } from "vuex"
 import mainLayout from "../../layouts/mainLayout.vue"
-import iconCallendar from "../../components/icons/iconCallendar.vue"
-import iconEye from '../../components/icons/iconEye.vue'
 
 export default {
     props: {
@@ -10,7 +8,7 @@ export default {
         required: true
     },
     components: {
-        mainLayout, iconCallendar, iconEye
+        mainLayout
     },
     computed: {
         ...mapGetters('news', ['content'])
@@ -29,7 +27,7 @@ export default {
         <div class="flex flex-col px-4 md:px-0 md:mb-36 md:container md:mx-auto">
             <h1 class="text-center text-2xl md:text-3xl font-bold uppercase my-8 md:mt-16 md:mb-12">NEWS</h1>
             <img :src="content?.featured_image" class="object-cover" alt="">
-            <div class="flex flex-row items-center py-4 md:py-2 space-x-4">
+            <div class="flex flex-row py-4 md:py-2 space-x-4 justify-start">
                 <div class="flex items-center justify-start space-x-2">
                     <span><i class="fas fa-eye"></i></span>
                     <span>{{ content?.publish_date }}</span>
