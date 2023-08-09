@@ -14,10 +14,10 @@ export default {
 </script>
 <template>
     <mainLayout>
-        <section class="w-full bg-gray-200 p-8">
-            <div class="flex flex-col gap-4 w-full md:w-1/2 mx-auto text-left">
-                <h4 class="uppercase font-bold text-3xl text-center">{{ title }}</h4>
-                <div v-html="description" class="text-xl md:text-center"></div>
+        <section class="w-full p-4 md:py-16 md:bg-[#F5F5F5]">
+            <div class="flex flex-col gap-y-4 w-full md:w-2/5 mx-auto text-left text-[#1D1A1A] ">
+                <h1 class="uppercase font-semibold md:font-bold text-2xl md:text-3xl text-center" v-html="title"></h1>
+                <div class="text-xl md:text-center" v-html="description"></div>
             </div>
         </section>
         <BrandsList />

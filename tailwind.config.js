@@ -6,39 +6,42 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     container: {
-      // default breakpoints but with 40px removed
       screens: {
-        '2xl': '1640px',
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        '2xl': '1536px',
+      },
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        md: '2.5rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
       },
     },
     extend: {
-      
-      screens: {
-        // '2xl': {'max': '1535px'},
-        // 'xl': {'max': '1279px'},
-        // 'lg': {'max': '1023px'},
-        // 'md': {'max': '767px'},
-        // 'sm': {'max': '639px'},
-      },
+      // screens: {
+      //   xs: "375px",
+      // },
+      // container: {
+      //   screens: {
+      //     xs: "375px",
+      //   },
+      // },
       colors: {
         'link-active': '#D3B266',
       },
       fontFamily: {
         'sans': ['Helvetica Neue', ...defaultTheme.fontFamily.sans],
-        // fancyFont: ["Pacifico", "cursive"],
-        // mainFont: ["PT Serif", "serif"],
-        // hel_light: "hel-light",
-        // hel_roman: "hel-roman",
-        // hel_medium: "hel-medium",
-        // hel_bold: "hel-bold",
-        // hel_heavy: "hel-heavy",
-        // hel_black: "hel-black",
       },
       width: {
         '15': '3.875rem',
       }
     },
-   
+
   },
   plugins: [],
 };
