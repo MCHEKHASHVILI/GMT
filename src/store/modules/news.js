@@ -7,38 +7,62 @@ const newsModule = {
       news: [],
       content: {},
       title: null,
-      more: null,
+      page: null,
+      next_page: null,
+      per_page: 5,
+      total_pages: null,
+      loading: false,
     }
   },
   getters: {
     news: ({ news }) => news,
     content: ({ content }) => content,
     title: ({ title }) => title,
-    more: ({ more }) => more,
+    
+    loading: ({ loading }) => loading,
+    next_page: ({ next_page }) => next_page,
+    params: ({ per_page, next_page }) => (next_page) ? { params: { per_page, page: next_page } } : { params: { per_page } }
   },
   mutations: {
     'SET_NEWS': (state, { more, data }) => (!!more) ? state.news.push(...data) : state.news = [...data],
     'SET_TITLE': (state, payload) => state.title = payload,
     'SET_CONTENT': (state, payload) => state.content = payload,
-    'SET_MORE': (state, payload) => (payload) ? state.more = payload : state.more = null,
+    
+    'SET_PAGE': (state, payload) => (payload) ? state.page = payload : state.page = null,
+    'SET_NEXT_PAGE': (state) => ((state.total_pages - state.page) > 0) ? state.next_page = state.page + 1 : state.next_page = null,
+    'SET_TOTAL_PAGES': (state, payload) => (payload) ? state.total_pages = payload : state.total_pages = null,
+    'SET_LOADING': (state, payload) => state.loading = (payload),
   },
   actions: {
-    getNews: async ({ commit }) => {
-      let { data } = await axios.get('news')
+    getNews: async ({ commit, getters }) => {
+
+      commit('SET_LOADING', true)
+      let { data } = await axios.get('news', getters.params)
       commit('SET_NEWS', { more: false, data: data.news })
+      commit('SET_PAGE', data.page)
+      commit('SET_TOTAL_PAGES', data.total_pages)
+      commit('SET_NEXT_PAGE')
       commit('SET_TITLE', data.title)
-      if(true == false) {// set pagination to api
-        commit('SET_MORE', data.title)
-      }
+      commit('SET_LOADING', false)
+
     },
     getContent: async ({ commit }, id) => {
+
+      commit('SET_LOADING', true)
       let { data } = await axios.get('news/' + id)
       commit('SET_CONTENT', data)
+      commit('SET_LOADING', false)
+
     },
-    getMore: async ({ commit, state }) => {
-      // let { data } = await axios.get(state.more) // state more will be an url or null
-      // commit('SET_NEWS', { more: true, data: data.news }) // [news] as optional key
-      console.log('need an api for pagination')
+    getMore: async ({ commit, getters }) => {
+
+      commit('SET_LOADING', true)
+      let { data } = await axios.get('news', getters.params)
+      commit('SET_NEWS', { more: true, data: data.news })
+      commit('SET_PAGE', data.page )
+      commit('SET_NEXT_PAGE')
+      commit('SET_LOADING', false)
+
     }
   },
 }
