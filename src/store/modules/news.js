@@ -7,6 +7,7 @@ const newsModule = {
       news: [],
       content: {},
       title: null,
+      
       page: null,
       next_page: null,
       per_page: 5,
