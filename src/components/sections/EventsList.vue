@@ -23,10 +23,10 @@ defineProps({
                         <span class="py-2">{{ event.start_date }}</span>
                     </div>
                 </div>
-                <div class="flex flex-row justify-between space-x-4 text-[#0B0B0B] text-lg">
-                    <button class="w-full p-4 bg-[#F5F5F5] hover:bg-[#0B0B0B] hover:text-white" @click.prevent="">
+                <div class="flex flex-row justify-between space-x-4 text-[#0B0B0B] text-lg whitespace-nowrap">
+                    <router-link class="w-full p-4 bg-[#F5F5F5] hover:bg-[#0B0B0B] hover:text-white text-center" :to="{ name: 'EventsContent', params: { id: event.id } }">
                         <span class="uppercase">view details</span>
-                    </button>
+                    </router-link>
                     <button class="w-full p-4 bg-[#0B0B0B] text-[#CCA657] hover:bg-[#444141]" @click.prevent="">
                         <span class="uppercase">book now</span>
                     </button>
