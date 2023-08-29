@@ -107,7 +107,7 @@ const eventsModule = {
       document.body.classList.toggle('touch-none')
     },
     toggleBooking: ({ commit, getters }, event) => {
-      commit('SET_BOOKING', (!!event) ? event?.id : null)
+      commit('SET_BOOKING', event?.id ?? null)
       window.scrollTo({ top: 0 })
       document.body.classList.toggle('overflow-hidden')
       document.body.classList.toggle('touch-none')

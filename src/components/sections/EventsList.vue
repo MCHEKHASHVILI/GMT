@@ -67,7 +67,7 @@ export default {
                     </button>
 
                     <Teleport to="body">
-                        <div v-if="booking == event?.id" class="absolute inset-0 bg-black bg-opacity-25">
+                        <div v-if="booking === event?.id" class="absolute inset-0 bg-black bg-opacity-25">
                             <div class="h-screen flex items-end md:items-center justify-center">
                                 <div class="h-3/4 md:h-auto w-full md:max-w-xl md:mx-auto bg-[#FFFFFF]">
                                     <div class="container mx-auto flex flex-col justify-start space-y-8 p-12">
