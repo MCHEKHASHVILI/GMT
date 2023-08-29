@@ -80,6 +80,7 @@ const eventsModule = {
       commit('SET_TITLE', data.title)
       commit('SET_EVENTS', { more: false, data: data.events })
       commit('SET_LOADING', false)
+      commit('SET_TYPES', data.event_types)
 
     },
     getEvent: async ({ commit }, id) => {
@@ -118,7 +119,7 @@ const eventsModule = {
         { id: null, name: 'null' },
       ])
     },
-    filterEvents: async ({ commit, getters }) => {
+    filterEvents: async ({ commit, getters, dispatch }) => {
       commit('SET_LOADING', true)
       let { data } = await axios.get('events', getters.filtered_params)
       let { page, title, subtitle, featured_image, total_pages, events } = data
@@ -127,11 +128,26 @@ const eventsModule = {
       commit('SET_SUBTITLE', subtitle )
       commit('SET_COVER', featured_image )
       commit('SET_TOTAL_PAGES', total_pages )
-      commit('SET_EVENTS', { more: false, data: events } )
+      commit('SET_EVENTS', { more: false, data: events ?? [] } )
+
       commit('SET_LOADING', false )
+      
+      if(!!getters.filter_bar){
+        dispatch('toggleFilterBar')
+      }
+
     },
     book: async({ commit, getters, dispatch }) => {
-      console.log('need book endpoint')
+
+      let data = {
+        email: getters.email,
+        phone: getters.phone,
+        fullname: getters.name,
+        post_id: getters.booking,
+      }
+
+      let response = await axios.post('email/booknow', data)
+      console.log(response)
       dispatch('toggleBooking', null)
     },
   },

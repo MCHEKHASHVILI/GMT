@@ -3,7 +3,9 @@ axios.defaults.baseURL = "https://gmt.javal.ge/wp-json/custom/v1" // Get env als
 
 // add language sector to each request
 axios.interceptors.request.use(function(config){
-    config.url += '/en'
+    if(config.method != 'post'){
+        config.url += '/en'
+    }
     return config 
 }, function(error) { return Promise.reject(error) })
 
