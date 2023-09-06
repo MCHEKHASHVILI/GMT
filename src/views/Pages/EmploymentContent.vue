@@ -39,11 +39,11 @@ export default {
       <section v-html="vacancy?.description" class="[&>p]:mt-[max(20px,2.801vh)]"></section>
       <section class="mt-[max(35px,4.902vh)] w-fit">
         <article class="text-gray-500 grid gap-x-[max(20px,1.302vw)] gap-y-[max(15px,2.101vh)] grid-cols-[auto_1fr]">
-          <p>Salary</p>
-          <p class="font-bold text-black">
+          <!-- <p>Salary</p> -->
+          <!-- <p class="font-bold text-black">
             <span class="text-xl max-sm:text-lg">{{ vacancy?.salary }}</span> ₾
             per month
-          </p>
+          </p> -->
           <p>{{ vacancy?.working_time }}</p>
           <p class="font-bold max-sm:font-normal text-black">
             {{ vacancy?.working_hours }}

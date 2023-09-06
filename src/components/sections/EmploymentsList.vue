@@ -36,8 +36,8 @@ export default {
                     <!-- right / down -->
                     <div class="flex flex-1 justify-start md:justify-end items-end">
                         <h2 class="font-bold">
-                            <span class="text-xl md:text-2xl">{{ item?.salary }} ₾</span>&nbsp;
-                            <span class="text-lg md:text-xl">per month</span>
+                            <!-- <span class="text-xl md:text-2xl">{{ item?.salary }} ₾</span>&nbsp; -->
+                            <!-- <span class="text-lg md:text-xl">per month</span> -->
                         </h2>
                     </div>
                 </div>

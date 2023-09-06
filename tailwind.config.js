@@ -12,6 +12,7 @@ module.exports = {
         lg: "1024px",
         xl: "1280px",
         '2xl': '1536px',
+        '3xl': '1848px',
       },
       padding: {
         DEFAULT: '1rem',
@@ -20,12 +21,14 @@ module.exports = {
         lg: '4rem',
         xl: '5rem',
         '2xl': '6rem',
+        '3xl': '6.5rem',
       },
     },
     extend: {
-      // screens: {
-      //   xs: "375px",
-      // },
+      screens: {
+        xs: "374px",
+        '3xl': "1919px",
+      },
       // container: {
       //   screens: {
       //     xs: "375px",

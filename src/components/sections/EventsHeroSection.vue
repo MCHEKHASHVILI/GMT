@@ -2,25 +2,19 @@
 import { mapGetters, mapActions } from "vuex"
 import IconExit from "@/components/icons/iconExit.vue"
 import DiscoverEventsButton from "../buttons/DiscoverEventsButton.vue"
+import VueDatePicker from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
 
 export default {
-    components: { IconExit, DiscoverEventsButton },
+    components: { IconExit, DiscoverEventsButton, VueDatePicker },
     computed: {
         date: {
-            get() {
-                return this.$store.getters['events/date']
-            },
-            set(value) {
-                this.$store.commit('events/SET_DATE', value)
-            }
+            get() { return this.$store.getters['events/date'] },
+            set(value) { this.$store.commit('events/SET_DATE', value) },
         },
         type: {
-            get() {
-                return this.$store.getters['events/type']
-            },
-            set(value) {
-                this.$store.commit('events/SET_TYPE', value)
-            }
+            get() { return this.$store.getters['events/type'] },
+            set(value) { this.$store.commit('events/SET_TYPE', value) },
         },
         ...mapGetters('events', ['subtitle', 'cover', 'filter_bar', 'types', 'filtered_params', 'loading'])
     },
@@ -47,8 +41,11 @@ export default {
                                 <option v-for="option in types" :value="option?.slug"
                                     class="text-[#0B0B0B] text-opacity-70 text-lg" v-html="option?.title"></option>
                             </select>
-                            <input type="date" v-model="date" required
-                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 text-[#0B0B0B] text-opacity-70 text-lg" />
+                            <VueDatePicker v-model="date" required :enable-time-picker="false">
+                                <template #dp-input="{ value, onInput, onEnter, onTab, onClear, onBlur, onKeypress, onPaste, isMenuOpen }">
+                                    <input class="w-full h-16 min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 text-[#0B0B0B] text-opacity-70 text-lg" :placeholder="(value) ? value : 'Date'"/>
+                                </template>
+                            </VueDatePicker>
                             <DiscoverEventsButton :loading="loading" />
                         </form>
                     </div>
@@ -70,7 +67,8 @@ export default {
                                         @submit.prevent="filterEvents">
                                         <select v-model="type" required
                                             class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4">
-                                            <option :value="null" class="text-[#0B0B0B] text-opacity-70 text-lg">Category</option>
+                                            <option :value="null" class="text-[#0B0B0B] text-opacity-70 text-lg">Category
+                                            </option>
                                             <option v-for="option in types" :value="option?.slug"
                                                 class="text-[#0B0B0B] text-opacity-70 text-lg">{{ option?.title }}
                                             </option>

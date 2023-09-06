@@ -12,6 +12,7 @@ const navbarModule = {
                     { name: 'Events', label: 'Events' },
                     { name: 'News', label: 'News' },
                     { name: 'About', label: 'About Us' },
+                    { name: 'Contact', label: 'Contact' },
                 ],
                 footer: [
                     { name: 'Brands', label: 'Brands' },
@@ -19,6 +20,7 @@ const navbarModule = {
                     { name: 'Events', label: 'Events' },
                     { name: 'About', label: 'About Us' },
                     { name: 'News', label: 'News' },
+                    { name: 'Contact', label: 'Contact' },
                 ]
             }
         }
