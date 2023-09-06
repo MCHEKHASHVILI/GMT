@@ -48,12 +48,12 @@ const newsModule = {
 
     },
     getContent: async ({ commit }, id) => {
-
       commit('SET_LOADING', true)
       let { data } = await axios.get('news/' + id)
       commit('SET_CONTENT', data)
+      // update views
+      await axios.post('update-views/' + id)
       commit('SET_LOADING', false)
-
     },
     getMore: async ({ commit, getters }) => {
 
@@ -63,7 +63,6 @@ const newsModule = {
       commit('SET_PAGE', data.page )
       commit('SET_NEXT_PAGE')
       commit('SET_LOADING', false)
-
     }
   },
 }
