@@ -39,10 +39,12 @@ export default {
             <div class="flex md:flex-row flex-col items-start justify-between space-y-4 md:space-x-4">
                 <div class="w-full flex flex-col justify-between items-start space-y-5">
                     <div v-for="info in contact_info" class="flex flex-row">
-                        <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center" v-html="(info && info?.icon) ? info.icon?.element : ''"></div>
+                        <div>
+                            <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center" v-html="(info && info?.icon) ? info.icon?.element : ''"></div>
+                        </div>
                         <div class="flex flex-col justify-center pl-5">
                             <h4 class="text-base font-semibold text-[#797878]" v-html="info?.title"></h4>
-                            <p class="text-sm font-semibold whitespace-nowrap" v-html="info?.content"></p>
+                            <p class="text-sm font-semibold" v-html="info?.content"></p>
                         </div>
                     </div>
                 </div>
