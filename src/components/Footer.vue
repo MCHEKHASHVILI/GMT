@@ -24,6 +24,7 @@ export default {
                                     <span class="text-xl md:md-0 whitespace-nowrap">{{ item.label }}</span>
                                 </router-link>
                             </div>
+                            <div></div>
                             <div class="md:hidden flex flex-col px-2">
                                 <h2 class="text-xl whitespace-nowrap">Follow us</h2>
                                 <div class="flex flex-row justify-content-start space-x-4 mt-2 py-2">

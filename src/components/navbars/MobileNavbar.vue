@@ -21,10 +21,10 @@ export default {
     <div class="container mx-auto px-4 py-4 flex flex-col justify-between">
       <div :class="['w-full flex flex-row justify-between']">
         <ApplicationLogo :imgClass="['object-cover h-12', { 'invert': open }]" :link="true" @click="goHome" />
-        <div class="flex flex-1 justify-end">
+        <div class="flex flex-1 justify-end items-center">
           <KeepAlive>
             <Component :is="{ ...icon }" @click="toggleMenu"
-              class="cursor-pointer aspect-square h-12 items-center justify-center" v-bind="iconProps" />
+              class="cursor-pointer aspect-square items-center justify-center" :class="[(open) ? 'h-9' : 'h-8']" v-bind="iconProps" />
           </KeepAlive>
         </div>
       </div>

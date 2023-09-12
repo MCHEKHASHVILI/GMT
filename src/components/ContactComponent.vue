@@ -1,36 +1,5 @@
 <script setup>
-import Phone from '@/components/icons/iconPhone.vue'
-import Address from '@/components/icons/iconAddress.vue'
-import Email from '@/components/icons/iconEmail.vue'
-import Facebook from '@/components/icons/iconFacebook.vue'
-import Linkedin from '@/components/icons/iconLinkedin.vue'
 
-const props = defineProps({
-    details: { type: Object, required: true }
-})
-
-const layout = {
-    'address': {
-        title: "ADDRESS",
-        icon: Address
-    },
-    'phone': {
-        title: "PHONE",
-        icon: Phone
-    },
-    'email': {
-        title: "E-MAIL",
-        icon: Email
-    },
-    'facebook': {
-        title: "FACEBOOK",
-        icon: Facebook
-    },
-    'linkedin': {
-        title: "LINKEDIN",
-        icon: Linkedin
-    }
-}
 </script>
 <template>
     <section class="flex flex-col w-full px-8 md:px-0 pb-28 md:pb-36 md:pt-8">
@@ -38,20 +7,20 @@ const layout = {
         <div class="flex md:flex-row flex-col items-start">
             <div class="w-full md:w-2/5 flex flex-col h-full items-start justify-right space-y-2">
                 <!-- Basic info as Text -->
-                <div v-for="(info, key) in details?.basic" class="flex flex-row">
-                    <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center p-4">
-                        <component :is="layout[key]?.icon" role="img"></component>
-                    </div>
+                <!-- <div v-for="(info, key) in details?.basic" class="flex flex-row">
+                </div>
+                <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center p-4">
+                    <component :is="{ ...layout[key]?.icon }" role="img"></component>
                     <div class="flex flex-col justify-center pl-5">
                         <p class="text-base font-semibold text-[#797878]">{{ layout[key]?.title }}</p>
                         <p class="text-sm font-semibold">{{ info }}</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- Socials as links -->
                 <div v-for="(social, key) in details?.social" class="flex flex-row">
                     <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center p-4">
-                        <component :is="layout[key]?.icon"></component>
                     </div>
+                    <component :is="{ ...layout[key]?.icon }" ></component>
                     <div class="flex flex-col justify-center pl-5">
                         <p class="text-base font-semibold text-[#797878]">{{ layout[key]?.title }}</p>
                         <a :href="social?.url" class="text-sm font-semibold" target="_blank">{{ social?.title }}</a>
