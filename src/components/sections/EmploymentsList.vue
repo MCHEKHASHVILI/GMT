@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <template>
-    <section class="mx-8 md:mx-0 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Card Container -->
         <div v-for="item in data" class="w-full p-8 border border-[#707070] border-opacity-40">
             <!-- Card Content -->
