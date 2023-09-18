@@ -38,7 +38,7 @@ export default {
                     </div>
                 </div> -->
                 <div class="w-full flex flex-col justify-between items-start space-y-5">
-                    <div v-for="info in brand?.contact" class="flex flex-row">
+                    <div v-for="info in contact_info" class="flex flex-row">
                         <div>
                             <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center" v-html="(info && info?.icon) ? info.icon?.element : ''"></div>
                         </div>

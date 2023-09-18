@@ -5,97 +5,57 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: 'Simplo';
   font-weight: 400;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_45_Light.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Regular.woff2") format("woff2"),
+        url("./_fonts/Simplo-Regular.otf") format("opentype");
 }
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "Simplo";
   font-weight: 500;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_55_Roman.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Medium.woff2") format("woff2"),
+        url("./fonts/Simplo-Medium.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: "Simplo";
   font-weight: 600;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_65_Medium.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Heavy.woff2") format("woff2"),
+        url("./fonts/Simplo-Heavy.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: "Simplo";
   font-weight: 700;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_75_Bold.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Heavy.woff2") format("woff2"),
+        url("./fonts/Simplo-Heavy.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: "Simplo";
   font-weight: 800;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_85_Heavy.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Bold.woff2") format("woff2"),
+        url("./fonts/Simplo-Bold.otf") format("opentype");
 }
 @font-face {
-  font-family: 'Helvetica Neue';
+  font-family: "Simplo";
   font-weight: 900;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_95_Black.woff2") format("woff2");
+  src: local('Simplo'),
+        url("./fonts/Simplo-Black.woff2") format("woff2"),
+        url("./fonts/Simplo-Black.otf") format("opentype");
 }
-/* @font-face {
-  font-family: 'Helvetica Neue';
-  font-weight: 600;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_75_Heavy.woff2") format("woff2");
-}
-@font-face {
-  font-family: 'Helvetica Neue';
-  font-weight: 700;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_85_Black.woff2") format("woff2");
-}
-@font-face {
-  font-family: 'Helvetica Neue';
-  font-weight: 800;
-  src: url("./fonts/Helvetica_Neue_LT_GEO_95_Black.woff2") format("woff2");
-} */
-
-/* 
-@font-face {
-  font-family: "hel-light";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_45_Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "hel-roman";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_55_Roman.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "hel-medium";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_65_Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "hel-bold";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_75_Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "hel-heavy";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_85_Heavy.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "hel-black";
-  src: url("/fonts/helvetica_neue_lt_geo/Helvetica_Neue_LT_GEO_95_Black.ttf") format("truetype");
-} 
-*/
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
   -ms-overflow-style: none;
@@ -103,7 +63,6 @@
   scrollbar-width: none;
   /* Firefox */
 }
-
 body {
   background-color: #FFFFFF;
 }

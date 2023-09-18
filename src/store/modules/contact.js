@@ -41,7 +41,7 @@ export default {
     actions: { 
         getContactInfo: async ({commit}) => {
             let { data } = await axios.get('contact')
-            console.log(data)
+            // console.log(data)
             commit("SET_CONTACT_INFO", data.contact_info)
             commit("SET_TOPICS", data.topics)
             commit("SET_TITLE", data.title)

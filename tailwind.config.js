@@ -38,7 +38,7 @@ module.exports = {
         'link-active': '#D3B266',
       },
       fontFamily: {
-        'sans': ['Helvetica Neue', ...defaultTheme.fontFamily.sans],
+        'sans': ['Simplo', ...defaultTheme.fontFamily.sans],
       },
       width: {
         '15': '3.875rem',
