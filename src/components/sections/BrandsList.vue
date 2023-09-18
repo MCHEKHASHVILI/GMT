@@ -36,7 +36,7 @@ export default {
                 <div :class="['text-lg md:text-xl mt-4 md:mt-8 md:w-2/3', (index % 2 === 0) ? 'md:text-left' : 'md:text-right']"
                     v-html="item?.description"></div>
                 <router-link :to="{ name: 'BrandsContent', params: { id: item?.id } }"
-                    class="mt-8 text-yellow-500 text-lg hover:underline w-fit text-right uppercase">Read More</router-link>
+                    class="mt-8 text-yellow-500 text-lg hover:underline w-fit text-right uppercase">{{ $t('buttons.read_more') }}</router-link>
             </div>
         </div>
     </section>

@@ -53,7 +53,8 @@ export default {
                         <div class="text-sm text-[#000000] bg-[#F5F5F5] flex flex-col justify-around px-8 md:px-6 uppercase"
                             v-html="event.event_type"></div>
                         <div class="flex flex-col justify-around">
-                            <div class="flex flex-row space-x-1 justify-start text-lg lg:text-xl text-[#1D1A1A] whitespace-nowrap">
+                            <div
+                                class="flex flex-row space-x-1 justify-start text-lg lg:text-xl text-[#1D1A1A] whitespace-nowrap">
                                 <span class="text-opacity-70">Price:</span><span v-html="event.price"></span>
                             </div>
                         </div>
@@ -65,12 +66,12 @@ export default {
                     <router-link :to="{ name: 'EventsContent', params: { id: event.id } }" custom v-slot="{ navigate }">
                         <button @click="navigate" role="link"
                             class="w-full p-4 bg-[#F5F5F5] hover:bg-[#0B0B0B] hover:text-white text-center">
-                            <span class="uppercase">view details</span>
+                            <span class="uppercase">{{ $t('buttons.event_details') }}</span>
                         </button>
                     </router-link>
                     <button class="w-full p-4 bg-[#0B0B0B] text-[#CCA657] hover:bg-[#444141]"
                         @click.prevent="toggleBooking(event)">
-                        <span class="uppercase">book now</span>
+                        <span class="uppercase">{{ $t('buttons.event_book_now') }}</span>
                     </button>
                     <Teleport to="body">
                         <div v-if="booking === event?.id" class="absolute inset-0 bg-black bg-opacity-25">
@@ -100,10 +101,10 @@ export default {
                                     </div>
                                 </div>
                             </div>
-                    </div>
-                </Teleport>
-
+                        </div>
+                    </Teleport>
+                </div>
             </div>
         </div>
-    </div>
-</section></template>
+    </section>
+</template>

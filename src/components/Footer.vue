@@ -54,7 +54,7 @@ export default {
             <GrowthHuntersLogo class="flex md:hidden mx-auto my-4" />
         </div>
         <div class="flex justify-center border-t-[1px] border-gray-700">
-            <h2 class="text-slate-100 py-12 md:py-10 text-lg">ALL RIGHTS RESERVED</h2>
+            <h2 class="text-slate-100 py-12 md:py-10 text-lg">{{ $t('system.all_rights_reserved') }}</h2>
         </div>
     </footer>
 </template>

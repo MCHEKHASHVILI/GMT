@@ -1,9 +1,11 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import ApplicationLogo from '../ApplicationLogo.vue';
+import ApplicationLogo from '../ApplicationLogo.vue'
+import LanguageSwitcher from '../buttons/LanguageSwitcher.vue'
 
 export default {
+  components: { ApplicationLogo, LanguageSwitcher },
   computed: {
     ...mapGetters('navbar', ['menus', 'open', 'icon', 'iconProps']),
   },
@@ -11,7 +13,6 @@ export default {
     ...mapActions('navbar', ['toggleMenu']),
     goHome(){ if(!!this.open) { this.toggleMenu() }}
   },
-  components: { ApplicationLogo }
 }
 </script>
 
@@ -33,8 +34,9 @@ export default {
   <div v-if="open" :class="['text-center h-screen', { 'border-t-[1px] border-gray-700': open }]">
     <ul>
       <li class="text-2xl cursor-pointer  text-[#060606] font-semibold my-8" v-for="item in menus.top">
-        <router-link @click="toggleMenu" :to="{ name: item.name }">{{ item.label }}</router-link>
+        <router-link @click="toggleMenu" :to="{ name: item }">{{ $t(`menu.${item}`) }}</router-link>
       </li>
+      <li class="text-2xl cursor-pointer  text-[#060606] font-semibold my-8"><LanguageSwitcher /></li>
     </ul>
   </div>
 </template>

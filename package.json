@@ -16,10 +16,11 @@
     "flowbite": "^1.6.5",
     "node-modules": "^0.0.1",
     "vue": "^3.2.47",
-    "vue-i18n": "^8.28.2",
+    "vue-i18n": "^9.4.1",
     "vue-recaptcha": "^3.0.0-alpha.2",
     "vue-router": "^4.2.1",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-i18n": "^1.13.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
