@@ -15,25 +15,25 @@ const brandsModule = {
         brand: ({ brand }) => brand,
         title: ({ title }) => title,
         description: ({ description }) => description,
-        contact: ({ brand }) => {
+        // contact: ({ brand }) => {
             
-            const socials = {}
+        //     const socials = {}
 
-            for (const [ key, value ] of Object.entries({ ...brand?.social_networks })) {
-                let [ label, variant ] = key.split('_')
-                if(Object.keys(socials).includes(label)){
-                    socials[label][variant] = value
-                }else{
-                    socials[label] = { }
-                    socials[label][variant] = value 
-                }
-            }
+        //     for (const [ key, value ] of Object.entries({ ...brand?.social_networks })) {
+        //         let [ label, variant ] = key.split('_')
+        //         if(Object.keys(socials).includes(label)){
+        //             socials[label][variant] = value
+        //         }else{
+        //             socials[label] = { }
+        //             socials[label][variant] = value 
+        //         }
+        //     }
 
-            return { 
-                basic: { ...brand?.contact },
-                social: { ...socials }
-            } 
-        }
+        //     return { 
+        //         basic: { ...brand?.contact },
+        //         social: { ...socials }
+        //     } 
+        // }
     },
     mutations:{
         "SET_BRANDS": (state, payload) => state.brands = payload,

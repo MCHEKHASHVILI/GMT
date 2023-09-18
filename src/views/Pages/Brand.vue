@@ -56,7 +56,6 @@ export default {
         <GalleryComponent :images="brand?.images" />
         <ContactComponent :details="contact" />
       </div>
-
     </div>
   </mainLayout>
 </template>
