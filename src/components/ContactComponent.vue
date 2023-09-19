@@ -41,7 +41,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="w-full h-52 md:h-96 min-h-full" id="map"></div>
+            <!-- <div class="w-full h-52 md:h-96 min-h-full" id="map"></div> -->
             <div class="w-full md:w-3/5 pt-7 md:pt-0">
                 <iframe class="w-full h-52 md:h-96 min-h-full" id="gmap_canvas"
                     src="https://maps.google.com/maps?q=Freedom Square, Aleksandr Pushkin Street, Tbilisi 0105, Georgia&t=&z=15&ie=UTF8&iwloc=&output=embed&desableDefaultUI=true">
