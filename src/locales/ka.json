@@ -7,7 +7,7 @@
         "loading": "ჩატვირთვა ...",
         "all_rights_reserved": "ყველა უფლება დაცულია",
         "social": {
-            "follow_us": "follow us"
+            "follow_us": "გამოგვყევით"
         }
     },
     "menu": {
@@ -15,6 +15,7 @@
         "Events": "ღონისძებები",
         "News": "სიახლეები",
         "About": "ჩვენს შესახებ",
+        "Employment": "დასაქმება",
         "Contact": "კონტაქტი"
     },
     "buttons": {
@@ -24,6 +25,8 @@
         "event_details": "დეტალები",
         "event_book_now": "დაჯავშნა",
         "event_book": "ჯავშანი",
-        "employment_details": "დეტალები"
+        "employment_details": "დეტალები",
+        "menu": "მენიუ",
+        "go_to_website": "ვებგვერდი"
     }
 }

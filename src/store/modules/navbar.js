@@ -8,14 +8,7 @@ const navbarModule = {
             open: false,
             menus: {
                 top: [ 'Brands', 'Events', 'News', 'About', 'Contact' ],
-                footer: [
-                    { name: 'Brands', label: 'Brands' },
-                    { name: 'Employment', label: 'Employment' },
-                    { name: 'Events', label: 'Events' },
-                    { name: 'About', label: 'About Us' },
-                    { name: 'News', label: 'News' },
-                    { name: 'Contact', label: 'Contact' },
-                ]
+                footer: [ 'Brands', 'Employment', 'Events', 'About', 'News', 'Contact' ]
             }
         }
     },

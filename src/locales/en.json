@@ -15,6 +15,7 @@
         "Events": "Events",
         "News": "News",
         "About": "About",
+        "Employment": "Employment",
         "Contact": "Contact"
     },
     "buttons": {
@@ -24,6 +25,8 @@
         "event_details": "view details",
         "event_book_now": "book now",
         "event_book": "book",
-        "employment_details": "view details"
+        "employment_details": "view details",
+        "menu": "menu",
+        "go_to_website": "go to website"
     }
 }

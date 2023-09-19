@@ -29,8 +29,8 @@ export default {
                     <div class="w-full flex flex-1 justify-between md:justify-end">
                         <div class="w-full grid grid-cols-2 gap-8 md:gap-8 gap-x-20 md:gap-x-32">
                             <div v-for="item in menus.footer" class="w-full text-left px-2">
-                                <router-link :to="{ name: item.name }" class="justify-self-start">
-                                    <span class="text-xl md:md-0 whitespace-nowrap">{{ item.label }}</span>
+                                <router-link :to="{ name: item }" class="justify-self-start">
+                                    <span class="text-xl md:md-0 whitespace-nowrap">{{ $t(`menu.${item}`) }}</span>
                                 </router-link>
                             </div>
                             <div></div>
@@ -47,9 +47,9 @@ export default {
                     <div class="hidden md:flex flex-col md:ml-32 px-2">
                         <h2 class="text-xl capitalize">{{ $t('system.social.follow_us') }}</h2>
                         <div class="flex flex-row justify-content-start space-x-4 mt-2 py-2">
-                            <div v-for="social in social_links" class="h-14 w-14 rounded-full flex items-center justify-center bg-[#FFFFFF] bg-opacity-20">
-                                <a :href="social?.url" target="_blank" v-html="social?.icon.element"></a>
-                            </div>
+                            <a v-for="social in social_links" :href="social?.url" target="_blank">
+                                <div v-html="social?.icon.element" class="h-14 w-14 rounded-full flex items-center justify-center bg-[#FFFFFF] bg-opacity-20 hover:bg-opacity-10 transition-all"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
