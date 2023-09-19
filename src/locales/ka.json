@@ -5,7 +5,10 @@
     },
     "system": {
         "loading": "ჩატვირთვა ...",
-        "all_rights_reserved": "ყველა უფლება დაცულია"
+        "all_rights_reserved": "ყველა უფლება დაცულია",
+        "social": {
+            "follow_us": "follow us"
+        }
     },
     "menu": {
         "Brands": "ბრენდები",
@@ -20,6 +23,7 @@
         "discover_events": "მოძებნე ღონისძებები",
         "event_details": "დეტალები",
         "event_book_now": "დაჯავშნა",
-        "event_book": "ჯავშანი"
+        "event_book": "ჯავშანი",
+        "employment_details": "დეტალები"
     }
 }

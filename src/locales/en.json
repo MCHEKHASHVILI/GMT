@@ -5,7 +5,10 @@
     },
     "system": {
         "loading": "Loading ...",
-        "all_rights_reserved": "all rights reserved"
+        "all_rights_reserved": "all rights reserved",
+        "social": {
+            "follow_us": "follow us"
+        }
     }, 
     "menu": {
         "Brands": "Brands",
@@ -20,6 +23,7 @@
         "discover_events": "discover events",
         "event_details": "view details",
         "event_book_now": "book now",
-        "event_book": "book"
+        "event_book": "book",
+        "employment_details": "view details"
     }
 }

@@ -23,6 +23,6 @@ defineEmits(['click'])
                 <span class="sr-only">{{ $t('system.loading') }}</span>
             </div>
         </span>
-        <span v-else>{{ $t('buttons.more') }}</span>
+        <span v-else class="uppercase">{{ $t('buttons.load_more') }}</span>
     </button>
 </template>

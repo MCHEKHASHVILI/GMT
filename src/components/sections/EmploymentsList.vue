@@ -61,7 +61,7 @@ export default {
                                 'bg-[#F5F5F5] hover:bg-[#0B0B0B] text-[#0B0B0B] hover:text-[#CCA657] text-center',
                                 'h-full py-4 px-16 w-full md:w-auto',
                             ]">
-                            <span class="text-lg uppercase whitespace-nowrap">view details</span>
+                            <span class="text-lg uppercase whitespace-nowrap">{{ $t('buttons.employment_details') }}</span>
                         </router-link>
                     </div>
                 </div>

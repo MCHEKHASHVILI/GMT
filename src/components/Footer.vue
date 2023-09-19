@@ -1,10 +1,19 @@
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import ApplicationLogo from "./ApplicationLogo.vue";
 import GrowthHuntersLogo from "./GrowthHuntersLogo.vue";
 export default {
     components: { ApplicationLogo, GrowthHuntersLogo },
-    computed: { ...mapGetters('navbar', ['open', 'menus']) }
+    computed: { 
+        ...mapGetters('navbar', ['open', 'menus']),
+        ...mapGetters('settings', ['social_links'])
+    },
+    methods: {
+        ...mapActions('settings', ['getSocialLinks'])
+    },
+    mounted(){
+        this.getSocialLinks()
+    }
 }
 </script>
 <template>
@@ -13,7 +22,7 @@ export default {
             <div class="w-full py-8 md:py-0 flex flex-col md:justify-between">
                 <ApplicationLogo :imgClass="['object-cover mx-auto md:mx-0 h-12', { 'invert': open }]" class="w-full"
                     :link="true" />
-                <GrowthHuntersLogo class="hidden md:flex" />
+                <GrowthHuntersLogo class="hidden md:flex flex-row flex-wrap justify-start items-center" />
             </div>
             <div class="w-full justify-between md:justify-end">
                 <div class="w-full flex flex-col md:flex-row justify-between md:pl-16">
@@ -28,24 +37,18 @@ export default {
                             <div class="md:hidden flex flex-col px-2">
                                 <h2 class="text-xl whitespace-nowrap">Follow us</h2>
                                 <div class="flex flex-row justify-content-start space-x-4 mt-2 py-2">
-                                    <div class="w-14 md:w-15">
-                                        <img class="object-cover aspect-square" src="@/assets/icons/linkedin.svg">
-                                    </div>
-                                    <div class="w-14 md:w-15">
-                                        <img class="object-cover aspect-square" src="@/assets/icons/facebook.svg">
+                                    <div v-for="social in social_links" class="h-14 w-14 rounded-full flex items-center justify-center bg-[#FFFFFF] bg-opacity-20">
+                                        <a :href="social?.url" target="_blank" v-html="social?.icon.element"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="hidden md:flex flex-col md:ml-32 px-2">
-                        <h2 class="text-xl">Follow us</h2>
+                        <h2 class="text-xl capitalize">{{ $t('system.social.follow_us') }}</h2>
                         <div class="flex flex-row justify-content-start space-x-4 mt-2 py-2">
-                            <div class="w-14 md:w-15">
-                                <img class="object-cover aspect-square" src="@/assets/icons/linkedin.svg">
-                            </div>
-                            <div class="w-14 md:w-15">
-                                <img class="object-cover aspect-square" src="@/assets/icons/facebook.svg">
+                            <div v-for="social in social_links" class="h-14 w-14 rounded-full flex items-center justify-center bg-[#FFFFFF] bg-opacity-20">
+                                <a :href="social?.url" target="_blank" v-html="social?.icon.element"></a>
                             </div>
                         </div>
                     </div>
