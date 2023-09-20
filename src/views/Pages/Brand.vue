@@ -1,8 +1,8 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import mainLayout from '../../layouts/mainLayout.vue'
-import GalleryComponent from "@/components/GalleryComponent.vue";
-import ContactComponent from "@/components/ContactComponent.vue";
+import GalleryComponent from "@/components/GalleryComponent.vue"
+import ContactComponent from "@/components/ContactComponent.vue"
 
 export default {
   props: {
@@ -19,9 +19,11 @@ export default {
   methods: {
     ...mapActions('brands', ['getBrand'])
   },
-  mounted() {
+  created() {
     this.getBrand(this.$props.id)
-  }
+  },
+  // mounted() {
+  // }
 }
 </script>
 <template>
@@ -51,7 +53,7 @@ export default {
       </div>
       <div class="container mx-auto">
         <GalleryComponent :images="brand?.images" />
-        <ContactComponent :details="contact" />
+        <ContactComponent v-if="!!brand" :contact_info="brand?.contact_info" :map="brand?.map" />
       </div>
     </div>
   </mainLayout>
