@@ -15,10 +15,13 @@ onMounted(() => getHomePage())
 </script>
 <template>
   <mainLayout>
-    <ApplicationLogo
+    <Suspense>
+
+      <ApplicationLogo
       class="flex flex-col py-[50%] md:py-0 md:h-screen bg-black"
       imgClass="m-auto md:w-2/5 w-11/12 text-center opacity-100"
-    />
+      />
+    </Suspense>
     <SubHeroComponent />
     <BrandsList :brands="brands" />
   </mainLayout>
