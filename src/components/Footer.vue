@@ -22,7 +22,6 @@ export default {
             <div class="w-full py-8 md:py-0 flex flex-col md:justify-between">
                 <ApplicationLogo :imgClass="['object-cover mx-auto md:mx-0 h-12', { 'invert': open }]" class="w-full"
                     :link="true" />
-                <GrowthHuntersLogo class="hidden md:flex flex-row flex-wrap justify-start items-center" />
             </div>
             <div class="w-full justify-between md:justify-end">
                 <div class="w-full flex flex-col md:flex-row justify-between md:pl-16">
@@ -54,10 +53,15 @@ export default {
                     </div>
                 </div>
             </div>
-            <GrowthHuntersLogo class="flex md:hidden mx-auto my-4" />
         </div>
-        <div class="flex justify-center border-t-[1px] border-gray-700">
-            <h2 class="text-slate-100 py-12 md:py-10 text-lg">{{ $t('system.all_rights_reserved') }}</h2>
+        <div class="flex justify-center border-t-[1px] border-gray-700 items-center">
+            <div class="flex flex-col justify-around">
+                <!-- <GrowthHuntersLogo class="hidden md:flex flex-row flex-nowrap justify-start items-center align-bottom" /> -->
+                <GrowthHuntersLogo class="flex flex-col sm:flex-row items-center" />
+            </div>
+            <div class="flex items-center text-center">
+                <h2 class="text-slate-100 py-12 md:py-10 text-lg" v-text="$t('system.all_rights_reserved')" />
+            </div>
         </div>
     </footer>
 </template>
