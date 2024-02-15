@@ -11,7 +11,7 @@ const router = createRouter({
 router.beforeEach(async (to, from) => {
 
     const { meta } = to
-    const title = (!meta?.page_id) ? useTitle(meta?.title ?? 'GMT') : null
+    const title = (!meta?.page_id) ? useTitle(meta?.title  + ' - GMT Hospitality') : null
     // return true
     // const store = useStore()
     // const pages = computed(() => store.getters('pages/pages'))

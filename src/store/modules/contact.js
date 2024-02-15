@@ -23,6 +23,7 @@ export default {
         message: ({ message }) => message,
     },
     mutations: { 
+        "SET_STATE": (state, payload) => state[payload.key] = payload.value,
         "SET_CONTACT_INFO": (state, payload) => state.contact_info = payload,
         "SET_TOPICS": (state, payload) => state.topics = payload,
         "SET_TOPIC": (state, payload) => state.topic = payload,
