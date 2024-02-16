@@ -11,12 +11,12 @@
         }
     }, 
     "menu": {
-        "Brands": "Brands",
-        "Events": "Events",
-        "News": "News",
-        "About": "About",
-        "Employment": "Employment",
-        "Contact": "Contact"
+        "brands": "Brands",
+        "events": "Events",
+        "news": "News",
+        "about": "About",
+        "employment": "Employment",
+        "contact": "Contact"
     },
     "buttons": {
         "load_more": "more",
@@ -27,6 +27,22 @@
         "event_book": "book",
         "employment_details": "view details",
         "menu": "menu",
-        "go_to_website": "go to website"
+        "go_to_website": "go to website",
+        "send": "send",
+        "book": "book"
+    },
+    "placeholders": {
+        "name": "full name",
+        "phone": "phone",
+        "email": "email",
+        "comment": "general comment",
+        "message": "message"
+    },
+    "forms": {
+        "booking": "booking"
+    },
+    "footer": {
+        "powered_by": "powered by"
     }
+    
 }

@@ -11,12 +11,12 @@
         }
     },
     "menu": {
-        "Brands": "ბრენდები",
-        "Events": "ღონისძებები",
-        "News": "სიახლეები",
-        "About": "ჩვენს შესახებ",
-        "Employment": "დასაქმება",
-        "Contact": "კონტაქტი"
+        "brands": "ბრენდები",
+        "events": "ღონისძებები",
+        "news": "სიახლეები",
+        "about": "ჩვენს შესახებ",
+        "employment": "დასაქმება",
+        "contact": "კონტაქტი"
     },
     "buttons": {
         "load_more": "მეტი",
@@ -27,6 +27,21 @@
         "event_book": "ჯავშანი",
         "employment_details": "დეტალები",
         "menu": "მენიუ",
-        "go_to_website": "ვებგვერდი"
+        "go_to_website": "ვებგვერდი",
+        "send": "გაგზავნა",
+        "book": "რეზერვაცია"
+    },
+    "forms": {
+        "booking": "ჯავშანი"
+    },
+    "placeholders": {
+        "name": "სახელი, გვარი",
+        "phone": "ტელეფონი",
+        "email": "ელ. ფოსტა",
+        "comment": "საკითხი",
+        "message": "აღწერა"
+    },
+    "footer": {
+        "powered_by": "დამზადებულია"
     }
 }

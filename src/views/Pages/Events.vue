@@ -27,7 +27,7 @@ export default {
 <template>
   <main-layout>
     <h1 class="text-center font-medium text-2xl md:text-3xl md:font-bold uppercase my-4 md:mt-16 md:mb-12" v-html="title"></h1>
-    <EventsHeroSection class="md:container md:mx-auto pb-4 md:pb-6" />
+    <EventsHeroSection v-if="events" class="md:container md:mx-auto pb-4 md:pb-6" />
     <div class="container mx-auto flex flex-col space-y-4 mb-20">
       <EventsList :events="events" />
       <LoadMoreButton v-if="!!next_page" :loading="loading" @click="getMore" class="mx-auto my-12" />

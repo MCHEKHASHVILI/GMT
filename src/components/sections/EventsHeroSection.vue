@@ -32,7 +32,7 @@ export default {
                         {{ subtitle }}
                     </span>
                 </h2>
-                <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-0 md:pb-2 lg:pb-8 xl:pb-20">
+                <div  v-if="cover" class="absolute inset-0 flex flex-col justify-end p-4 md:p-0 md:pb-2 lg:pb-8 xl:pb-20">
                     <div class="hidden md:block w-7/12 p-2 lg:p-4 xl:p-6 bg-[#F5F5F5]">
                         <form class="flex flex-row justify-between space-x-4 min-h-full p-2" @submit.prevent="filterEvents">
                             <select v-model="type" required
