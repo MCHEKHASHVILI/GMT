@@ -12,6 +12,7 @@ function switchLocale() {
 }
 watch(locale, (val) => {
     setI18nLanguage(val)
+    localStorage.setItem('lang', val)
     window.location.reload()
 });
 </script>

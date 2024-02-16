@@ -79,7 +79,7 @@ export default {
                                 <div class="h-3/4 md:h-auto w-full md:max-w-xl md:mx-auto bg-[#FFFFFF]">
                                     <div class="container mx-auto flex flex-col justify-start space-y-8 p-12">
                                         <div class="flex flex-row justify-between">
-                                            <h3 class="w-full text-xl text-[#1D1A1A] uppercase">booking</h3>
+                                            <h3 class="w-full text-xl text-[#1D1A1A] uppercase">{{ $t("forms.booking") }}</h3>
                                             <div class="w-full flex flex-row justify-end">
                                                 <IconExit @click.prevent="toggleBooking(null)"
                                                     class="justify-end w-8 -mr-2" />
@@ -88,15 +88,15 @@ export default {
                                         <form class="flex flex-col justify-between space-y-4 min-h-full"
                                             @submit.prevent="book">
                                             <input required type="text" v-model="name"
-                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                                placeholder="Full Name" />
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg capitalize"
+                                                :placeholder="$t('placeholders.name')" />
                                             <input required type="text" v-model="phone"
-                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                                placeholder="Phone" />
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg capitalize"
+                                                :placeholder="$t('placeholders.phone')"  />
                                             <input required type="email" v-model="email"
-                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                                placeholder="Email" />
-                                            <DiscoverEventsButton>book</DiscoverEventsButton>
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg capitalize"
+                                                :placeholder="$t('placeholders.email')" />
+                                            <DiscoverEventsButton>{{ $t("buttons.book") }}</DiscoverEventsButton>
                                         </form>
                                     </div>
                                 </div>

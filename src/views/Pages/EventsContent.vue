@@ -47,49 +47,54 @@ export default {
 </script>
 <template>
     <main-layout>
-        <div class="container mx-auto flex items-center justify-between space-y-4 flex-col my-12 ">
-            <img class="w-full " :src="event.featured_image" alt="event image">
-            <div class="flex items-center w-full justify-start space-x-4">
-                <div class="bg-[#f5f5f5] text-center font-medium text-base p-8 py-2 uppercase" v-html="event.event_type"></div>
-                <div class="text-[#7d7c7c] font-medium py-2" v-html="event.start_date"></div>
-            </div>
-            <div class="flex flex-col w-full mt-4">
-                <h1 class="md:text-3xl font-bold mb-4">{{ event.title }}</h1>
-                <div class="mb-6 whitespace-pre-line text-lg" v-html="event.description"></div>
-                <div class="text-[#676666] text-base mb-4">Price: <span class="text-[#343131]">{{ event.price }}</span>
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between space-y-4 flex-col my-12">
+                <img class="w-full" :src="event.featured_image" alt="event image">
+                <div class="flex items-center w-full justify-start space-x-4">
+                    <div class="bg-[#f5f5f5] text-center font-medium text-base p-8 py-2 uppercase"
+                        v-html="event.event_type"></div>
+                    <div class="text-[#7d7c7c] font-medium py-2" v-html="event.start_date"></div>
                 </div>
-                <button class="w-full md:w-48 p-4 bg-[#0B0B0B] text-[#CCA657] hover:bg-[#444141]"
-                    @click.prevent="toggleBooking(event)">
-                    <span class="uppercase">book now</span>
-                </button>
-                <Teleport to="body">
-                    <div v-if="booking === event?.id" class="absolute inset-0 bg-black bg-opacity-25">
-                        <div class="h-screen flex items-end md:items-center justify-center">
-                            <div class="h-3/4 md:h-auto w-full md:max-w-xl md:mx-auto bg-[#FFFFFF]">
-                                <div class="container mx-auto flex flex-col justify-start space-y-8 p-12">
-                                    <div class="flex flex-row justify-between">
-                                        <h3 class="w-full text-xl text-[#1D1A1A] uppercase">booking</h3>
-                                        <div class="w-full flex flex-row justify-end">
-                                            <IconExit @click.prevent="toggleBooking(null)" class="justify-end w-8 -mr-2" />
+                <div class="flex flex-col w-full mt-4">
+                    <h1 class="md:text-3xl font-bold mb-4">{{ event.title }}</h1>
+                    <div class="mb-6 whitespace-pre-line text-lg" v-html="event.description"></div>
+                    <div class="text-[#676666] text-base mb-4">Price: <span class="text-[#343131]">{{ event.price }}</span>
+                    </div>
+                    <button class="w-full md:w-48 p-4 bg-[#0B0B0B] text-[#CCA657] hover:bg-[#444141]"
+                        @click.prevent="toggleBooking(event)">
+                        <span class="uppercase">book now</span>
+                    </button>
+                    <Teleport to="body">
+                        <div v-if="booking === event?.id" class="absolute inset-0 bg-black bg-opacity-25">
+                            <div class="h-screen flex items-end md:items-center justify-center">
+                                <div class="h-3/4 md:h-auto w-full md:max-w-xl md:mx-auto bg-[#FFFFFF]">
+                                    <div class="container mx-auto flex flex-col justify-start space-y-8 p-12">
+                                        <div class="flex flex-row justify-between">
+                                            <h3 class="w-full text-xl text-[#1D1A1A] uppercase">booking</h3>
+                                            <div class="w-full flex flex-row justify-end">
+                                                <IconExit @click.prevent="toggleBooking(null)"
+                                                    class="justify-end w-8 -mr-2" />
+                                            </div>
                                         </div>
+                                        <form class="flex flex-col justify-between space-y-4 min-h-full"
+                                            @submit.prevent="book">
+                                            <input required type="text" v-model="name"
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
+                                                placeholder="Full Name" />
+                                            <input required type="text" v-model="phone"
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
+                                                placeholder="Phone" />
+                                            <input required type="email" v-model="email"
+                                                class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
+                                                placeholder="Email" />
+                                            <DiscoverEventsButton>book</DiscoverEventsButton>
+                                        </form>
                                     </div>
-                                    <form class="flex flex-col justify-between space-y-4 min-h-full" @submit.prevent="book">
-                                        <input required type="text" v-model="name"
-                                            class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                            placeholder="Full Name" />
-                                        <input required type="text" v-model="phone"
-                                            class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                            placeholder="Phone" />
-                                        <input required type="email" v-model="email"
-                                            class="w-full min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 py-4 text-[#0B0B0B] text-opacity-70 text-lg"
-                                            placeholder="Email" />
-                                        <DiscoverEventsButton>book</DiscoverEventsButton>
-                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Teleport>
+                    </Teleport>
+                </div>
             </div>
         </div>
     </main-layout>
