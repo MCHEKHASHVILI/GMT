@@ -44,7 +44,7 @@ export default {
         <div v-for="event in events" class="w-full h-full">
             <div class="w-full h-full bg-[#FFFFFF] flex flex-col justify-between space-y-2">
                 <img class="w-full object-fit h-48" :src="event.featured_image">
-                <div class="grow">
+                <div class="">
                     <h2 class="text-2xl font-medium" v-html="event.title"></h2>
                 </div>
                 <div
