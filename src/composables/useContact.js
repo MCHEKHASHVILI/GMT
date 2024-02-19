@@ -27,9 +27,6 @@ export default function useContact() {
     function sendContact(payload) {
         store.dispatch("contact/sendContact", payload)
     }
-    const isSocial = (item) => {
-        return item?.title === "FACEBOOK" || item?.title === "LINKEDIN"
-    }
 
     return {
         contact_info,
@@ -40,8 +37,7 @@ export default function useContact() {
         phone,
         message,
         getContactInfo,
-        sendContact,
-        isSocial
+        sendContact
     }
 
 }
