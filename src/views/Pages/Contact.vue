@@ -13,7 +13,6 @@ const {
     message,
     getContactInfo,
     sendContact,
-    isSocial,
 } = useContact()
 onMounted(() => {
     getContactInfo()
@@ -25,14 +24,13 @@ onMounted(() => {
             <h1 class="text-center m-5 text-3xl font-bold uppercase" v-html="title" />
             <div class="flex md:flex-row flex-col items-start justify-between space-y-4 md:space-x-4">
                 <div class="w-full flex flex-col justify-between items-start space-y-5">
-                    <div v-for="info in contact_info" class="flex flex-row">
+                    <a v-for="info in contact_info" :href="info.url" class="flex flex-row" target="_blank">
                         <div class="bg-[#e6e6e6] w-16 h-16 rounded-full flex justify-center items-center" v-html="(info && info?.icon) ? info.icon?.element : null" />
                         <div class="flex flex-col justify-center pl-5">
                             <h4 class="text-base font-semibold text-[#797878]" v-html="info?.title" />
-                            <a v-if="isSocial(info)" :href=info.content v-text="info?.content" />
-                            <p v-else class="text-sm font-semibold" v-html="info?.content" />
+                            <p class="text-sm font-semibold" v-html="info?.content" />
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="w-full p-8 bg-[#F5F5F5] bg-opacity-40">
                     <form @submit.prevent="sendContact" class="flex flex-col space-y-4">
