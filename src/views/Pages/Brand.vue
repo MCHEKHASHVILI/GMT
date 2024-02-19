@@ -52,8 +52,8 @@ export default {
         </div>
       </div>
       <div class="container mx-auto">
-        <GalleryComponent :images="brand?.images" />
-        <ContactComponent v-if="!!brand" :contact_info="brand?.contact_info" :map="brand?.map" />
+        <GalleryComponent v-if="!!brand && brand?.images" :images="brand.images" />
+        <!-- <ContactComponent v-if="!!brand" :contact_info="brand?.contact_info" :map="brand?.map" /> -->
       </div>
     </div>
   </mainLayout>
