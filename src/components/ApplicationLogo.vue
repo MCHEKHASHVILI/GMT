@@ -22,12 +22,12 @@ const { logo } = useHome()
 <template>
     <RouterLink v-if="!!link" :to="{ name: 'Home' }" @click="$emit('click')">
         <img v-if="logo" :class="imgClass" :src="logo">
-        <span v-else>nologo</span>
+        <!-- <span v-else>nologo</span> -->
         <!-- <img v-else :class="imgClass" src="@/assets/logos/sublogo.png"> -->
     </RouterLink>
     <caption v-else>
         <img v-if="logo" :class="imgClass" :src="logo">
-        <span v-else>nologo</span>
+        <!-- <span v-else>GMT</span> -->
         <!-- <img v-else :class="imgClass" src="@/assets/logos/sublogo.png"> -->
     </caption>
 </template>
