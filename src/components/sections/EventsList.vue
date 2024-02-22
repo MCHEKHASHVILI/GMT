@@ -55,7 +55,7 @@ export default {
                         <div class="flex flex-col justify-around">
                             <div
                                 class="flex flex-row space-x-1 justify-start text-lg lg:text-xl text-[#1D1A1A] whitespace-nowrap">
-                                <span class="text-opacity-70">Price:</span><span v-html="event.price"></span>
+                                <span class="text-opacity-70 capitalize">{{ $t('labels.price') }}:</span><span v-html="event.price"></span>
                             </div>
                         </div>
                     </div>

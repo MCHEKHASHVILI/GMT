@@ -41,6 +41,12 @@
         "comment": "საკითხი",
         "message": "აღწერა"
     },
+    "labels": {
+        "price": "ფასი",
+        "date": "თარიღი",
+        "category": "კატეგორია",
+        "gallery": "გალერეა"
+    },
     "footer": {
         "powered_by": "დამზადებულია"
     }

@@ -37,13 +37,13 @@ export default {
                         <form class="flex flex-row justify-between space-x-4 min-h-full p-2" @submit.prevent="filterEvents">
                             <select v-model="type" required
                                 class="w-full md:h-16 bg-transparent border border-[#707070] border-opacity-50 px-4">
-                                <option :value="null" class="text-[#0B0B0B] text-opacity-70 text-lg">Category</option>
+                                <option :value="null" class="text-[#0B0B0B] text-opacity-70 text-lg"><span class="capitalize">{{ $t('labels.category') }}</span></option>
                                 <option v-for="option in types" :value="option?.slug"
                                     class="text-[#0B0B0B] text-opacity-70 text-lg" v-html="option?.title"></option>
                             </select>
                             <VueDatePicker v-model="date" required :enable-time-picker="false">
                                 <template #dp-input="{ value, onInput, onEnter, onTab, onClear, onBlur, onKeypress, onPaste, isMenuOpen }">
-                                    <input class="w-full h-16 min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 text-[#0B0B0B] text-opacity-70 text-lg" :placeholder="(value) ? value : 'Date'"/>
+                                    <input class="w-full h-16 min-h-full bg-transparent border border-[#707070] border-opacity-50 px-4 text-[#0B0B0B] text-opacity-70 text-lg" :placeholder="(value) ? value : $t('labels.date')"/>
                                 </template>
                             </VueDatePicker>
                             <DiscoverEventsButton :loading="loading" />
