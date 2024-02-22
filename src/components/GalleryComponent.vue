@@ -61,7 +61,7 @@ export default {
 <template>
 
     <section class="w-full mt-24 md:mt-0 px-8 md:px-0 flex flex-col mb-28 items-center">
-        <h1 class="font-[arial] font-bold text-3xl mb-10">GALLERY</h1>
+        <h1 class="font-[arial] font-bold text-3xl mb-10 uppercase">{{ $t('labels.gallery') }}</h1>
         <Splide class="w-full md:inline-block hidden mb-3" :options="mainOptions" aria-label="My Favorite Images" ref="main">
             <SplideSlide v-for="image in images" :key="image">
                 <img class="h-full w-full" :src="image" :alt="'Slide ' + image">

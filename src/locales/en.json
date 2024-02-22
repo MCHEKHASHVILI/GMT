@@ -41,6 +41,12 @@
     "forms": {
         "booking": "booking"
     },
+    "labels": {
+        "price": "price",
+        "date": "Date",
+        "category": "Category",
+        "gallery": "gallery"
+    },
     "footer": {
         "powered_by": "powered by"
     }

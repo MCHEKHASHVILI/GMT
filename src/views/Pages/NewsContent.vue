@@ -27,7 +27,7 @@ export default {
     <main-layout>
         <section class="container mx-auto">
             <div class="flex flex-col px-4 xl:px-0 xl:mb-36">
-                <h1 class="text-center text-2xl xl:text-3xl font-bold uppercase my-8 xl:mt-16 xl:mb-12">NEWS</h1>
+                <h1 class="text-center text-2xl xl:text-3xl font-bold uppercase my-8 xl:mt-16 xl:mb-12"></h1>
                 <img :src="content?.featured_image" class="object-cover" alt="">
                 <div class="flex flex-row py-4 xl:py-2 space-x-4 justify-start">
                     <div class="flex items-center justify-start space-x-2">
