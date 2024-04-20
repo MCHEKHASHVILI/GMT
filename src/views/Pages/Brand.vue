@@ -30,7 +30,7 @@ export default {
   <mainLayout>
     <div class="flex overflow-x-hidden flex-col items-center mb-32">
       <div class="w-screen flex justify-center flex-col md:flex-row mb-16 md:mb-32 ">
-        <img class="md:w-1/2 w-full md:mr-32 mr-10" :src="brand?.featured_image" />
+        <img class="md:w-1/2 w-full md:mr-32 mr-10 object-cover" :src="brand?.featured_image" />
         <div class="flex flex-col px-4 md:px-0 py-8 md:w-1/2 md:items-start items-left md:justify-end">
           <div class="min-h-24">
             <img class="md:w-40" :src="brand?.logo" alt="" />
